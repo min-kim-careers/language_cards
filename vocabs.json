@@ -1,0 +1,5087 @@
+[
+  {
+    "id": 0,
+    "korean": "개",
+    "english": "dog",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/320396/SND000329750.mp3"
+  },
+  {
+    "id": 1,
+    "korean": "고양이",
+    "english": "cat",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120229/35697/SND000024400.mp3"
+  },
+  {
+    "id": 2,
+    "korean": "물고기",
+    "english": "fish",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120511/78852/SND000067555.mp3"
+  },
+  {
+    "id": 3,
+    "korean": "새",
+    "english": "bird",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120531/90965/SND000079668.mp3"
+  },
+  {
+    "id": 4,
+    "korean": "소",
+    "english": "cow",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120607/95142/SND000083845.mp3"
+  },
+  {
+    "id": 5,
+    "korean": "쥐",
+    "english": "mouse",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120506/75760/SND000064463.mp3"
+  },
+  {
+    "id": 6,
+    "korean": "말",
+    "english": "horse",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/300375/SND000309729.mp3"
+  },
+  {
+    "id": 7,
+    "korean": "날개",
+    "english": "wing",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/306388/SND000315742.mp3"
+  },
+  {
+    "id": 8,
+    "korean": "동물",
+    "english": "animal",
+    "origin": "動物",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/38000/326783/SND000336137.mp3"
+  },
+  {
+    "id": 9,
+    "korean": "기차",
+    "english": "train",
+    "origin": "汽車",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/45000/305007/SND000314361.mp3"
+  },
+  {
+    "id": 10,
+    "korean": "비행기",
+    "english": "airplane",
+    "origin": "飛行機",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/07000/294592/SND000303946.mp3"
+  },
+  {
+    "id": 11,
+    "korean": "차",
+    "english": "car",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/50000/304456/SND000313810.mp3"
+  },
+  {
+    "id": 12,
+    "korean": "트럭",
+    "english": "truck",
+    "origin": "truck",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 13,
+    "korean": "자전거",
+    "english": "bicycle",
+    "origin": "自轉車",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120420/66457/SND000055160.mp3"
+  },
+  {
+    "id": 14,
+    "korean": "버스",
+    "english": "bus",
+    "origin": "bus",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 15,
+    "korean": "배",
+    "english": "boat",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/33000/294818/SND000304172.mp3"
+  },
+  {
+    "id": 16,
+    "korean": "선박",
+    "english": "ship",
+    "origin": "船舶",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120604/93092/SND000081795.mp3"
+  },
+  {
+    "id": 17,
+    "korean": "바퀴",
+    "english": "tire",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/13000/294406/SND000303760.mp3"
+  },
+  {
+    "id": 18,
+    "korean": "기름",
+    "english": "oil",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120227/34422/SND000023125.mp3"
+  },
+  {
+    "id": 19,
+    "korean": "엔진",
+    "english": "engine",
+    "origin": "engine",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 20,
+    "korean": "기차표",
+    "english": "train ticket",
+    "origin": "汽車票",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/45000/305014/SND000314368.mp3"
+  },
+  {
+    "id": 21,
+    "korean": "교통",
+    "english": "transportation",
+    "origin": "交通",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120304/38228/SND000026931.mp3"
+  },
+  {
+    "id": 22,
+    "korean": "도시",
+    "english": "city",
+    "origin": "都市",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120212/25340/SND000014043.mp3"
+  },
+  {
+    "id": 23,
+    "korean": "집",
+    "english": "house",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/67817/SND000056520.mp3"
+  },
+  {
+    "id": 24,
+    "korean": "길",
+    "english": "street",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120227/34242/SND000022945.mp3"
+  },
+  {
+    "id": 25,
+    "korean": "도로",
+    "english": "road",
+    "origin": "道路",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/37000/308933/SND000318287.mp3"
+  },
+  {
+    "id": 26,
+    "korean": "공항",
+    "english": "airport",
+    "origin": "空港",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120310/41693/SND000030396.mp3"
+  },
+  {
+    "id": 27,
+    "korean": "기차역",
+    "english": "train station",
+    "origin": "汽車驛",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/45000/305009/SND000314363.mp3"
+  },
+  {
+    "id": 28,
+    "korean": "다리",
+    "english": "bridge",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120219/29446/SND000018149.mp3"
+  },
+  {
+    "id": 29,
+    "korean": "호텔",
+    "english": "hotel",
+    "origin": "hotel",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 30,
+    "korean": "식당",
+    "english": "restaurant",
+    "origin": "食堂",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/94142/SND000082845.mp3"
+  },
+  {
+    "id": 31,
+    "korean": "농장",
+    "english": "farm",
+    "origin": "農場",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/33000/298383/SND000307737.mp3"
+  },
+  {
+    "id": 32,
+    "korean": "법원",
+    "english": "courthouse",
+    "origin": "法院",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120106/3401/SND000001612.mp3"
+  },
+  {
+    "id": 33,
+    "korean": "학교",
+    "english": "school",
+    "origin": "學校",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120314/43825/SND000032528.mp3"
+  },
+  {
+    "id": 34,
+    "korean": "사무실",
+    "english": "office",
+    "origin": "事務室",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/08000/317528/SND000326882.mp3"
+  },
+  {
+    "id": 35,
+    "korean": "방",
+    "english": "room",
+    "origin": "房",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120105/2479/SND000001185.mp3"
+  },
+  {
+    "id": 36,
+    "korean": "마을",
+    "english": "village",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120508/76870/SND000065573.mp3"
+  },
+  {
+    "id": 37,
+    "korean": "대학교",
+    "english": "university",
+    "origin": "大學校",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/36000/322420/SND000331774.mp3"
+  },
+  {
+    "id": 38,
+    "korean": "클럽",
+    "english": "club",
+    "origin": "club",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 39,
+    "korean": "술집",
+    "english": "bar",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120609/96381/SND000085084.mp3"
+  },
+  {
+    "id": 40,
+    "korean": "공원",
+    "english": "park",
+    "origin": "公園",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120229/35536/SND000024239.mp3"
+  },
+  {
+    "id": 41,
+    "korean": "캠프",
+    "english": "camp",
+    "origin": "camp",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 42,
+    "korean": "가게",
+    "english": "store",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/295343/SND000304697.mp3"
+  },
+  {
+    "id": 43,
+    "korean": "극장",
+    "english": "theater",
+    "origin": "劇場",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120308/40683/SND000029386.mp3"
+  },
+  {
+    "id": 44,
+    "korean": "도서관",
+    "english": "library",
+    "origin": "圖書館",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/37000/306031/SND000315385.mp3"
+  },
+  {
+    "id": 45,
+    "korean": "병원",
+    "english": "hospital",
+    "origin": "病院",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/36000/318616/SND000327970.mp3"
+  },
+  {
+    "id": 46,
+    "korean": "교회",
+    "english": "church",
+    "origin": "敎會",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/320663/SND000330017.mp3"
+  },
+  {
+    "id": 47,
+    "korean": "시장",
+    "english": "market",
+    "origin": "市場",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/93821/SND000082524.mp3"
+  },
+  {
+    "id": 48,
+    "korean": "나라",
+    "english": "country",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/16000/317843/SND000327197.mp3"
+  },
+  {
+    "id": 49,
+    "korean": "건물",
+    "english": "building",
+    "origin": "建物",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/300874/SND000310228.mp3"
+  },
+  {
+    "id": 50,
+    "korean": "바닥",
+    "english": "floor",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120101/468/SND000000164.mp3"
+  },
+  {
+    "id": 51,
+    "korean": "공간",
+    "english": "space",
+    "origin": "空間",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120228/35347/SND000024050.mp3"
+  },
+  {
+    "id": 52,
+    "korean": "은행",
+    "english": "bank",
+    "origin": "銀行",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/24000/327080/SND000336434.mp3"
+  },
+  {
+    "id": 53,
+    "korean": "위치",
+    "english": "location",
+    "origin": "位置",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120328/52475/SND000041178.mp3"
+  },
+  {
+    "id": 54,
+    "korean": "모자",
+    "english": "hat",
+    "origin": "帽子",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120510/78189/SND000066892.mp3"
+  },
+  {
+    "id": 55,
+    "korean": "드레스",
+    "english": "dress",
+    "origin": "dress",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 56,
+    "korean": "양복",
+    "english": "suit",
+    "origin": "洋服",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120329/53197/SND000041900.mp3"
+  },
+  {
+    "id": 57,
+    "korean": "치마",
+    "english": "skirt",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120201/19064/SND000009454.mp3"
+  },
+  {
+    "id": 58,
+    "korean": "티셔츠",
+    "english": "t-shirt",
+    "origin": "←T-shirt",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 59,
+    "korean": "바지",
+    "english": "pants",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120103/1251/SND000000551.mp3"
+  },
+  {
+    "id": 60,
+    "korean": "신발",
+    "english": "shoes",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/13000/301683/SND000311037.mp3"
+  },
+  {
+    "id": 61,
+    "korean": "주머니",
+    "english": "pocket",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/68336/SND000057039.mp3"
+  },
+  {
+    "id": 62,
+    "korean": "코트",
+    "english": "coat",
+    "origin": "coat",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 63,
+    "korean": "얼룩",
+    "english": "stain",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/49186/SND000037889.mp3"
+  },
+  {
+    "id": 64,
+    "korean": "옷",
+    "english": "clothes",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51598/SND000040301.mp3"
+  },
+  {
+    "id": 65,
+    "korean": "빨간색",
+    "english": "red",
+    "origin": "빨간色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/300156/SND000309510.mp3"
+  },
+  {
+    "id": 66,
+    "korean": "초록색",
+    "english": "green",
+    "origin": "草綠色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120129/17283/SND000008564.mp3"
+  },
+  {
+    "id": 67,
+    "korean": "파란색",
+    "english": "blue",
+    "origin": "파란色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/327248/SND000336602.mp3"
+  },
+  {
+    "id": 68,
+    "korean": "노란색",
+    "english": "yellow",
+    "origin": "노란色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/295320/SND000304674.mp3"
+  },
+  {
+    "id": 69,
+    "korean": "곤색",
+    "english": "navy blue",
+    "origin": "kon[紺]色",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 70,
+    "korean": "분홍색",
+    "english": "pink",
+    "origin": "粉紅色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/07000/297142/SND000306496.mp3"
+  },
+  {
+    "id": 71,
+    "korean": "갈색",
+    "english": "brown",
+    "origin": "褐色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120223/31905/SND000020608.mp3"
+  },
+  {
+    "id": 72,
+    "korean": "주황색",
+    "english": "orange",
+    "origin": "朱黃色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120419/65757/SND000054460.mp3"
+  },
+  {
+    "id": 73,
+    "korean": "검은색",
+    "english": "black",
+    "origin": "검은色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120225/33093/SND000021796.mp3"
+  },
+  {
+    "id": 74,
+    "korean": "하얀색",
+    "english": "white",
+    "origin": "하얀色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/17000/337087/SND000346441.mp3"
+  },
+  {
+    "id": 75,
+    "korean": "회색",
+    "english": "gray",
+    "origin": "灰色",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120319/47202/SND000035905.mp3"
+  },
+  {
+    "id": 76,
+    "korean": "색깔",
+    "english": "color",
+    "origin": "色깔",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120531/91071/SND000079774.mp3"
+  },
+  {
+    "id": 77,
+    "korean": "아들",
+    "english": "son",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120321/48072/SND000036775.mp3"
+  },
+  {
+    "id": 78,
+    "korean": "딸",
+    "english": "daughter",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120213/25939/SND000014642.mp3"
+  },
+  {
+    "id": 79,
+    "korean": "엄마",
+    "english": "mom",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120323/49248/SND000037951.mp3"
+  },
+  {
+    "id": 80,
+    "korean": "아빠",
+    "english": "dad",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/48738/SND000037441.mp3"
+  },
+  {
+    "id": 81,
+    "korean": "부모님",
+    "english": "parents",
+    "origin": "父母님",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/47000/318617/SND000327971.mp3"
+  },
+  {
+    "id": 82,
+    "korean": "애기",
+    "english": "baby",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 83,
+    "korean": "남자",
+    "english": "man",
+    "origin": "男子",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120521/84916/SND000073619.mp3"
+  },
+  {
+    "id": 84,
+    "korean": "여자",
+    "english": "woman",
+    "origin": "女子",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120330/53620/SND000042323.mp3"
+  },
+  {
+    "id": 85,
+    "korean": "형",
+    "english": "older brother",
+    "origin": "兄",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/03000/341962/SND000351316.mp3"
+  },
+  {
+    "id": 86,
+    "korean": "누나",
+    "english": "older sister",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/302963/SND000312317.mp3"
+  },
+  {
+    "id": 87,
+    "korean": "오빠",
+    "english": "older brother",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51550/SND000040253.mp3"
+  },
+  {
+    "id": 88,
+    "korean": "언니",
+    "english": "older sister",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120323/49366/SND000038069.mp3"
+  },
+  {
+    "id": 89,
+    "korean": "할아버지",
+    "english": "grandfather",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120314/44267/SND000032970.mp3"
+  },
+  {
+    "id": 90,
+    "korean": "할머니",
+    "english": "grandmother",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120314/43879/SND000032582.mp3"
+  },
+  {
+    "id": 91,
+    "korean": "남편",
+    "english": "husband",
+    "origin": "男便",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120521/84960/SND000073663.mp3"
+  },
+  {
+    "id": 92,
+    "korean": "아내",
+    "english": "wife",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120321/48530/SND000037233.mp3"
+  },
+  {
+    "id": 93,
+    "korean": "왕",
+    "english": "king",
+    "origin": "王",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120328/52252/SND000040955.mp3"
+  },
+  {
+    "id": 94,
+    "korean": "여왕",
+    "english": "queen",
+    "origin": "女王",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120331/54312/SND000043015.mp3"
+  },
+  {
+    "id": 95,
+    "korean": "대통령",
+    "english": "president",
+    "origin": "大統領",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/36000/312050/SND000321404.mp3"
+  },
+  {
+    "id": 96,
+    "korean": "이웃",
+    "english": "neighbor",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51085/SND000039788.mp3"
+  },
+  {
+    "id": 97,
+    "korean": "여자아이",
+    "english": "little girl",
+    "origin": "女子아이",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/32000/343821/SND000353175.mp3"
+  },
+  {
+    "id": 98,
+    "korean": "남자아이",
+    "english": "little boy",
+    "origin": "男子아이",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/31000/343843/SND000353197.mp3"
+  },
+  {
+    "id": 99,
+    "korean": "성인",
+    "english": "adult",
+    "origin": "成人",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120604/93304/SND000082007.mp3"
+  },
+  {
+    "id": 100,
+    "korean": "인간",
+    "english": "human being",
+    "origin": "人間",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120325/50628/SND000039331.mp3"
+  },
+  {
+    "id": 101,
+    "korean": "친구",
+    "english": "friend",
+    "origin": "親舊",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120201/19088/SND000009478.mp3"
+  },
+  {
+    "id": 102,
+    "korean": "피해자",
+    "english": "victim",
+    "origin": "被害者",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/02000/338404/SND000347758.mp3"
+  },
+  {
+    "id": 103,
+    "korean": "선수",
+    "english": "player",
+    "origin": "選手",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/05000/318361/SND000327715.mp3"
+  },
+  {
+    "id": 104,
+    "korean": "팬",
+    "english": "fan",
+    "origin": "fan",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 105,
+    "korean": "군중",
+    "english": "crowd",
+    "origin": "群衆",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120301/36346/SND000025049.mp3"
+  },
+  {
+    "id": 106,
+    "korean": "사람",
+    "english": "person",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/314705/SND000324059.mp3"
+  },
+  {
+    "id": 107,
+    "korean": "선생님",
+    "english": "teacher",
+    "origin": "先生님",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/05000/319213/SND000328567.mp3"
+  },
+  {
+    "id": 108,
+    "korean": "학생",
+    "english": "student",
+    "origin": "學生",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/02000/302714/SND000312068.mp3"
+  },
+  {
+    "id": 109,
+    "korean": "변호사",
+    "english": "lawyer",
+    "origin": "辯護士",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/35000/315111/SND000324465.mp3"
+  },
+  {
+    "id": 110,
+    "korean": "의사",
+    "english": "doctor",
+    "origin": "醫師",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/24000/298476/SND000307830.mp3"
+  },
+  {
+    "id": 111,
+    "korean": "환자",
+    "english": "patient",
+    "origin": "患者",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/302713/SND000312067.mp3"
+  },
+  {
+    "id": 112,
+    "korean": "웨이터",
+    "english": "waiter",
+    "origin": "waiter",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 113,
+    "korean": "비서",
+    "english": "secretary",
+    "origin": "祕書",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/14000/316997/SND000326351.mp3"
+  },
+  {
+    "id": 114,
+    "korean": "신부",
+    "english": "priest",
+    "origin": "新婦",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/06000/321578/SND000330932.mp3"
+  },
+  {
+    "id": 115,
+    "korean": "경찰",
+    "english": "police",
+    "origin": "警察",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/41000/299649/SND000309003.mp3"
+  },
+  {
+    "id": 116,
+    "korean": "군대",
+    "english": "army",
+    "origin": "軍隊",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120301/36224/SND000024927.mp3"
+  },
+  {
+    "id": 117,
+    "korean": "군인",
+    "english": "soldier",
+    "origin": "軍人",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120311/42177/SND000030880.mp3"
+  },
+  {
+    "id": 118,
+    "korean": "예술가",
+    "english": "artist",
+    "origin": "藝術家",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/27000/326618/SND000335972.mp3"
+  },
+  {
+    "id": 119,
+    "korean": "저자",
+    "english": "author",
+    "origin": "著者",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120421/66889/SND000055592.mp3"
+  },
+  {
+    "id": 120,
+    "korean": "매니저",
+    "english": "manager",
+    "origin": "manager",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 121,
+    "korean": "기자",
+    "english": "reporter",
+    "origin": "記者",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120226/34187/SND000022890.mp3"
+  },
+  {
+    "id": 122,
+    "korean": "배우",
+    "english": "actor",
+    "origin": "俳優",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120117/9972/SND000004916.mp3"
+  },
+  {
+    "id": 123,
+    "korean": "직업",
+    "english": "job",
+    "origin": "職業",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67604/SND000056307.mp3"
+  },
+  {
+    "id": 124,
+    "korean": "종교",
+    "english": "religion",
+    "origin": "宗敎",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120505/75376/SND000064079.mp3"
+  },
+  {
+    "id": 125,
+    "korean": "천국",
+    "english": "heaven",
+    "origin": "天國",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/10000/298930/SND000308284.mp3"
+  },
+  {
+    "id": 126,
+    "korean": "지옥",
+    "english": "hell",
+    "origin": "地獄",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/67815/SND000056518.mp3"
+  },
+  {
+    "id": 127,
+    "korean": "죽음",
+    "english": "death",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/68272/SND000056975.mp3"
+  },
+  {
+    "id": 128,
+    "korean": "약",
+    "english": "medicine",
+    "origin": "藥",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120329/52999/SND000041702.mp3"
+  },
+  {
+    "id": 129,
+    "korean": "돈",
+    "english": "money",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/295301/SND000304655.mp3"
+  },
+  {
+    "id": 130,
+    "korean": "원",
+    "english": "won (Korean currency)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120328/52748/SND000041451.mp3"
+  },
+  {
+    "id": 131,
+    "korean": "지폐",
+    "english": "paper money",
+    "origin": "紙幣",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/67853/SND000056556.mp3"
+  },
+  {
+    "id": 132,
+    "korean": "결혼",
+    "english": "marriage",
+    "origin": "結婚",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120303/37469/SND000026172.mp3"
+  },
+  {
+    "id": 133,
+    "korean": "결혼식",
+    "english": "wedding",
+    "origin": "結婚式",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/37000/302707/SND000312061.mp3"
+  },
+  {
+    "id": 134,
+    "korean": "팀",
+    "english": "team",
+    "origin": "team",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 135,
+    "korean": "인종",
+    "english": "ethnicity",
+    "origin": "人種",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120325/50726/SND000039429.mp3"
+  },
+  {
+    "id": 136,
+    "korean": "섹스",
+    "english": "sex",
+    "origin": "sex",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 137,
+    "korean": "성별",
+    "english": "gender",
+    "origin": "性別",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/05000/319974/SND000329328.mp3"
+  },
+  {
+    "id": 138,
+    "korean": "살인",
+    "english": "murder",
+    "origin": "殺人",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120602/92395/SND000081098.mp3"
+  },
+  {
+    "id": 139,
+    "korean": "교도소",
+    "english": "prison",
+    "origin": "矯導所",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/41000/302115/SND000311469.mp3"
+  },
+  {
+    "id": 140,
+    "korean": "기술",
+    "english": "technology",
+    "origin": "技術",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120309/41198/SND000029901.mp3"
+  },
+  {
+    "id": 141,
+    "korean": "정력",
+    "english": "stamina",
+    "origin": "精力",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120416/64021/SND000052724.mp3"
+  },
+  {
+    "id": 142,
+    "korean": "전쟁",
+    "english": "war",
+    "origin": "戰爭",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/12000/301384/SND000310738.mp3"
+  },
+  {
+    "id": 143,
+    "korean": "평화",
+    "english": "peace",
+    "origin": "平和",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/02000/327276/SND000336630.mp3"
+  },
+  {
+    "id": 144,
+    "korean": "공격",
+    "english": "attack",
+    "origin": "攻擊",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/35000/296522/SND000305876.mp3"
+  },
+  {
+    "id": 145,
+    "korean": "선거",
+    "english": "election",
+    "origin": "選擧",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/295233/SND000304587.mp3"
+  },
+  {
+    "id": 146,
+    "korean": "잡지",
+    "english": "magazine",
+    "origin": "雜誌",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120421/66701/SND000055404.mp3"
+  },
+  {
+    "id": 147,
+    "korean": "신문",
+    "english": "newspaper",
+    "origin": "新聞",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120615/100104/SND000088807.mp3"
+  },
+  {
+    "id": 148,
+    "korean": "독",
+    "english": "poison",
+    "origin": "毒",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120211/24702/SND000013405.mp3"
+  },
+  {
+    "id": 149,
+    "korean": "총",
+    "english": "gun",
+    "origin": "銃",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/11000/299294/SND000308648.mp3"
+  },
+  {
+    "id": 150,
+    "korean": "스포츠",
+    "english": "sports",
+    "origin": "sports",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 151,
+    "korean": "경주",
+    "english": "race",
+    "origin": "競走",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120303/37679/SND000026382.mp3"
+  },
+  {
+    "id": 152,
+    "korean": "운동",
+    "english": "exercise",
+    "origin": "運動",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120327/51984/SND000040687.mp3"
+  },
+  {
+    "id": 153,
+    "korean": "공",
+    "english": "ball",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/296532/SND000305886.mp3"
+  },
+  {
+    "id": 154,
+    "korean": "게임",
+    "english": "game",
+    "origin": "game",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 155,
+    "korean": "가격",
+    "english": "price",
+    "origin": "價格",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20170223/442851/SND000020389.mp3"
+  },
+  {
+    "id": 156,
+    "korean": "계약서",
+    "english": "contract",
+    "origin": "契約書",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/43000/295604/SND000304958.mp3"
+  },
+  {
+    "id": 157,
+    "korean": "마약",
+    "english": "drug",
+    "origin": "痲藥",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120508/77370/SND000066073.mp3"
+  },
+  {
+    "id": 158,
+    "korean": "간판",
+    "english": "signboard",
+    "origin": "看板",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20170223/442941/SND000021182.mp3"
+  },
+  {
+    "id": 159,
+    "korean": "과학",
+    "english": "science",
+    "origin": "科學",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120302/36647/SND000025350.mp3"
+  },
+  {
+    "id": 160,
+    "korean": "하느님",
+    "english": "god",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120314/44031/SND000032734.mp3"
+  },
+  {
+    "id": 161,
+    "korean": "밴드",
+    "english": "band",
+    "origin": "band",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 162,
+    "korean": "노래",
+    "english": "song",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120523/85968/SND000074671.mp3"
+  },
+  {
+    "id": 163,
+    "korean": "악기",
+    "english": "musical instrument",
+    "origin": "樂器",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120321/48281/SND000036984.mp3"
+  },
+  {
+    "id": 164,
+    "korean": "음악",
+    "english": "music",
+    "origin": "音樂",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120323/49552/SND000038255.mp3"
+  },
+  {
+    "id": 165,
+    "korean": "영화",
+    "english": "movie",
+    "origin": "映畫",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120331/54004/SND000042707.mp3"
+  },
+  {
+    "id": 166,
+    "korean": "미술",
+    "english": "art",
+    "origin": "美術",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/31000/301275/SND000310629.mp3"
+  },
+  {
+    "id": 167,
+    "korean": "커피",
+    "english": "coffee",
+    "origin": "coffee",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 168,
+    "korean": "차",
+    "english": "tea",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/50000/304456/SND000313810.mp3"
+  },
+  {
+    "id": 169,
+    "korean": "맥주",
+    "english": "beer",
+    "origin": "麥酒",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120507/76758/SND000065461.mp3"
+  },
+  {
+    "id": 170,
+    "korean": "쥬스",
+    "english": "juice",
+    "origin": "juice",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 171,
+    "korean": "물",
+    "english": "water",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120511/78780/SND000067483.mp3"
+  },
+  {
+    "id": 172,
+    "korean": "우유",
+    "english": "milk",
+    "origin": "牛乳",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120327/52171/SND000040874.mp3"
+  },
+  {
+    "id": 173,
+    "korean": "음료수",
+    "english": "beverage",
+    "origin": "飮料水",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/24000/327082/SND000336436.mp3"
+  },
+  {
+    "id": 174,
+    "korean": "계란",
+    "english": "egg",
+    "origin": "鷄卵",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120304/38005/SND000026708.mp3"
+  },
+  {
+    "id": 175,
+    "korean": "치즈",
+    "english": "cheese",
+    "origin": "cheese",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 176,
+    "korean": "국물",
+    "english": "soup",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120301/36271/SND000024974.mp3"
+  },
+  {
+    "id": 177,
+    "korean": "케이크",
+    "english": "cake",
+    "origin": "cake",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 178,
+    "korean": "닭",
+    "english": "chicken",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120216/28059/SND000016762.mp3"
+  },
+  {
+    "id": 179,
+    "korean": "돼지고기",
+    "english": "pork",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/341801/SND000351155.mp3"
+  },
+  {
+    "id": 180,
+    "korean": "소고기",
+    "english": "beef",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120607/95275/SND000083978.mp3"
+  },
+  {
+    "id": 181,
+    "korean": "사과",
+    "english": "apple",
+    "origin": "沙果/砂果",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120601/91370/SND000080073.mp3"
+  },
+  {
+    "id": 182,
+    "korean": "바나나",
+    "english": "banana",
+    "origin": "banana",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 183,
+    "korean": "오렌지",
+    "english": "orange",
+    "origin": "orange",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 184,
+    "korean": "레몬",
+    "english": "lemon",
+    "origin": "lemon",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 185,
+    "korean": "옥수수",
+    "english": "corn",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51424/SND000040127.mp3"
+  },
+  {
+    "id": 186,
+    "korean": "쌀",
+    "english": "uncooked rice",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95771/SND000084474.mp3"
+  },
+  {
+    "id": 187,
+    "korean": "밥",
+    "english": "rice; meal",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120106/3024/SND000001433.mp3"
+  },
+  {
+    "id": 188,
+    "korean": "식용유",
+    "english": "cooking oil",
+    "origin": "食用油",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/94033/SND000082736.mp3"
+  },
+  {
+    "id": 189,
+    "korean": "씨",
+    "english": "seed",
+    "origin": "氏",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95939/SND000084642.mp3"
+  },
+  {
+    "id": 190,
+    "korean": "칼",
+    "english": "knife",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120506/75781/SND000064484.mp3"
+  },
+  {
+    "id": 191,
+    "korean": "숟가락",
+    "english": "spoon",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120619/102405/SND000091108.mp3"
+  },
+  {
+    "id": 192,
+    "korean": "포크",
+    "english": "fork",
+    "origin": "fork",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 193,
+    "korean": "접시",
+    "english": "plate",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67437/SND000056140.mp3"
+  },
+  {
+    "id": 194,
+    "korean": "컵",
+    "english": "cup",
+    "origin": "cup",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/40000/303221/SND000312575.mp3"
+  },
+  {
+    "id": 195,
+    "korean": "아침",
+    "english": "morning; breakfast",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120321/48062/SND000036765.mp3"
+  },
+  {
+    "id": 196,
+    "korean": "점심",
+    "english": "lunch",
+    "origin": "點心",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/12000/326886/SND000336240.mp3"
+  },
+  {
+    "id": 197,
+    "korean": "저녁",
+    "english": "dinner; evening",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67415/SND000056118.mp3"
+  },
+  {
+    "id": 198,
+    "korean": "설탕",
+    "english": "sugar",
+    "origin": "雪糖▽/屑糖▽",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120603/92975/SND000081678.mp3"
+  },
+  {
+    "id": 199,
+    "korean": "소금",
+    "english": "salt",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120607/95254/SND000083957.mp3"
+  },
+  {
+    "id": 200,
+    "korean": "병",
+    "english": "bottle",
+    "origin": "病",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/35000/319092/SND000328446.mp3"
+  },
+  {
+    "id": 201,
+    "korean": "음식",
+    "english": "food",
+    "origin": "飮食",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/24000/327084/SND000336438.mp3"
+  },
+  {
+    "id": 202,
+    "korean": "책상",
+    "english": "desk",
+    "origin": "冊床",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120131/18119/SND000009004.mp3"
+  },
+  {
+    "id": 203,
+    "korean": "탁자",
+    "english": "coffee table",
+    "origin": "卓子",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120622/104122/SND000092825.mp3"
+  },
+  {
+    "id": 204,
+    "korean": "식탁",
+    "english": "dining table",
+    "origin": "食卓",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/94138/SND000082841.mp3"
+  },
+  {
+    "id": 205,
+    "korean": "의자",
+    "english": "chair",
+    "origin": "椅子",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120327/51833/SND000040536.mp3"
+  },
+  {
+    "id": 206,
+    "korean": "침대",
+    "english": "bed",
+    "origin": "寢臺",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/01000/304158/SND000313512.mp3"
+  },
+  {
+    "id": 207,
+    "korean": "꿈",
+    "english": "dream",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120305/38880/SND000027583.mp3"
+  },
+  {
+    "id": 208,
+    "korean": "창문",
+    "english": "window",
+    "origin": "窓門",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120131/18456/SND000009143.mp3"
+  },
+  {
+    "id": 209,
+    "korean": "문",
+    "english": "door",
+    "origin": "門",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120511/79020/SND000067723.mp3"
+  },
+  {
+    "id": 210,
+    "korean": "침실",
+    "english": "bedroom",
+    "origin": "寢室",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/01000/328041/SND000337395.mp3"
+  },
+  {
+    "id": 211,
+    "korean": "부엌",
+    "english": "kitchen",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120122/12927/SND000006386.mp3"
+  },
+  {
+    "id": 212,
+    "korean": "화장실",
+    "english": "bathroom",
+    "origin": "化粧室",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/03000/301682/SND000311036.mp3"
+  },
+  {
+    "id": 213,
+    "korean": "연필",
+    "english": "pencil",
+    "origin": "鉛筆",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120331/54165/SND000042868.mp3"
+  },
+  {
+    "id": 214,
+    "korean": "볼펜",
+    "english": "pen",
+    "origin": "ball pen",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 215,
+    "korean": "사진",
+    "english": "photo",
+    "origin": "寫眞",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120601/91484/SND000080187.mp3"
+  },
+  {
+    "id": 216,
+    "korean": "비누",
+    "english": "soap",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120109/4801/SND000002319.mp3"
+  },
+  {
+    "id": 217,
+    "korean": "책",
+    "english": "book",
+    "origin": "冊",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/10000/327390/SND000336744.mp3"
+  },
+  {
+    "id": 218,
+    "korean": "페이지",
+    "english": "page",
+    "origin": "page",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 219,
+    "korean": "열쇠",
+    "english": "key",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120330/53705/SND000042408.mp3"
+  },
+  {
+    "id": 220,
+    "korean": "페인트",
+    "english": "paint",
+    "origin": "paint",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 221,
+    "korean": "편지",
+    "english": "letter",
+    "origin": "便紙/片紙",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/02000/298511/SND000307865.mp3"
+  },
+  {
+    "id": 222,
+    "korean": "메모",
+    "english": "note",
+    "origin": "memo",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 223,
+    "korean": "벽",
+    "english": "wall",
+    "origin": "壁",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120115/8583/SND000004220.mp3"
+  },
+  {
+    "id": 224,
+    "korean": "종이",
+    "english": "paper",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/68145/SND000056848.mp3"
+  },
+  {
+    "id": 225,
+    "korean": "천장",
+    "english": "ceiling",
+    "origin": "天障",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120201/18872/SND000009361.mp3"
+  },
+  {
+    "id": 226,
+    "korean": "지붕",
+    "english": "roof",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67570/SND000056273.mp3"
+  },
+  {
+    "id": 227,
+    "korean": "수영장",
+    "english": "swimming pool",
+    "origin": "水泳場",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/06000/300166/SND000309520.mp3"
+  },
+  {
+    "id": 228,
+    "korean": "자물쇠",
+    "english": "lock",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120414/62794/SND000051497.mp3"
+  },
+  {
+    "id": 229,
+    "korean": "전화기",
+    "english": "phone",
+    "origin": "電話機",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/12000/326860/SND000336214.mp3"
+  },
+  {
+    "id": 230,
+    "korean": "정원",
+    "english": "garden",
+    "origin": "庭園",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67330/SND000056033.mp3"
+  },
+  {
+    "id": 231,
+    "korean": "마당",
+    "english": "yard",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/342432/SND000351786.mp3"
+  },
+  {
+    "id": 232,
+    "korean": "바늘",
+    "english": "needle",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/312948/SND000322302.mp3"
+  },
+  {
+    "id": 233,
+    "korean": "가방",
+    "english": "bag",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20170223/442828/SND000019932.mp3"
+  },
+  {
+    "id": 234,
+    "korean": "상자",
+    "english": "box",
+    "origin": "箱子",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120602/92119/SND000080822.mp3"
+  },
+  {
+    "id": 235,
+    "korean": "선물",
+    "english": "gift; present",
+    "origin": "膳物",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/304154/SND000313508.mp3"
+  },
+  {
+    "id": 236,
+    "korean": "카드",
+    "english": "card",
+    "origin": "card",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 237,
+    "korean": "반지",
+    "english": "ring",
+    "origin": "半指/斑指",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120105/2982/SND000001391.mp3"
+  },
+  {
+    "id": 238,
+    "korean": "도구",
+    "english": "tool",
+    "origin": "道具",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/37000/308798/SND000318152.mp3"
+  },
+  {
+    "id": 239,
+    "korean": "시계",
+    "english": "clock; watch",
+    "origin": "時計",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/94022/SND000082725.mp3"
+  },
+  {
+    "id": 240,
+    "korean": "램프",
+    "english": "lamp",
+    "origin": "lamp",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 241,
+    "korean": "휴대폰",
+    "english": "cell phone",
+    "origin": "携帶phone",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 242,
+    "korean": "네트워크",
+    "english": "network",
+    "origin": "network",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 243,
+    "korean": "컴퓨터",
+    "english": "computer",
+    "origin": "computer",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 244,
+    "korean": "노트북",
+    "english": "laptop",
+    "origin": "notebook",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 245,
+    "korean": "화면",
+    "english": "screen",
+    "origin": "畫面",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/03000/343459/SND000352813.mp3"
+  },
+  {
+    "id": 246,
+    "korean": "카메라",
+    "english": "camera",
+    "origin": "camera",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 247,
+    "korean": "텔레비전",
+    "english": "television",
+    "origin": "television",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 248,
+    "korean": "라디오",
+    "english": "radio",
+    "origin": "radio",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 249,
+    "korean": "머리",
+    "english": "head",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120509/77505/SND000066208.mp3"
+  },
+  {
+    "id": 250,
+    "korean": "목",
+    "english": "neck",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120518/83124/SND000071827.mp3"
+  },
+  {
+    "id": 251,
+    "korean": "얼굴",
+    "english": "face",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/49148/SND000037851.mp3"
+  },
+  {
+    "id": 252,
+    "korean": "턱수염",
+    "english": "beard",
+    "origin": "턱鬚髥",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120620/102880/SND000091583.mp3"
+  },
+  {
+    "id": 253,
+    "korean": "머리카락",
+    "english": "hair",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/311959/SND000321313.mp3"
+  },
+  {
+    "id": 254,
+    "korean": "눈",
+    "english": "eye",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120523/86158/SND000074861.mp3"
+  },
+  {
+    "id": 255,
+    "korean": "입",
+    "english": "mouth",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/318624/SND000327978.mp3"
+  },
+  {
+    "id": 256,
+    "korean": "입술",
+    "english": "lips",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120408/58942/SND000047645.mp3"
+  },
+  {
+    "id": 257,
+    "korean": "코",
+    "english": "nose",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/37000/308376/SND000317730.mp3"
+  },
+  {
+    "id": 258,
+    "korean": "이빨",
+    "english": "tooth",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120325/50905/SND000039608.mp3"
+  },
+  {
+    "id": 259,
+    "korean": "귀",
+    "english": "ear",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120302/37132/SND000025835.mp3"
+  },
+  {
+    "id": 260,
+    "korean": "눈물",
+    "english": "tears",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/311878/SND000321232.mp3"
+  },
+  {
+    "id": 261,
+    "korean": "혀",
+    "english": "tongue",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120317/46100/SND000034803.mp3"
+  },
+  {
+    "id": 262,
+    "korean": "등",
+    "english": "back",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/38000/310018/SND000319372.mp3"
+  },
+  {
+    "id": 263,
+    "korean": "허리",
+    "english": "waist; lower back",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120315/44464/SND000033167.mp3"
+  },
+  {
+    "id": 264,
+    "korean": "발가락",
+    "english": "toe",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120103/1663/SND000000765.mp3"
+  },
+  {
+    "id": 265,
+    "korean": "손가락",
+    "english": "finger",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95609/SND000084312.mp3"
+  },
+  {
+    "id": 266,
+    "korean": "발",
+    "english": "foot",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120103/1446/SND000000647.mp3"
+  },
+  {
+    "id": 267,
+    "korean": "손",
+    "english": "hand",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95497/SND000084200.mp3"
+  },
+  {
+    "id": 268,
+    "korean": "팔",
+    "english": "arm",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120528/89212/SND000077915.mp3"
+  },
+  {
+    "id": 269,
+    "korean": "어깨",
+    "english": "shoulder",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/49103/SND000037806.mp3"
+  },
+  {
+    "id": 270,
+    "korean": "심장",
+    "english": "heart",
+    "origin": "心臟",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120606/94415/SND000083118.mp3"
+  },
+  {
+    "id": 271,
+    "korean": "피",
+    "english": "blood",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120529/89513/SND000078216.mp3"
+  },
+  {
+    "id": 272,
+    "korean": "뇌",
+    "english": "brain",
+    "origin": "腦",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120526/87841/SND000076544.mp3"
+  },
+  {
+    "id": 273,
+    "korean": "무릅",
+    "english": "knee",
+    "origin": "Pure Korean",
+    "word_grade": "Advanced",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/311895/SND000321249.mp3"
+  },
+  {
+    "id": 274,
+    "korean": "땀",
+    "english": "sweat",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120213/25955/SND000014658.mp3"
+  },
+  {
+    "id": 275,
+    "korean": "병",
+    "english": "disease; illness",
+    "origin": "病",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/35000/319092/SND000328446.mp3"
+  },
+  {
+    "id": 276,
+    "korean": "뼈",
+    "english": "bone",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120116/9547/SND000004689.mp3"
+  },
+  {
+    "id": 277,
+    "korean": "목소리",
+    "english": "voice",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120510/78266/SND000066969.mp3"
+  },
+  {
+    "id": 278,
+    "korean": "피부",
+    "english": "skin",
+    "origin": "皮膚",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/02000/322405/SND000331759.mp3"
+  },
+  {
+    "id": 279,
+    "korean": "몸",
+    "english": "body",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120510/78312/SND000067015.mp3"
+  },
+  {
+    "id": 280,
+    "korean": "바다",
+    "english": "sea; ocean",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/28000/322755/SND000332109.mp3"
+  },
+  {
+    "id": 281,
+    "korean": "강",
+    "english": "river",
+    "origin": "江",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20170223/442924/SND000021023.mp3"
+  },
+  {
+    "id": 282,
+    "korean": "산",
+    "english": "mountain",
+    "origin": "山",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120602/91806/SND000080509.mp3"
+  },
+  {
+    "id": 283,
+    "korean": "비",
+    "english": "rain",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120108/4426/SND000002142.mp3"
+  },
+  {
+    "id": 284,
+    "korean": "눈",
+    "english": "snow",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120523/86158/SND000074861.mp3"
+  },
+  {
+    "id": 285,
+    "korean": "달",
+    "english": "moon; month",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/316842/SND000326196.mp3"
+  },
+  {
+    "id": 286,
+    "korean": "세계",
+    "english": "world",
+    "origin": "世界",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120612/98057/SND000086760.mp3"
+  },
+  {
+    "id": 287,
+    "korean": "지구",
+    "english": "earth",
+    "origin": "地球",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67618/SND000056321.mp3"
+  },
+  {
+    "id": 288,
+    "korean": "숲",
+    "english": "forest",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120619/102272/SND000090975.mp3"
+  },
+  {
+    "id": 289,
+    "korean": "하늘",
+    "english": "sky",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/18000/296849/SND000306203.mp3"
+  },
+  {
+    "id": 290,
+    "korean": "식물",
+    "english": "plant",
+    "origin": "植物",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120606/94611/SND000083314.mp3"
+  },
+  {
+    "id": 291,
+    "korean": "바람",
+    "english": "wind",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/338506/SND000347860.mp3"
+  },
+  {
+    "id": 292,
+    "korean": "토양",
+    "english": "soil",
+    "origin": "土壤",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/01000/334536/SND000343890.mp3"
+  },
+  {
+    "id": 293,
+    "korean": "꽃",
+    "english": "flower",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120305/38808/SND000027511.mp3"
+  },
+  {
+    "id": 294,
+    "korean": "계곡",
+    "english": "valley",
+    "origin": "溪谷",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120312/42702/SND000031405.mp3"
+  },
+  {
+    "id": 295,
+    "korean": "뿌리",
+    "english": "root",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120116/9537/SND000004679.mp3"
+  },
+  {
+    "id": 296,
+    "korean": "호수",
+    "english": "lake",
+    "origin": "湖水",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/03000/338915/SND000348269.mp3"
+  },
+  {
+    "id": 297,
+    "korean": "별",
+    "english": "star",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/314903/SND000324257.mp3"
+  },
+  {
+    "id": 298,
+    "korean": "잔디",
+    "english": "grass",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120426/69732/SND000058435.mp3"
+  },
+  {
+    "id": 299,
+    "korean": "나뭇잎",
+    "english": "leaf",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120521/85005/SND000073708.mp3"
+  },
+  {
+    "id": 300,
+    "korean": "공기",
+    "english": "air",
+    "origin": "空氣",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120228/35352/SND000024055.mp3"
+  },
+  {
+    "id": 301,
+    "korean": "모래",
+    "english": "sand",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120510/78415/SND000067118.mp3"
+  },
+  {
+    "id": 302,
+    "korean": "해변",
+    "english": "beach",
+    "origin": "海邊",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120313/43534/SND000032237.mp3"
+  },
+  {
+    "id": 303,
+    "korean": "파도",
+    "english": "wave",
+    "origin": "波濤",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120528/89120/SND000077823.mp3"
+  },
+  {
+    "id": 304,
+    "korean": "불",
+    "english": "fire",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120112/7008/SND000003437.mp3"
+  },
+  {
+    "id": 305,
+    "korean": "얼음",
+    "english": "ice",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120323/49423/SND000038126.mp3"
+  },
+  {
+    "id": 306,
+    "korean": "섬",
+    "english": "island",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/321415/SND000330769.mp3"
+  },
+  {
+    "id": 307,
+    "korean": "언덕",
+    "english": "hill",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120323/49282/SND000037985.mp3"
+  },
+  {
+    "id": 308,
+    "korean": "열",
+    "english": "fever; heat",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/323986/SND000333340.mp3"
+  },
+  {
+    "id": 309,
+    "korean": "자연",
+    "english": "nature",
+    "origin": "自然",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120427/70295/SND000058998.mp3"
+  },
+  {
+    "id": 310,
+    "korean": "유리",
+    "english": "glass",
+    "origin": "琉璃",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120401/55019/SND000043722.mp3"
+  },
+  {
+    "id": 311,
+    "korean": "금속",
+    "english": "metal",
+    "origin": "金屬",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120226/33634/SND000022337.mp3"
+  },
+  {
+    "id": 312,
+    "korean": "플라스틱",
+    "english": "plastic",
+    "origin": "plastic",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 313,
+    "korean": "나무",
+    "english": "tree; wood",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120521/84983/SND000073686.mp3"
+  },
+  {
+    "id": 314,
+    "korean": "돌",
+    "english": "stone; pebble",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/318977/SND000328331.mp3"
+  },
+  {
+    "id": 315,
+    "korean": "찰흙",
+    "english": "clay",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120125/14942/SND000007411.mp3"
+  },
+  {
+    "id": 316,
+    "korean": "먼지",
+    "english": "dust; dirt",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/311459/SND000320813.mp3"
+  },
+  {
+    "id": 317,
+    "korean": "금",
+    "english": "gold",
+    "origin": "金",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120225/33531/SND000022234.mp3"
+  },
+  {
+    "id": 318,
+    "korean": "구리",
+    "english": "copper",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120301/36423/SND000025126.mp3"
+  },
+  {
+    "id": 319,
+    "korean": "은",
+    "english": "silver",
+    "origin": "銀",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120323/49629/SND000038332.mp3"
+  },
+  {
+    "id": 320,
+    "korean": "재료",
+    "english": "ingredient; material",
+    "origin": "材料",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120420/66384/SND000055087.mp3"
+  },
+  {
+    "id": 321,
+    "korean": "미터",
+    "english": "meter",
+    "origin": "meter",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": null
+  },
+  {
+    "id": 322,
+    "korean": "센티미터",
+    "english": "centimeter",
+    "origin": "centimeter",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": null
+  },
+  {
+    "id": 323,
+    "korean": "킬로미터",
+    "english": "kilometer",
+    "origin": "kilometer",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/42000/328061/SND000337415.mp3"
+  },
+  {
+    "id": 324,
+    "korean": "반",
+    "english": "half",
+    "origin": "半",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/32000/314166/SND000323520.mp3"
+  },
+  {
+    "id": 325,
+    "korean": "서클",
+    "english": "circle",
+    "origin": "circle",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 326,
+    "korean": "정사각형",
+    "english": "square",
+    "origin": "正四角形",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120421/67194/SND000055897.mp3"
+  },
+  {
+    "id": 327,
+    "korean": "온도",
+    "english": "temperature",
+    "origin": "溫度",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51511/SND000040214.mp3"
+  },
+  {
+    "id": 328,
+    "korean": "날짜",
+    "english": "date",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/314700/SND000324054.mp3"
+  },
+  {
+    "id": 329,
+    "korean": "무게",
+    "english": "weight",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/311500/SND000320854.mp3"
+  },
+  {
+    "id": 330,
+    "korean": "가장자리",
+    "english": "edge",
+    "origin": "Pure Korean",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/342836/SND000352190.mp3"
+  },
+  {
+    "id": 331,
+    "korean": "지도",
+    "english": "map",
+    "origin": "地圖",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67587/SND000056290.mp3"
+  },
+  {
+    "id": 332,
+    "korean": "점",
+    "english": "point",
+    "origin": "點",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/12000/318787/SND000328141.mp3"
+  },
+  {
+    "id": 333,
+    "korean": "자음",
+    "english": "consonant",
+    "origin": "子音",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120420/66393/SND000055096.mp3"
+  },
+  {
+    "id": 334,
+    "korean": "모음",
+    "english": "vowel",
+    "origin": "母音",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/43000/312066/SND000321420.mp3"
+  },
+  {
+    "id": 335,
+    "korean": "가벼운",
+    "english": "light (weight)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120222/31246/SND000019949.mp3"
+  },
+  {
+    "id": 336,
+    "korean": "소리",
+    "english": "sound",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95660/SND000084363.mp3"
+  },
+  {
+    "id": 337,
+    "korean": "네",
+    "english": "yes; I see; okay (formal)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85303/SND000074006.mp3"
+  },
+  {
+    "id": 338,
+    "korean": "아니요",
+    "english": "no (formal)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Interjection",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/295285/SND000304639.mp3"
+  },
+  {
+    "id": 339,
+    "korean": "조각",
+    "english": "piece",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/12000/343464/SND000352818.mp3"
+  },
+  {
+    "id": 340,
+    "korean": "아픔",
+    "english": "pain",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/327196/SND000336550.mp3"
+  },
+  {
+    "id": 341,
+    "korean": "상처",
+    "english": "wound",
+    "origin": "傷處",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120602/91998/SND000080701.mp3"
+  },
+  {
+    "id": 342,
+    "korean": "구멍",
+    "english": "hole",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120301/36170/SND000024873.mp3"
+  },
+  {
+    "id": 343,
+    "korean": "이미지",
+    "english": "image",
+    "origin": "image",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 344,
+    "korean": "패턴",
+    "english": "pattern",
+    "origin": "pattern",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": null
+  },
+  {
+    "id": 345,
+    "korean": "명사",
+    "english": "noun",
+    "origin": "名詞",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/42000/311264/SND000320618.mp3"
+  },
+  {
+    "id": 346,
+    "korean": "동사",
+    "english": "verb",
+    "origin": "動詞",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/38000/308641/SND000317995.mp3"
+  },
+  {
+    "id": 347,
+    "korean": "형용사",
+    "english": "adjective",
+    "origin": "形容詞",
+    "word_grade": "Advanced",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/03000/338777/SND000348131.mp3"
+  },
+  {
+    "id": 348,
+    "korean": "위",
+    "english": "above",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120328/52451/SND000041154.mp3"
+  },
+  {
+    "id": 349,
+    "korean": "아래",
+    "english": "under",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/48777/SND000037480.mp3"
+  },
+  {
+    "id": 350,
+    "korean": "옆",
+    "english": "side of",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120413/62043/SND000050746.mp3"
+  },
+  {
+    "id": 351,
+    "korean": "뒤",
+    "english": "back side",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/323691/SND000333045.mp3"
+  },
+  {
+    "id": 352,
+    "korean": "안",
+    "english": "inside",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120321/48528/SND000037231.mp3"
+  },
+  {
+    "id": 353,
+    "korean": "밖",
+    "english": "outside",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120103/1267/SND000000567.mp3"
+  },
+  {
+    "id": 354,
+    "korean": "왼쪽",
+    "english": "left side",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/301665/SND000311019.mp3"
+  },
+  {
+    "id": 355,
+    "korean": "오른쪽",
+    "english": "right side",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/295326/SND000304680.mp3"
+  },
+  {
+    "id": 356,
+    "korean": "곧장",
+    "english": "straight",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Adverb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120229/35677/SND000024380.mp3"
+  },
+  {
+    "id": 357,
+    "korean": "북쪽",
+    "english": "north",
+    "origin": "北쪽",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/07000/315846/SND000325200.mp3"
+  },
+  {
+    "id": 358,
+    "korean": "남쪽",
+    "english": "south",
+    "origin": "南쪽",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/31000/319923/SND000329277.mp3"
+  },
+  {
+    "id": 359,
+    "korean": "동쪽",
+    "english": "east",
+    "origin": "東쪽",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/38000/319949/SND000329303.mp3"
+  },
+  {
+    "id": 360,
+    "korean": "서쪽",
+    "english": "west",
+    "origin": "西쪽",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/321786/SND000331140.mp3"
+  },
+  {
+    "id": 361,
+    "korean": "방향",
+    "english": "direction",
+    "origin": "方向",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120105/2674/SND000001281.mp3"
+  },
+  {
+    "id": 362,
+    "korean": "여름",
+    "english": "summer",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120331/54232/SND000042935.mp3"
+  },
+  {
+    "id": 363,
+    "korean": "봄",
+    "english": "spring",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120110/5650/SND000002772.mp3"
+  },
+  {
+    "id": 364,
+    "korean": "겨울",
+    "english": "winter",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120304/37989/SND000026692.mp3"
+  },
+  {
+    "id": 365,
+    "korean": "가을",
+    "english": "autumn",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20170223/442841/SND000020336.mp3"
+  },
+  {
+    "id": 366,
+    "korean": "계절",
+    "english": "season",
+    "origin": "季節",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/43000/297520/SND000306874.mp3"
+  },
+  {
+    "id": 367,
+    "korean": "공",
+    "english": "zero; ball",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/296532/SND000305886.mp3"
+  },
+  {
+    "id": 368,
+    "korean": "하나",
+    "english": "one",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/18000/296848/SND000306202.mp3"
+  },
+  {
+    "id": 369,
+    "korean": "둘",
+    "english": "two",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/13000/303539/SND000312893.mp3"
+  },
+  {
+    "id": 370,
+    "korean": "셋",
+    "english": "three",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120613/98767/SND000087470.mp3"
+  },
+  {
+    "id": 371,
+    "korean": "넷",
+    "english": "four",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85417/SND000074120.mp3"
+  },
+  {
+    "id": 372,
+    "korean": "다섯",
+    "english": "five",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120209/23893/SND000012596.mp3"
+  },
+  {
+    "id": 373,
+    "korean": "여섯",
+    "english": "six",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120331/54270/SND000042973.mp3"
+  },
+  {
+    "id": 374,
+    "korean": "일곱",
+    "english": "seven",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/326793/SND000336147.mp3"
+  },
+  {
+    "id": 375,
+    "korean": "여덟",
+    "english": "eight",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120330/53545/SND000042248.mp3"
+  },
+  {
+    "id": 376,
+    "korean": "아홉",
+    "english": "nine",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/340741/SND000350095.mp3"
+  },
+  {
+    "id": 377,
+    "korean": "열",
+    "english": "ten",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/323986/SND000333340.mp3"
+  },
+  {
+    "id": 387,
+    "korean": "스물",
+    "english": "twenty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/93613/SND000082316.mp3"
+  },
+  {
+    "id": 390,
+    "korean": "서른",
+    "english": "thirty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/302701/SND000312055.mp3"
+  },
+  {
+    "id": 393,
+    "korean": "마흔",
+    "english": "forty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/340743/SND000350097.mp3"
+  },
+  {
+    "id": 396,
+    "korean": "쉰",
+    "english": "fifty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/321499/SND000330853.mp3"
+  },
+  {
+    "id": 399,
+    "korean": "예순",
+    "english": "sixty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/314683/SND000324037.mp3"
+  },
+  {
+    "id": 402,
+    "korean": "여든",
+    "english": "eighty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/323891/SND000333245.mp3"
+  },
+  {
+    "id": 405,
+    "korean": "아흔",
+    "english": "ninety",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/340224/SND000349578.mp3"
+  },
+  {
+    "id": 408,
+    "korean": "백",
+    "english": "one hundred",
+    "origin": "百",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/303916/SND000313270.mp3"
+  },
+  {
+    "id": 413,
+    "korean": "천",
+    "english": "one thousand",
+    "origin": "千",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/10000/295271/SND000304625.mp3"
+  },
+  {
+    "id": 415,
+    "korean": "만",
+    "english": "ten thousand",
+    "origin": "萬",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/41000/320998/SND000330352.mp3"
+  },
+  {
+    "id": 416,
+    "korean": "십만",
+    "english": "one hundred thousand",
+    "origin": "十萬",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/07000/301341/SND000310695.mp3"
+  },
+  {
+    "id": 417,
+    "korean": "백만",
+    "english": "one million",
+    "origin": "百萬",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/303915/SND000313269.mp3"
+  },
+  {
+    "id": 418,
+    "korean": "천만",
+    "english": "ten million",
+    "origin": "千萬",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/10000/332253/SND000341607.mp3"
+  },
+  {
+    "id": 419,
+    "korean": "억",
+    "english": "one hundred million",
+    "origin": "億",
+    "word_grade": "Beginner",
+    "pos": "Numeral",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/26000/323342/SND000332696.mp3"
+  },
+  {
+    "id": 421,
+    "korean": "첫째",
+    "english": "first",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120628/107407/SND000105739.mp3"
+  },
+  {
+    "id": 422,
+    "korean": "둘째",
+    "english": "second",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120212/25444/SND000014147.mp3"
+  },
+  {
+    "id": 423,
+    "korean": "셋째",
+    "english": "third",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120613/98768/SND000087471.mp3"
+  },
+  {
+    "id": 424,
+    "korean": "넷째",
+    "english": "fourth",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85418/SND000074121.mp3"
+  },
+  {
+    "id": 425,
+    "korean": "다섯째",
+    "english": "fifth",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120209/23894/SND000012597.mp3"
+  },
+  {
+    "id": 426,
+    "korean": "번호",
+    "english": "number",
+    "origin": "番號",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/302652/SND000312006.mp3"
+  },
+  {
+    "id": 427,
+    "korean": "일월",
+    "english": "January",
+    "origin": "一月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51017/SND000039720.mp3"
+  },
+  {
+    "id": 428,
+    "korean": "이월",
+    "english": "February",
+    "origin": "二月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/25000/300197/SND000309551.mp3"
+  },
+  {
+    "id": 429,
+    "korean": "삼월",
+    "english": "March",
+    "origin": "三月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120601/91751/SND000080454.mp3"
+  },
+  {
+    "id": 430,
+    "korean": "사월",
+    "english": "April",
+    "origin": "四月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/08000/296837/SND000306191.mp3"
+  },
+  {
+    "id": 431,
+    "korean": "오월",
+    "english": "May",
+    "origin": "五月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/318930/SND000328284.mp3"
+  },
+  {
+    "id": 432,
+    "korean": "유월",
+    "english": "June",
+    "origin": "六▽月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120401/55084/SND000043787.mp3"
+  },
+  {
+    "id": 433,
+    "korean": "칠월",
+    "english": "July",
+    "origin": "七月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120201/19106/SND000009496.mp3"
+  },
+  {
+    "id": 434,
+    "korean": "팔월",
+    "english": "August",
+    "origin": "八月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/01000/301664/SND000311018.mp3"
+  },
+  {
+    "id": 435,
+    "korean": "구월",
+    "english": "September",
+    "origin": "九月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120301/36513/SND000025216.mp3"
+  },
+  {
+    "id": 436,
+    "korean": "시월",
+    "english": "October",
+    "origin": "十▽月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120607/94916/SND000083619.mp3"
+  },
+  {
+    "id": 437,
+    "korean": "십일월",
+    "english": "November",
+    "origin": "十一月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/93933/SND000082636.mp3"
+  },
+  {
+    "id": 438,
+    "korean": "십이월",
+    "english": "December",
+    "origin": "十二月",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120605/93934/SND000082637.mp3"
+  },
+  {
+    "id": 439,
+    "korean": "월요일",
+    "english": "Monday",
+    "origin": "月曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120329/52885/SND000041588.mp3"
+  },
+  {
+    "id": 440,
+    "korean": "화요일",
+    "english": "Tuesday",
+    "origin": "火曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/03000/328856/SND000338210.mp3"
+  },
+  {
+    "id": 441,
+    "korean": "수요일",
+    "english": "Wednesday",
+    "origin": "水曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/06000/301046/SND000310400.mp3"
+  },
+  {
+    "id": 442,
+    "korean": "목요일",
+    "english": "Thursday",
+    "origin": "木曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120510/78168/SND000066871.mp3"
+  },
+  {
+    "id": 443,
+    "korean": "금요일",
+    "english": "Friday",
+    "origin": "金曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120309/40843/SND000029546.mp3"
+  },
+  {
+    "id": 444,
+    "korean": "토요일",
+    "english": "Saturday",
+    "origin": "土曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/01000/301684/SND000311038.mp3"
+  },
+  {
+    "id": 445,
+    "korean": "일요일",
+    "english": "Sunday",
+    "origin": "日曜日",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51027/SND000039730.mp3"
+  },
+  {
+    "id": 446,
+    "korean": "년",
+    "english": "year (counter)",
+    "origin": "年",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120523/86303/SND000075006.mp3"
+  },
+  {
+    "id": 447,
+    "korean": "달",
+    "english": "month (counter)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/316842/SND000326196.mp3"
+  },
+  {
+    "id": 448,
+    "korean": "시간",
+    "english": "hour (duration); time",
+    "origin": "時間",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/06000/319246/SND000328600.mp3"
+  },
+  {
+    "id": 449,
+    "korean": "분",
+    "english": "minute; person (honorific)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Dependent noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120113/7759/SND000003792.mp3"
+  },
+  {
+    "id": 450,
+    "korean": "밤",
+    "english": "night",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120104/1989/SND000000893.mp3"
+  },
+  {
+    "id": 451,
+    "korean": "일하다",
+    "english": "to work",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/313819/SND000323173.mp3"
+  },
+  {
+    "id": 452,
+    "korean": "놀다",
+    "english": "to play",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/340753/SND000350107.mp3"
+  },
+  {
+    "id": 453,
+    "korean": "걷다",
+    "english": "to walk",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/301417/SND000310771.mp3"
+  },
+  {
+    "id": 454,
+    "korean": "뛰다",
+    "english": "to run",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/329519/SND000338873.mp3"
+  },
+  {
+    "id": 455,
+    "korean": "운전하다",
+    "english": "to drive",
+    "origin": "運轉하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120408/59221/SND000047924.mp3"
+  },
+  {
+    "id": 456,
+    "korean": "날다",
+    "english": "to fly",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120521/84828/SND000073531.mp3"
+  },
+  {
+    "id": 457,
+    "korean": "수영하다",
+    "english": "to swim",
+    "origin": "水泳하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/06000/320976/SND000330330.mp3"
+  },
+  {
+    "id": 458,
+    "korean": "가다",
+    "english": "to go",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/301272/SND000310626.mp3"
+  },
+  {
+    "id": 459,
+    "korean": "멈추다",
+    "english": "to stop",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120509/77467/SND000066170.mp3"
+  },
+  {
+    "id": 460,
+    "korean": "따르다",
+    "english": "to follow",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120213/26021/SND000014724.mp3"
+  },
+  {
+    "id": 461,
+    "korean": "생각하다",
+    "english": "to think",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120531/91123/SND000079826.mp3"
+  },
+  {
+    "id": 462,
+    "korean": "말하다",
+    "english": "to speak",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/318439/SND000327793.mp3"
+  },
+  {
+    "id": 463,
+    "korean": "먹다",
+    "english": "to eat",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/294903/SND000304257.mp3"
+  },
+  {
+    "id": 464,
+    "korean": "마시다",
+    "english": "to drink",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120517/82279/SND000070982.mp3"
+  },
+  {
+    "id": 465,
+    "korean": "죽이다",
+    "english": "to kill",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/68275/SND000056978.mp3"
+  },
+  {
+    "id": 466,
+    "korean": "죽다",
+    "english": "to die",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/68314/SND000057017.mp3"
+  },
+  {
+    "id": 467,
+    "korean": "웃다",
+    "english": "to laugh; smile",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120327/52141/SND000040844.mp3"
+  },
+  {
+    "id": 468,
+    "korean": "울다",
+    "english": "to cry",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120327/51910/SND000040613.mp3"
+  },
+  {
+    "id": 469,
+    "korean": "사다",
+    "english": "to buy",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120531/90954/SND000079657.mp3"
+  },
+  {
+    "id": 470,
+    "korean": "지불하다",
+    "english": "to pay",
+    "origin": "支拂하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/09000/300668/SND000310022.mp3"
+  },
+  {
+    "id": 471,
+    "korean": "팔다",
+    "english": "to sell",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120528/89219/SND000077922.mp3"
+  },
+  {
+    "id": 472,
+    "korean": "쏘다",
+    "english": "to shoot",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/318989/SND000328343.mp3"
+  },
+  {
+    "id": 473,
+    "korean": "배우다",
+    "english": "to learn",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120103/1238/SND000000538.mp3"
+  },
+  {
+    "id": 474,
+    "korean": "점프하다",
+    "english": "to jump",
+    "origin": "jump하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": null
+  },
+  {
+    "id": 475,
+    "korean": "듣다",
+    "english": "to listen; hear",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/310308/SND000319662.mp3"
+  },
+  {
+    "id": 476,
+    "korean": "맛보다",
+    "english": "to taste",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120508/77337/SND000066040.mp3"
+  },
+  {
+    "id": 477,
+    "korean": "보다",
+    "english": "to see",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/317511/SND000326865.mp3"
+  },
+  {
+    "id": 478,
+    "korean": "만지다",
+    "english": "to touch",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/317478/SND000326832.mp3"
+  },
+  {
+    "id": 479,
+    "korean": "뽀뽀하다",
+    "english": "to kiss",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/317496/SND000326850.mp3"
+  },
+  {
+    "id": 480,
+    "korean": "불타다",
+    "english": "to burn",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/317326/SND000326680.mp3"
+  },
+  {
+    "id": 481,
+    "korean": "녹다",
+    "english": "to melt",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85746/SND000074449.mp3"
+  },
+  {
+    "id": 482,
+    "korean": "파다",
+    "english": "to dig",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/38000/335421/SND000344775.mp3"
+  },
+  {
+    "id": 483,
+    "korean": "폭발하다",
+    "english": "to explode",
+    "origin": "暴發하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120529/89778/SND000078481.mp3"
+  },
+  {
+    "id": 484,
+    "korean": "앉다",
+    "english": "to sit",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120405/57189/SND000045892.mp3"
+  },
+  {
+    "id": 485,
+    "korean": "서다",
+    "english": "to stand",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120603/92791/SND000081494.mp3"
+  },
+  {
+    "id": 486,
+    "korean": "사랑하다",
+    "english": "to love",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/319149/SND000328503.mp3"
+  },
+  {
+    "id": 487,
+    "korean": "지나가다",
+    "english": "to pass by",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67764/SND000056467.mp3"
+  },
+  {
+    "id": 488,
+    "korean": "자르다",
+    "english": "to cut (hair/trees/papers...)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120421/66731/SND000055434.mp3"
+  },
+  {
+    "id": 489,
+    "korean": "싸우다",
+    "english": "to fight",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95849/SND000084552.mp3"
+  },
+  {
+    "id": 490,
+    "korean": "눕다",
+    "english": "to lie down",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/318386/SND000327740.mp3"
+  },
+  {
+    "id": 491,
+    "korean": "춤추다",
+    "english": "to dance",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/37000/328020/SND000337374.mp3"
+  },
+  {
+    "id": 492,
+    "korean": "자다",
+    "english": "to sleep",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120420/66288/SND000054991.mp3"
+  },
+  {
+    "id": 493,
+    "korean": "깨다",
+    "english": "to wake up",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/13000/318701/SND000328055.mp3"
+  },
+  {
+    "id": 494,
+    "korean": "노래하다",
+    "english": "to sing",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/23000/320846/SND000330200.mp3"
+  },
+  {
+    "id": 495,
+    "korean": "세다",
+    "english": "to count",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120612/98036/SND000086739.mp3"
+  },
+  {
+    "id": 496,
+    "korean": "결혼하다",
+    "english": "to marry",
+    "origin": "結婚하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120303/37472/SND000026175.mp3"
+  },
+  {
+    "id": 497,
+    "korean": "기도하다",
+    "english": "to pray",
+    "origin": "企圖하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/45000/303100/SND000312454.mp3"
+  },
+  {
+    "id": 498,
+    "korean": "이기다",
+    "english": "to win",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120324/50152/SND000038855.mp3"
+  },
+  {
+    "id": 499,
+    "korean": "지다",
+    "english": "to lose",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/26000/319907/SND000329261.mp3"
+  },
+  {
+    "id": 500,
+    "korean": "섞다",
+    "english": "to mix",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120603/92889/SND000081592.mp3"
+  },
+  {
+    "id": 501,
+    "korean": "구부리다",
+    "english": "to bend",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120229/35854/SND000024557.mp3"
+  },
+  {
+    "id": 502,
+    "korean": "씻다",
+    "english": "to wash",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95977/SND000084680.mp3"
+  },
+  {
+    "id": 503,
+    "korean": "요리하다",
+    "english": "to cook",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/13000/341720/SND000351074.mp3"
+  },
+  {
+    "id": 504,
+    "korean": "열다",
+    "english": "to open",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/322680/SND000332034.mp3"
+  },
+  {
+    "id": 505,
+    "korean": "닫다",
+    "english": "to close",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120219/29615/SND000018318.mp3"
+  },
+  {
+    "id": 506,
+    "korean": "쓰다",
+    "english": "to write",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95880/SND000084583.mp3"
+  },
+  {
+    "id": 507,
+    "korean": "부르다",
+    "english": "to call",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120114/8216/SND000004051.mp3"
+  },
+  {
+    "id": 508,
+    "korean": "돌다",
+    "english": "to turn",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/330198/SND000339552.mp3"
+  },
+  {
+    "id": 509,
+    "korean": "건설하다",
+    "english": "to construct or erect",
+    "origin": "建設하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/294815/SND000304169.mp3"
+  },
+  {
+    "id": 510,
+    "korean": "가르치다",
+    "english": "to teach",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20170223/442957/SND000021280.mp3"
+  },
+  {
+    "id": 511,
+    "korean": "자라다",
+    "english": "to grow up",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120421/66724/SND000055427.mp3"
+  },
+  {
+    "id": 512,
+    "korean": "그리다",
+    "english": "to draw",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/313793/SND000323147.mp3"
+  },
+  {
+    "id": 513,
+    "korean": "먹이다",
+    "english": "to feed",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120517/82548/SND000071251.mp3"
+  },
+  {
+    "id": 514,
+    "korean": "잡다",
+    "english": "to catch",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120421/66719/SND000055422.mp3"
+  },
+  {
+    "id": 515,
+    "korean": "던지다",
+    "english": "to throw",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120210/24060/SND000012763.mp3"
+  },
+  {
+    "id": 516,
+    "korean": "청소하다",
+    "english": "to clean",
+    "origin": "淸掃하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/10000/303220/SND000312574.mp3"
+  },
+  {
+    "id": 517,
+    "korean": "찾다",
+    "english": "to find; look for",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120131/18483/SND000009170.mp3"
+  },
+  {
+    "id": 518,
+    "korean": "넘어지다",
+    "english": "to fall down",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85369/SND000074072.mp3"
+  },
+  {
+    "id": 519,
+    "korean": "밀다",
+    "english": "to push",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/329551/SND000338905.mp3"
+  },
+  {
+    "id": 520,
+    "korean": "당기다",
+    "english": "to pull",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120209/23630/SND000012333.mp3"
+  },
+  {
+    "id": 521,
+    "korean": "들다",
+    "english": "to carry; wear",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/327601/SND000336955.mp3"
+  },
+  {
+    "id": 522,
+    "korean": "망가지다",
+    "english": "to break down",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/310611/SND000319965.mp3"
+  },
+  {
+    "id": 523,
+    "korean": "깨지다",
+    "english": "to break",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/338623/SND000347977.mp3"
+  },
+  {
+    "id": 524,
+    "korean": "입다",
+    "english": "to wear",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120408/58943/SND000047646.mp3"
+  },
+  {
+    "id": 525,
+    "korean": "흔들다",
+    "english": "to shake",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120315/44634/SND000033337.mp3"
+  },
+  {
+    "id": 526,
+    "korean": "서명하다",
+    "english": "to sign (signature)",
+    "origin": "署名하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/04000/295057/SND000304411.mp3"
+  },
+  {
+    "id": 527,
+    "korean": "패다",
+    "english": "to beat; bash",
+    "origin": "Pure Korean",
+    "word_grade": "Advanced",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/38000/334567/SND000343921.mp3"
+  },
+  {
+    "id": 528,
+    "korean": "길다",
+    "english": "to be long",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/307836/SND000317190.mp3"
+  },
+  {
+    "id": 529,
+    "korean": "짧다",
+    "english": "to be short",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120423/67943/SND000056646.mp3"
+  },
+  {
+    "id": 530,
+    "korean": "크다",
+    "english": "to be tall (height)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120506/75810/SND000064513.mp3"
+  },
+  {
+    "id": 531,
+    "korean": "작다",
+    "english": "to be short (height)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/325768/SND000335122.mp3"
+  },
+  {
+    "id": 532,
+    "korean": "넓다",
+    "english": "to be wide",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85358/SND000074061.mp3"
+  },
+  {
+    "id": 533,
+    "korean": "크다",
+    "english": "to be big",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120506/75810/SND000064513.mp3"
+  },
+  {
+    "id": 534,
+    "korean": "작다",
+    "english": "to be small",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/325768/SND000335122.mp3"
+  },
+  {
+    "id": 535,
+    "korean": "느리다",
+    "english": "to be slow",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120526/87614/SND000076317.mp3"
+  },
+  {
+    "id": 536,
+    "korean": "빠르다",
+    "english": "to be fast",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120116/9383/SND000004624.mp3"
+  },
+  {
+    "id": 537,
+    "korean": "뜨겁다",
+    "english": "to be hot",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120213/26181/SND000014884.mp3"
+  },
+  {
+    "id": 538,
+    "korean": "차갑다",
+    "english": "to be cold",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120203/20042/SND000009937.mp3"
+  },
+  {
+    "id": 539,
+    "korean": "따뜻하다",
+    "english": "to be warm",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/19000/313810/SND000323164.mp3"
+  },
+  {
+    "id": 540,
+    "korean": "선선하다",
+    "english": "to be cool",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120613/98701/SND000087404.mp3"
+  },
+  {
+    "id": 541,
+    "korean": "새롭다",
+    "english": "to be new",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120601/91322/SND000080025.mp3"
+  },
+  {
+    "id": 542,
+    "korean": "오래되다",
+    "english": "to be old (for inanimate objects)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120326/51556/SND000040259.mp3"
+  },
+  {
+    "id": 543,
+    "korean": "젊다",
+    "english": "to be young; youthful",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/26000/330874/SND000340228.mp3"
+  },
+  {
+    "id": 544,
+    "korean": "늙다",
+    "english": "to be old (person)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85440/SND000074143.mp3"
+  },
+  {
+    "id": 545,
+    "korean": "좋다",
+    "english": "to be good",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/26000/333334/SND000342688.mp3"
+  },
+  {
+    "id": 546,
+    "korean": "나쁘다",
+    "english": "to be bad",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120521/85189/SND000073892.mp3"
+  },
+  {
+    "id": 547,
+    "korean": "젖다",
+    "english": "to be wet; damp",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120422/67461/SND000056164.mp3"
+  },
+  {
+    "id": 548,
+    "korean": "건조하다",
+    "english": "to be dry",
+    "origin": "建造하다",
+    "word_grade": "Other",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/299091/SND000308445.mp3"
+  },
+  {
+    "id": 549,
+    "korean": "아프다",
+    "english": "to be sick; hurt",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/48717/SND000037420.mp3"
+  },
+  {
+    "id": 550,
+    "korean": "건강하다",
+    "english": "to be healthy",
+    "origin": "健康하다",
+    "word_grade": "Other",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/40000/34000/295349/SND000304703.mp3"
+  },
+  {
+    "id": 551,
+    "korean": "시끄럽다",
+    "english": "to be noisy; loud",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/294869/SND000304223.mp3"
+  },
+  {
+    "id": 552,
+    "korean": "조용하다",
+    "english": "to be quiet",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/26000/314713/SND000324067.mp3"
+  },
+  {
+    "id": 553,
+    "korean": "행복하다",
+    "english": "to be happy",
+    "origin": "幸福하다",
+    "word_grade": "Other",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120318/46559/SND000035262.mp3"
+  },
+  {
+    "id": 554,
+    "korean": "슬프다",
+    "english": "to be sad",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120613/98781/SND000087484.mp3"
+  },
+  {
+    "id": 555,
+    "korean": "아름답다",
+    "english": "to be beautiful",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/327228/SND000336582.mp3"
+  },
+  {
+    "id": 556,
+    "korean": "못생기다",
+    "english": "to be ugly",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120510/78475/SND000067178.mp3"
+  },
+  {
+    "id": 557,
+    "korean": "귀머거리",
+    "english": "deaf person",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/305050/SND000314404.mp3"
+  },
+  {
+    "id": 558,
+    "korean": "맹인",
+    "english": "blind person",
+    "origin": "盲人",
+    "word_grade": "Other",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120508/76819/SND000065522.mp3"
+  },
+  {
+    "id": 559,
+    "korean": "착하다",
+    "english": "to be nice; kind",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120131/18251/SND000009037.mp3"
+  },
+  {
+    "id": 560,
+    "korean": "가난하다",
+    "english": "to be poor",
+    "origin": "Pure Korean",
+    "word_grade": "Other",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/318889/SND000328243.mp3"
+  },
+  {
+    "id": 561,
+    "korean": "부유하다",
+    "english": "to be wealthy",
+    "origin": "富裕하다",
+    "word_grade": "Advanced",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120111/6567/SND000003194.mp3"
+  },
+  {
+    "id": 562,
+    "korean": "두껍다",
+    "english": "to be thick",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120212/25441/SND000014144.mp3"
+  },
+  {
+    "id": 563,
+    "korean": "얇다",
+    "english": "to be thin",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/13000/341834/SND000351188.mp3"
+  },
+  {
+    "id": 564,
+    "korean": "비싸다",
+    "english": "to be expensive",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120109/4843/SND000002361.mp3"
+  },
+  {
+    "id": 565,
+    "korean": "싸다",
+    "english": "to be cheap",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120608/95737/SND000084440.mp3"
+  },
+  {
+    "id": 566,
+    "korean": "평탄하다",
+    "english": "to be smooth; flat",
+    "origin": "平坦하다",
+    "word_grade": "Other",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/02000/336274/SND000345628.mp3"
+  },
+  {
+    "id": 567,
+    "korean": "끼다",
+    "english": "to put on; wear (a ring)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120305/38658/SND000027361.mp3"
+  },
+  {
+    "id": 568,
+    "korean": "헐렁하다",
+    "english": "to be loose; baggy",
+    "origin": "Pure Korean",
+    "word_grade": "Advanced",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/18000/339020/SND000348374.mp3"
+  },
+  {
+    "id": 569,
+    "korean": "높다",
+    "english": "to be high",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120523/85965/SND000074668.mp3"
+  },
+  {
+    "id": 570,
+    "korean": "낮다",
+    "english": "to be low",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85277/SND000073980.mp3"
+  },
+  {
+    "id": 571,
+    "korean": "딱딱하다",
+    "english": "to be hard",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120221/30892/SND000019595.mp3"
+  },
+  {
+    "id": 572,
+    "korean": "부드럽다",
+    "english": "to be soft",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120112/6612/SND000003239.mp3"
+  },
+  {
+    "id": 573,
+    "korean": "깊다",
+    "english": "to be deep",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120227/34414/SND000023117.mp3"
+  },
+  {
+    "id": 574,
+    "korean": "얕다",
+    "english": "to be shallow",
+    "origin": "Pure Korean",
+    "word_grade": "Intermediate",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120329/53333/SND000042036.mp3"
+  },
+  {
+    "id": 575,
+    "korean": "깨끗하다",
+    "english": "to be clean",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120304/38359/SND000027062.mp3"
+  },
+  {
+    "id": 576,
+    "korean": "더럽다",
+    "english": "to be dirty",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120209/23960/SND000012663.mp3"
+  },
+  {
+    "id": 577,
+    "korean": "세다",
+    "english": "to be strong",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120612/98036/SND000086739.mp3"
+  },
+  {
+    "id": 578,
+    "korean": "약하다",
+    "english": "to be weak",
+    "origin": "弱하다",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120329/53000/SND000041703.mp3"
+  },
+  {
+    "id": 579,
+    "korean": "살다",
+    "english": "to live",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/20000/325826/SND000335180.mp3"
+  },
+  {
+    "id": 580,
+    "korean": "무겁다",
+    "english": "to be heavy",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120511/78641/SND000067344.mp3"
+  },
+  {
+    "id": 581,
+    "korean": "가볍다",
+    "english": "to be light",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120222/31246/SND000019949.mp3"
+  },
+  {
+    "id": 582,
+    "korean": "어둡다",
+    "english": "to be dark",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Adjective",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120322/48977/SND000037680.mp3"
+  },
+  {
+    "id": 583,
+    "korean": "밝다",
+    "english": "to be bright",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Verb",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120103/1424/SND000000625.mp3"
+  },
+  {
+    "id": 584,
+    "korean": "저",
+    "english": "I; me (formal); that",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/21000/327175/SND000336529.mp3"
+  },
+  {
+    "id": 585,
+    "korean": "나",
+    "english": "I; me (informal)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/20000/16000/318550/SND000327904.mp3"
+  },
+  {
+    "id": 586,
+    "korean": "그",
+    "english": "that; he; she; it",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/30000/22000/307837/SND000317191.mp3"
+  },
+  {
+    "id": 587,
+    "korean": "우리",
+    "english": "we; our",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120327/52094/SND000040797.mp3"
+  },
+  {
+    "id": 588,
+    "korean": "상대방",
+    "english": "other party; counterpart",
+    "origin": "相對方",
+    "word_grade": "Intermediate",
+    "pos": "Noun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/10000/08000/327074/SND000336428.mp3"
+  },
+  {
+    "id": 589,
+    "korean": "제",
+    "english": "I; my (formal)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20160913/50000/44000/330916/SND000340270.mp3"
+  },
+  {
+    "id": 590,
+    "korean": "내",
+    "english": "I; my (informal)",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120524/86628/SND000075331.mp3"
+  },
+  {
+    "id": 591,
+    "korean": "당신",
+    "english": "you (formal)",
+    "origin": "當身",
+    "word_grade": "Intermediate",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120209/23698/SND000012401.mp3"
+  },
+  {
+    "id": 593,
+    "korean": "너",
+    "english": "you",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85315/SND000074018.mp3"
+  },
+  {
+    "id": 594,
+    "korean": "너희",
+    "english": "you (plural); (all of) you",
+    "origin": "Pure Korean",
+    "word_grade": "Beginner",
+    "pos": "Pronoun",
+    "url": "https://krdicmedia.korean.go.kr/multimedia/multimedia_files/convert/20120522/85330/SND000074033.mp3"
+  }
+]
