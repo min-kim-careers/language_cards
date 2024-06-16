@@ -7,5 +7,7 @@ export default function Layout() {
     storeAllData();
   }, []);
 
-  return <Stack screenOptions={{ title: 'Swish Cards',  }} />;
+  return (
+      <Stack screenOptions={{ title: 'Swish Cards' }} />
+  );
 }
