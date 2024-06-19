@@ -1,10 +1,18 @@
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { ActivityIndicator, Button, Portal, Snackbar, Text, TextInput } from 'react-native-paper';
+import {
+  ActivityIndicator,
+  Button,
+  Portal,
+  Snackbar,
+  Text,
+  TextInput,
+} from 'react-native-paper';
 import { useSession } from '../components/SessionProvider';
 import Signup from '../components/SignUpModal';
 import { firebaseApp } from '../services/firebase';
+import Header from '../components/Header';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -50,6 +58,10 @@ const SignIn = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.title}>
+        <Header isTitle={true} />
+      </View>
+
       <View style={styles.header}>
         <Text variant="titleLarge">Sign In</Text>
       </View>
@@ -72,8 +84,12 @@ const SignIn = () => {
         <Button>Forgot password?</Button>
       </View> */}
 
-      <View style={styles.loginButton}>
-        <Button mode="elevated" onPress={handleLoginButton}>
+      <View style={styles.loginButtonContainer}>
+        <Button
+          labelStyle={{ color: 'black' }}
+          mode="elevated"
+          onPress={handleLoginButton}
+        >
           Login
         </Button>
       </View>
@@ -87,7 +103,7 @@ const SignIn = () => {
           mode="contained-tonal"
           onPress={() => setIsSignupModalVisible(true)}
         >
-          {isLoading ? <ActivityIndicator/> : 'Sign Up'}
+          {isLoading ? <ActivityIndicator /> : 'Sign Up'}
         </Button>
       </View>
       <Signup
@@ -111,6 +127,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#f2f2f2',
   },
+  title: {
+    margin: 10,
+  },
   header: {
     margin: 30,
   },
@@ -120,7 +139,7 @@ const styles = StyleSheet.create({
   forgot: {
     marginTop: 15,
   },
-  loginButton: {
+  loginButtonContainer: {
     margin: 15,
   },
   hint: {

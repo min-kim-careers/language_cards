@@ -14,14 +14,14 @@ export default function AppLayout() {
       <Stack.Screen
         name="(tabs)"
         options={{
-          headerTitle: (props) => <Header {...props} />,
+          headerTitle: () => <Header  />,
           headerTitleAlign: 'center',
         }}
       />
       <Stack.Screen
         name="swish"
         options={{
-          headerTitle: (props) => <Header {...props} />,
+          headerTitle: () => <Header />,
           headerTitleAlign: 'center',
         }}
       />
