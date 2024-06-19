@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "swish-cards-expo",
+    "name": "Swish Cards",
     "slug": "swish-cards-expo",
     "scheme": "swish-cards-expo",
     "version": "1.0.0",
@@ -22,7 +22,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
+      "favicon": "./assets/flash-cards.png",
       "bundler": "metro"
     },
     "plugins": [
