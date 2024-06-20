@@ -1,15 +1,14 @@
-import { useLocalSearchParams } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import Swiper from 'react-native-deck-swiper';
-import Fallback from '../../components/Fallback';
-import SwishCard from '../../components/SwishCard';
-import { router } from 'expo-router';
-import { getOrderedWords, getShuffledWords } from '../../database/db.config';
-import { DisplayOrder, ELEMENT_WIDTH, Word } from '../../global';
-import { useSettings } from '../../components/SettingsProvider';
 import { StyleSheet, View } from 'react-native';
-import { Card, Divider, Portal, Text } from 'react-native-paper';
+import Swiper from 'react-native-deck-swiper';
+import { Text } from 'react-native-paper';
 import TipBanner from '../../components/Banner';
+import Fallback from '../../components/Fallback';
+import { useSettings } from '../../components/SettingsProvider';
+import SwishCard from '../../components/SwishCard';
+import { getOrderedWords, getShuffledWords } from '../../database/db.config';
+import { DisplayOrder, Word } from '../../global';
 
 const generateRandomBooleans = (wordCount: number) =>
   Array.from({ length: wordCount }, () => Math.random() >= 0.5);
@@ -47,7 +46,7 @@ const SwishScreen = () => {
     initWords();
   }, []);
 
-  if (!words.length) return <Fallback />;
+  if (!words.length) return <Fallback duration={3000} />;
 
   return (
     <View>

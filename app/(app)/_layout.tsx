@@ -1,13 +1,25 @@
-import { Redirect, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 
+import SignIn from '../../components/auth/SignIn';
 import Header from '../../components/Header';
-import { useSession } from '../../components/SessionProvider';
-import Fallback from '../../components/Fallback';
+import { useEffect, useState } from 'react';
+import { Session } from '@supabase/supabase-js';
+import { supabase } from '../../services/supabase';
 
 export default function AppLayout() {
-  const { session } = useSession();
+  const [session, setSession] = useState<Session | null>(null)
 
-  if (!session) return <Redirect href="/signin" />;
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+    })
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+  }, [])
+
+  if (!session) return <SignIn />
 
   return (
     <Stack>

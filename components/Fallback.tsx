@@ -2,17 +2,17 @@ import { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 
-const DURATION = 30000;
-
-const Fallback = () => {
+const Fallback = ({ duration = 0 }: { duration?: number }) => {
   const [timedOut, setTimedOut] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setTimedOut(true), DURATION);
-    return () => clearTimeout(timeout);
+    if (duration) {
+      const timeout = setTimeout(() => setTimedOut(true), duration);
+      return () => clearTimeout(timeout);
+    }
   }, []);
 
-  return timedOut ? (
+  return duration && timedOut ? (
     <View style={styles.container}>
       <Text>Nothing to display...</Text>
     </View>

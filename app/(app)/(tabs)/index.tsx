@@ -17,7 +17,7 @@ const HomeScreen = () => {
     getCollections();
   }, []);
 
-  if (!collectionNames.length) return <Fallback />;
+  if (!collectionNames.length) return <Fallback duration={3000} />;
 
   return (
     <View style={styles.container}>

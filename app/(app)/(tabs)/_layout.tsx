@@ -12,7 +12,7 @@ export default function TabLayout() {
     setLoading(false);
   }, []);
 
-  if (loading) return <Fallback />
+  if (loading) return <Fallback />;
 
   return (
     <Tabs
@@ -27,6 +27,16 @@ export default function TabLayout() {
           title: 'H O M E',
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="home" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="favourites"
+        options={{
+          headerShown: false,
+          title: 'F A V O U R I T E',
+          tabBarIcon: ({ color }) => (
+            <FontAwesome size={28} name="star" color={color} />
           ),
         }}
       />

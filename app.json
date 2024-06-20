@@ -22,7 +22,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/flash-cards.png",
+      "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
     "plugins": [

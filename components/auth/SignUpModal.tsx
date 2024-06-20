@@ -1,13 +1,8 @@
 import { Entypo } from '@expo/vector-icons';
-import {
-  AuthErrorCodes,
-  createUserWithEmailAndPassword,
-  getAuth,
-} from 'firebase/auth';
 import React, { useState } from 'react';
 import { Modal, StyleSheet, View } from 'react-native';
-import { Button, Portal, Snackbar, Text, TextInput } from 'react-native-paper';
-import { firebaseApp } from '../services/firebase';
+import { Button, Snackbar, Text, TextInput } from 'react-native-paper';
+import { supabase } from '../../services/supabase';
 
 const Signup = ({
   isVisible,
@@ -19,11 +14,23 @@ const Signup = ({
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [toast, setToast] = useState<string>('');
+  const [loading, setLoading] = useState(false);
 
-  // initialised auth instance
-  const auth = getAuth(firebaseApp);
+  async function signUpWithEmail() {
+    setLoading(true);
+    const {
+      data: { session },
+      error,
+    } = await supabase.auth.signUp({
+      email: email,
+      password: password,
+    });
 
-  // handle form submit
+    if (error) setToast(error.message);
+    if (!session) setToast('Please check your inbox for email verification!');
+    setLoading(false);
+  }
+
   // @ts-ignore
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,22 +40,9 @@ const Signup = ({
 
     if (!_email || !_password) {
       setToast('Please fill in all required fields.');
-      return;
+    } else {
+      signUpWithEmail();
     }
-
-    createUserWithEmailAndPassword(auth, _email, _password)
-      .then((userCredential) => {
-        console.log('Created user:', userCredential.user);
-      })
-      .catch((err) => {
-        if (err.code === AuthErrorCodes.WEAK_PASSWORD) {
-          setToast('The password is too weak.');
-        } else if (err.code === AuthErrorCodes.EMAIL_EXISTS) {
-          setToast('The email address is already in use.');
-        } else {
-          setToast(err.code);
-        }
-      });
   };
 
   return (
@@ -76,7 +70,12 @@ const Signup = ({
         </View>
 
         <View style={styles.loginButton}>
-          <Button mode="elevated" onPress={handleSubmit}>
+          <Button
+            labelStyle={{ color: 'black' }}
+            mode="elevated"
+            onPress={handleSubmit}
+            disabled={loading}
+          >
             Create Account
           </Button>
         </View>
@@ -86,7 +85,7 @@ const Signup = ({
         </View>
 
         <View style={styles.signupButton}>
-          <Button mode="contained-tonal" onPress={onClose}>
+          <Button mode="contained-tonal" onPress={onClose} disabled={loading}>
             Sign in
           </Button>
         </View>

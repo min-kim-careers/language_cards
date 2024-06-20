@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FlipCard from 'react-native-flip-card';
-import { Card, Text } from 'react-native-paper';
+import { Card, Text, TextInput } from 'react-native-paper';
 import { ELEMENT_WIDTH, Word } from '../global';
 import AudioPlayer from './AudioPlayer';
+import { AntDesign } from '@expo/vector-icons';
 
 interface CardProps {
   cardIndex: number;
@@ -69,6 +70,18 @@ const CardSide = ({
   isFront,
   englishFirst,
 }: CardSideProps) => {
+  const [input, setInput] = useState('');
+  const [correct, setCorrect] = useState(false);
+
+  const handleTextInput = (e: string) => {
+    if (e === (englishFirst ? word.korean : word.english)) {
+      setCorrect(true);
+    } else {
+      setCorrect(false);
+    }
+    setInput(e);
+  };
+
   return (
     <View style={styles.container}>
       <Card style={styles.cardContainer}>
@@ -90,6 +103,18 @@ const CardSide = ({
               : word.english}
           </Text>
           <Text>{!isFront && word.origin}</Text>
+          <View style={styles.inputContainer}>
+            {isFront && (
+              <TextInput
+                value={input}
+                onChangeText={(e) => handleTextInput(e)}
+                mode="flat"
+                placeholder="Guess"
+                style={styles.input}
+                right={correct && <TextInput.Icon icon="check" color="green" />}
+              />
+            )}
+          </View>
         </View>
 
         {/* Footer */}
@@ -105,7 +130,6 @@ const CardSide = ({
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -131,10 +155,19 @@ const styles = StyleSheet.create({
     height: 450,
     justifyContent: 'center',
     alignItems: 'center',
+    gap: 10,
   },
   bodyText: {
     fontSize: 40,
   },
+  inputContainer: {
+    width: 150,
+  },
+  input: {
+    backgroundColor: 'white',
+    textAlign: 'center'
+  },
+  inputIcon: {},
   footer: {
     width: ELEMENT_WIDTH,
     height: 25,

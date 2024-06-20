@@ -1,29 +1,29 @@
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+// import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import {
-  ActivityIndicator,
-  Button,
-  Portal,
-  Snackbar,
-  Text,
-  TextInput,
-} from 'react-native-paper';
-import { useSession } from '../components/SessionProvider';
-import Signup from '../components/SignUpModal';
-import { firebaseApp } from '../services/firebase';
-import Header from '../components/Header';
+import { Button, Portal, Snackbar, Text, TextInput } from 'react-native-paper';
+import { supabase } from '../../services/supabase';
+import Header from '../Header';
+import Signup from './SignUpModal';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [toast, setToast] = useState<string>('');
+  const [loading, setLoading] = useState(false);
 
   const [isSignupModalVisible, setIsSignupModalVisible] = useState(false);
 
-  const auth = getAuth(firebaseApp);
+  async function signInWithEmail() {
+    setLoading(true);
+    const { error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
 
-  const { signIn, isLoading } = useSession();
+    if (error) setToast(error.message);
+    setLoading(false);
+  }
 
   // @ts-ignore
   const handleLoginButton = (e) => {
@@ -34,27 +34,10 @@ const SignIn = () => {
 
     if (!_email || !_password) {
       setToast('Please fill in all required fields.');
-      return;
+    } else {
+      signInWithEmail();
     }
-
-    signInWithEmailAndPassword(auth, _email, _password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        user.getIdToken().then((idToken) => {
-          signIn(idToken);
-          setToast('Logging in...');
-        });
-      })
-      .catch((err) => {
-        setToast('The email address or password is incorrect');
-        console.error('Sign in error:', err);
-      });
   };
-
-  // // @ts-ignore
-  // const handleForgotPasswordButton = (e) => {
-  //   sendPasswordResetEmail(auth, email)
-  // }
 
   return (
     <View style={styles.container}>
@@ -79,16 +62,13 @@ const SignIn = () => {
           placeholder="Password"
         />
       </View>
-      {/* 
-      <View style={styles.forgot}>
-        <Button>Forgot password?</Button>
-      </View> */}
 
       <View style={styles.loginButtonContainer}>
         <Button
           labelStyle={{ color: 'black' }}
           mode="elevated"
           onPress={handleLoginButton}
+          disabled={loading}
         >
           Login
         </Button>
@@ -102,10 +82,12 @@ const SignIn = () => {
         <Button
           mode="contained-tonal"
           onPress={() => setIsSignupModalVisible(true)}
+          disabled={loading}
         >
-          {isLoading ? <ActivityIndicator /> : 'Sign Up'}
+          Sign Up
         </Button>
       </View>
+
       <Signup
         isVisible={isSignupModalVisible}
         onClose={() => setIsSignupModalVisible(false)}
