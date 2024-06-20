@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Settings, Word } from '../global';
 import vocabs from './vocabs.json';
+import { supabase } from '../services/supabase';
 
 const _storeData = async (key: string, value: any) => {
   try {
@@ -77,4 +78,24 @@ export const getSettings = async (): Promise<Settings> => {
 
 export const storeSettings = async (settings: Settings) => {
   await _storeData(SETTINGS_KEY, settings);
-}
+};
+
+// SUPABASE FUNCTIONS
+
+const TABLE_NAME = 'vocabs';
+
+export const fetchCollectionLabels = async (limit: number): Promise<string[] | null> => {
+  const { data, error } = await supabase
+    .from(TABLE_NAME)
+    .select('*', { count: 'exact', head: true })
+  if (error) {
+    console.error(error);
+    return null;
+  }
+  console.log(data);
+  
+  return null;
+  // for (let i = 0; i < Math.floor(data.count / limit); i++) {
+
+  // }
+};
