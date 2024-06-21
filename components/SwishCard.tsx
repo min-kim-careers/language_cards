@@ -4,15 +4,20 @@ import FlipCard from 'react-native-flip-card';
 import { Card, Text, TextInput } from 'react-native-paper';
 import { ELEMENT_WIDTH, Word } from '../global';
 import AudioPlayer from './AudioPlayer';
-import { AntDesign } from '@expo/vector-icons';
 
 interface CardProps {
   cardIndex: number;
   word: Word;
+  wordCount: number;
   englishFirst: boolean;
 }
 
-const SwishCard = ({ cardIndex, word, englishFirst = false }: CardProps) => {
+const SwishCard = ({
+  cardIndex,
+  word,
+  wordCount,
+  englishFirst = false,
+}: CardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [lastPress, setLastPress] = useState(0);
 
@@ -43,12 +48,14 @@ const SwishCard = ({ cardIndex, word, englishFirst = false }: CardProps) => {
         <CardSide
           cardIndex={cardIndex}
           word={word}
+          wordCount={wordCount}
           isFront={true}
           englishFirst={englishFirst}
         />
         <CardSide
           cardIndex={cardIndex}
           word={word}
+          wordCount={wordCount}
           isFront={false}
           englishFirst={englishFirst}
         />
@@ -60,6 +67,7 @@ const SwishCard = ({ cardIndex, word, englishFirst = false }: CardProps) => {
 interface CardSideProps {
   cardIndex: number;
   word: Word;
+  wordCount: number;
   isFront: boolean;
   englishFirst: boolean;
 }
@@ -67,6 +75,7 @@ interface CardSideProps {
 const CardSide = ({
   cardIndex,
   word,
+  wordCount,
   isFront,
   englishFirst,
 }: CardSideProps) => {
@@ -88,7 +97,9 @@ const CardSide = ({
         {/* Header */}
         <View style={styles.header}>
           <Text>{word.word_grade || ''}</Text>
-          <Text style={styles.headerText}>{cardIndex} / 10</Text>
+          <Text style={styles.headerText}>
+            {cardIndex} / {wordCount}
+          </Text>
         </View>
 
         {/* Body */}
@@ -165,7 +176,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   inputIcon: {},
   footer: {

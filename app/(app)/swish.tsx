@@ -1,13 +1,17 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { BackHandler, StyleSheet, View } from 'react-native';
 import Swiper from 'react-native-deck-swiper';
 import { Text } from 'react-native-paper';
 import TipBanner from '../../components/Banner';
 import Fallback from '../../components/Fallback';
 import { useSettings } from '../../components/SettingsProvider';
 import SwishCard from '../../components/SwishCard';
-import { getOrderedWords, getShuffledWords } from '../../database/db.config';
+import {
+  fetchWordsForCollection,
+  fetchWordsForFavourites,
+  updateFavourites,
+} from '../../database/db.config';
 import { DisplayOrder, Word } from '../../global';
 
 const generateRandomBooleans = (wordCount: number) =>
@@ -16,37 +20,71 @@ const generateRandomBooleans = (wordCount: number) =>
 const SwishScreen = () => {
   const [words, setWords] = useState<Word[]>([]);
   const [displayOrderList, setDisplayOrderList] = useState<boolean[]>([]);
+  const [favouriteIds, setFavouriteIds] = useState<number[]>([]);
+
   const { settings } = useSettings();
 
-  const { collection } = useLocalSearchParams<{ collection?: string }>();
+  const { from, to, favourites } = useLocalSearchParams<{
+    from?: string;
+    to?: string;
+    favourites?: string;
+  }>();
 
-  const initWords = async () => {
-    let _words: Word[] = [];
-    if (settings.shuffled) {
-      _words = await getShuffledWords(collection!);
+  const fetchWords = async () => {
+    let newWords: Word[] | null = [];
+    if (from && to) {
+      newWords = await fetchWordsForCollection(
+        parseInt(from!),
+        parseInt(to!),
+        settings.shuffled
+      );
+    } else if (favourites) {
+      newWords = await fetchWordsForFavourites(
+        favourites.split(',').map((e) => parseInt(e)),
+        settings.shuffled
+      );
     } else {
-      _words = await getOrderedWords(collection!);
+      console.error('Unable to fetch words in swish.tsx');
     }
-    setWords(_words);
 
-    let _displayOrder: boolean[] = [];
-    if (settings.displayOrder === DisplayOrder.Alternate) {
-      _displayOrder = generateRandomBooleans(_words.length);
-    } else if (settings.displayOrder === DisplayOrder.FrontFirst) {
-      _displayOrder = Array.from({ length: _words.length }, () => true);
-    } else if (settings.displayOrder === DisplayOrder.BackFirst) {
-      _displayOrder = Array.from({ length: _words.length }, () => false);
-    } else {
-      console.error('Invalid argument passed as DisplayOrder');
+    if (newWords) {
+      setWords(newWords);
+
+      let _displayOrder: boolean[] = [];
+      if (settings.displayOrder === DisplayOrder.Alternate) {
+        _displayOrder = generateRandomBooleans(newWords.length);
+      } else if (settings.displayOrder === DisplayOrder.FrontFirst) {
+        _displayOrder = Array.from({ length: newWords.length }, () => true);
+      } else if (settings.displayOrder === DisplayOrder.BackFirst) {
+        _displayOrder = Array.from({ length: newWords.length }, () => false);
+      } else {
+        console.error('Invalid argument passed as DisplayOrder');
+      }
+      setDisplayOrderList(_displayOrder);
     }
-    setDisplayOrderList(_displayOrder);
   };
 
   useEffect(() => {
-    initWords();
+    fetchWords();
+
+    BackHandler.addEventListener('hardwareBackPress', () => {
+      if (favouriteIds.length) updateFavourites(favouriteIds);
+      console.log('back pressed');
+      
+      return true;
+    });
   }, []);
 
-  if (!words.length) return <Fallback duration={3000} />;
+  const handleOnSwipeTop = (cardIndex: number) => {
+    setFavouriteIds([...favouriteIds, cardIndex]);
+  };
+
+  const handleOnSwipeAll = async () => {
+    if (favouriteIds.length) updateFavourites(favouriteIds);
+    router.back();
+  };
+
+  if (!words.length) return <Fallback duration={5000} />;
 
   return (
     <View>
@@ -56,17 +94,24 @@ const SwishScreen = () => {
           <SwishCard
             cardIndex={index + 1}
             word={word}
+            wordCount={words.length}
             englishFirst={displayOrderList[index]}
           />
         )}
         cardIndex={0}
         backgroundColor="lightgrey"
-        onSwipedAll={() => router.back()}
+        onSwipedAll={handleOnSwipeAll}
+        showSecondCard={true}
+        stackSize={2}
+        onSwipedTop={(cardIndex: number) =>
+          handleOnSwipeTop(words[cardIndex].id)
+        }
       />
       <TipBanner buttonStyle={styles.buttonStyle}>
         <View style={styles.bannerContainer}>
           <Text>Double tap or click to flip the card</Text>
-          <Text>Swipe left or right to view the next card</Text>
+          <Text>Swipe LEFT or RIGHT to view the next card</Text>
+          <Text>Swipe UP to save word to favourites</Text>
         </View>
       </TipBanner>
     </View>
@@ -78,7 +123,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     alignSelf: 'center',
-    margin: 20,
+    marginBottom: 40,
     width: 200,
   },
   bannerContainer: {

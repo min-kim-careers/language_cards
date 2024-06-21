@@ -5,14 +5,14 @@ import { loadDBFile as loadDBFile } from '../../../database/db.config';
 import Fallback from '../../../components/Fallback';
 
 export default function TabLayout() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadDBFile();
-    setLoading(false);
-  }, []);
+  // useEffect(() => {
+  //   loadDBFile();
+  //   setLoading(false);
+  // }, []);
 
-  if (loading) return <Fallback />;
+  // if (loading) return <Fallback />;
 
   return (
     <Tabs

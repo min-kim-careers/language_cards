@@ -36,6 +36,9 @@ const TipBanner = ({
             onPress: () => setVisible(false),
           },
         ]}
+        style={{
+          backgroundColor: 'lightgrey'
+        }}
       >
         {children}
       </Banner>

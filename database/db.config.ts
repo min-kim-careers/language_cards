@@ -3,6 +3,8 @@ import { Settings, Word } from '../global';
 import vocabs from './vocabs.json';
 import { supabase } from '../services/supabase';
 
+// ASYNCSTORAGE FUNCTIONS
+
 const _storeData = async (key: string, value: any) => {
   try {
     const jsonValue = JSON.stringify(value);
@@ -80,22 +82,134 @@ export const storeSettings = async (settings: Settings) => {
   await _storeData(SETTINGS_KEY, settings);
 };
 
+export const getFavourites = async () => {
+  return _getData(FAVOURITES_KEY) || [];
+}
+
 // SUPABASE FUNCTIONS
 
-const TABLE_NAME = 'vocabs';
+const VOCABS_TABLE = 'vocabs';
 
-export const fetchCollectionLabels = async (limit: number): Promise<string[] | null> => {
-  const { data, error } = await supabase
-    .from(TABLE_NAME)
-    .select('*', { count: 'exact', head: true })
+export const fetchCollectionCount = async (
+  limit: number
+): Promise<number | null> => {
+  const result = await _getData('collectionCount');
+  if (result) {
+    console.log('Retrieved collectionCount from cache');
+    return result;
+  }
+  const { count, error } = await supabase
+    .from(VOCABS_TABLE)
+    .select('*', { count: 'exact', head: true });
   if (error) {
     console.error(error);
     return null;
   }
-  console.log(data);
-  
-  return null;
-  // for (let i = 0; i < Math.floor(data.count / limit); i++) {
+  if (!count) {
+    console.error('Database was empty..');
+    return null;
+  }
+  const collectionCount = Math.floor(count! / limit);
+  _storeData('collectionCount', collectionCount);
+  console.log('Fetched collectionCount from DB');
+  return collectionCount;
+};
 
-  // }
+export const fetchWordsForCollection = async (
+  from: number,
+  to: number,
+  shuffled: boolean = false
+): Promise<Word[] | null> => {
+  const { data, error } = await supabase
+    .from(VOCABS_TABLE)
+    .select()
+    .range(from, to);
+  if (error) {
+    console.error(error);
+    return null;
+  }
+  if (!data) {
+    console.error('No words fetched..');
+    return null;
+  }
+  if (shuffled) {
+    return _shuffleWords(data);
+  }
+  return data;
+};
+
+export const fetchWordsForFavourites = async (
+  favourites: number[],
+  shuffled: boolean = false
+): Promise<Word[] | null> => {
+  const { data, error } = await supabase
+    .from(VOCABS_TABLE)
+    .select()
+    .in('id', favourites);
+  if (error) {
+    console.error(error);
+    return null;
+  }
+  if (!data) {
+    console.error('No words fetched..');
+    return null;
+  }
+  if (shuffled) {
+    return _shuffleWords(data);
+  }
+  return data;
+};
+
+const FAVOURITES_TABLE = 'favourites';
+
+const FAVOURITES_KEY = 'favourites';
+
+const _getUserId = async () => {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  return user?.id || null;
+};
+
+const _getWordIds = async (userId: string) => {
+  const { data } = await supabase
+    .from(FAVOURITES_TABLE)
+    .select('word_ids')
+    .eq('user_id', userId)
+    .single();
+  if (!data) return [];
+  return data.word_ids;
+};
+
+export const updateFavourites = async (
+  wordIds: number[]
+): Promise<number[] | null> => {
+  const userId = await _getUserId();
+  if (!userId) {
+    console.error('Failed to get user ID');
+    return null;
+  }
+  const prevWordIds: number[] = await _getWordIds(userId);
+  
+  const newWordIds: number[] = Array.from(
+    new Set([...prevWordIds, ...wordIds])
+  ).toSorted();
+
+  if (prevWordIds.length === newWordIds.length) {
+    console.log('Nothing to update..');
+    return prevWordIds;
+  }
+
+  const { data, error } = await supabase
+    .from(FAVOURITES_TABLE)
+    .upsert({ user_id: userId, word_ids: newWordIds })
+    .select()
+    .single();
+  if (error) {
+    console.error('Error updating word IDs:', error);
+    return null;
+  }
+  _storeData(FAVOURITES_KEY, data.word_ids);
+  console.log('Word IDs updated and cached successfully');
+  return data.word_ids || [];
 };
