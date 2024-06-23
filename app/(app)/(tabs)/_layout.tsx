@@ -1,19 +1,7 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
-import { useEffect, useState } from 'react';
-import { loadDBFile as loadDBFile } from '../../../database/db.config';
-import Fallback from '../../../components/Fallback';
 
 export default function TabLayout() {
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   loadDBFile();
-  //   setLoading(false);
-  // }, []);
-
-  // if (loading) return <Fallback />;
-
   return (
     <Tabs
       screenOptions={{
@@ -21,7 +9,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="home"
         options={{
           headerShown: false,
           title: 'H O M E',
@@ -48,6 +36,12 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="cog" color={color} />
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="index"
+        options={{
+          href: null,
         }}
       />
     </Tabs>

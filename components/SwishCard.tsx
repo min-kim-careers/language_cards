@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FlipCard from 'react-native-flip-card';
 import { Card, Text, TextInput } from 'react-native-paper';
@@ -132,7 +132,7 @@ const CardSide = ({
         <View style={styles.footer}>
           <Text>{word.pos}</Text>
           {((!isFront && englishFirst) || (isFront && !englishFirst)) &&
-            word.url && <AudioPlayer soundUrl={word.url} />}
+            word.url !== '' && <AudioPlayer soundUrl={word.url!} />}
         </View>
       </Card>
     </View>

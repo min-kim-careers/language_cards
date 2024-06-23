@@ -3,5 +3,5 @@
     "strict": true
   },
   "extends": "expo/tsconfig.base",
-  "include": ["app/**/*", "global.ts", "components/**/*"]
+  "include": ["app/**/*", "global.ts", "components/**/*", "app/(app)/(tabs)/index.tsx"]
 }

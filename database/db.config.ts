@@ -14,6 +14,14 @@ const _storeData = async (key: string, value: any) => {
   }
 };
 
+const _removeData = async (key: string) => {
+  try {
+    await AsyncStorage.removeItem(key);
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 const _getData = async (key: string) => {
   try {
     const jsonValue = await AsyncStorage.getItem(key);
@@ -29,6 +37,20 @@ const _shuffleWords = (words: Word[]) => {
     [words[i], words[j]] = [words[j], words[i]];
   }
   return words;
+};
+
+const sessionKey = 'appSession';
+
+export const getSession = async (): Promise<string> => {
+  return await _getData(sessionKey);
+};
+
+export const storeSession = async (session: string) => {
+  await _storeData(sessionKey, session);
+};
+
+export const removeSession = async () => {
+  await _removeData(sessionKey);
 };
 
 export const loadDBFile = async () => {
@@ -84,18 +106,19 @@ export const storeSettings = async (settings: Settings) => {
 
 export const getFavourites = async () => {
   return _getData(FAVOURITES_KEY) || [];
-}
+};
 
 // SUPABASE FUNCTIONS
 
 const VOCABS_TABLE = 'vocabs';
+const COLLECTION_COUNT_KEY = 'collectionCount';
 
 export const fetchCollectionCount = async (
   limit: number
 ): Promise<number | null> => {
-  const result = await _getData('collectionCount');
+  const result = await _getData(COLLECTION_COUNT_KEY);
   if (result) {
-    console.log('Retrieved collectionCount from cache');
+    console.log('Retrieved collection count from cache');
     return result;
   }
   const { count, error } = await supabase
@@ -190,7 +213,7 @@ export const updateFavourites = async (
     return null;
   }
   const prevWordIds: number[] = await _getWordIds(userId);
-  
+
   const newWordIds: number[] = Array.from(
     new Set([...prevWordIds, ...wordIds])
   ).toSorted();

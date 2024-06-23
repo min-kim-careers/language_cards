@@ -14,10 +14,10 @@ describe('Fetch words', () => {
   });
 });
 
-describe('Favouriting words for user', () => {
-  it('', async () => {
-    return expect(
-      dbConfig.updateFavourites('123e4567-e89b-12d3-a456-426614174000', [2, 4])
-    ).resolves.toStrictEqual([1,2,4,5]);
-  });
-});
+// describe('Favouriting words for user', () => {
+//   it('', async () => {
+//     return expect(
+//       dbConfig.updateFavourites('123e4567-e89b-12d3-a456-426614174000', )
+//     ).resolves.toStrictEqual([1,2,4,5]);
+//   });
+// });

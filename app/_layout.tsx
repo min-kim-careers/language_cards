@@ -1,6 +1,7 @@
 import { Slot } from 'expo-router';
 import { DefaultTheme, PaperProvider } from 'react-native-paper';
 import { SettingsProvider } from '../components/SettingsProvider';
+import { SessionProvider } from '../components/SessionProvider';
 
 const theme = {
   ...DefaultTheme,
@@ -18,9 +19,11 @@ const theme = {
 export default function Layout() {
   return (
     <PaperProvider theme={theme}>
-      <SettingsProvider>
-        <Slot />
-      </SettingsProvider>
+      <SessionProvider>
+        <SettingsProvider>
+          <Slot />
+        </SettingsProvider>
+      </SessionProvider>
     </PaperProvider>
   );
 }

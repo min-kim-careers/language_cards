@@ -1,10 +1,9 @@
+import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Card, SegmentedButtons, Text } from 'react-native-paper';
-import { ELEMENT_WIDTH, Settings } from '../../../global';
 import { useSettings } from '../../../components/SettingsProvider';
-import { DisplayOrder } from '../../../global';
-import { useEffect, useState } from 'react';
-import { supabase } from '../../../services/supabase';
+import { DisplayOrder, ELEMENT_WIDTH, Settings } from '../../../global';
+import { useSession } from '../../../components/SessionProvider';
 
 const SettingsScreen = () => {
   const [tempSettings, setTempSettings] = useState<Settings>({
@@ -12,6 +11,7 @@ const SettingsScreen = () => {
     shuffled: false,
   });
 
+  const { signOut } = useSession();
   const { settings, saveSettings } = useSettings();
 
   useEffect(() => {
@@ -44,6 +44,10 @@ const SettingsScreen = () => {
 
   const handleSaveSettingsButton = () => {
     saveSettings(tempSettings);
+  };
+
+  const handleSignOutButton = () => {
+    signOut();
   };
 
   return (
@@ -112,7 +116,7 @@ const SettingsScreen = () => {
         <Button
           labelStyle={styles.button}
           mode="contained"
-          onPress={async () => await supabase.auth.signOut({ scope: 'local' })}
+          onPress={handleSignOutButton}
           style={{ backgroundColor: 'darkgrey' }}
         >
           Sign out
