@@ -13,6 +13,7 @@ import {
   updateFavourites,
 } from '../../database/db.config';
 import { DisplayOrder, Word } from '../../global';
+import { useSession } from '../../components/SessionProvider';
 
 const generateRandomBooleans = (wordCount: number) =>
   Array.from({ length: wordCount }, () => Math.random() >= 0.5);
@@ -22,6 +23,7 @@ const SwishScreen = () => {
   const [displayOrderList, setDisplayOrderList] = useState<boolean[]>([]);
   const [favouriteIds, setFavouriteIds] = useState<number[]>([]);
 
+  const { session } = useSession();
   const { settings } = useSettings();
 
   const { from, to, favourites } = useLocalSearchParams<{
@@ -66,13 +68,6 @@ const SwishScreen = () => {
 
   useEffect(() => {
     fetchWords();
-
-    BackHandler.addEventListener('hardwareBackPress', () => {
-      if (favouriteIds.length) updateFavourites(favouriteIds);
-      console.log('back pressed');
-      
-      return true;
-    });
   }, []);
 
   const handleOnSwipeTop = (cardIndex: number) => {
@@ -80,7 +75,9 @@ const SwishScreen = () => {
   };
 
   const handleOnSwipeAll = async () => {
-    if (favouriteIds.length) updateFavourites(favouriteIds);
+    if (favouriteIds.length && session) {
+      updateFavourites(session, favouriteIds);
+    }
     router.back();
   };
 

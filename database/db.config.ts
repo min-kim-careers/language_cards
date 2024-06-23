@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Settings, Word } from '../global';
 import vocabs from './vocabs.json';
 import { supabase } from '../services/supabase';
+import { useSession } from '../components/SessionProvider';
 
 // ASYNCSTORAGE FUNCTIONS
 
@@ -187,13 +188,6 @@ const FAVOURITES_TABLE = 'favourites';
 
 const FAVOURITES_KEY = 'favourites';
 
-const _getUserId = async () => {
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  return user?.id || null;
-};
-
 const _getWordIds = async (userId: string) => {
   const { data } = await supabase
     .from(FAVOURITES_TABLE)
@@ -205,13 +199,9 @@ const _getWordIds = async (userId: string) => {
 };
 
 export const updateFavourites = async (
+  userId: string,
   wordIds: number[]
 ): Promise<number[] | null> => {
-  const userId = await _getUserId();
-  if (!userId) {
-    console.error('Failed to get user ID');
-    return null;
-  }
   const prevWordIds: number[] = await _getWordIds(userId);
 
   const newWordIds: number[] = Array.from(
@@ -235,4 +225,30 @@ export const updateFavourites = async (
   _storeData(FAVOURITES_KEY, data.word_ids);
   console.log('Word IDs updated and cached successfully');
   return data.word_ids || [];
+};
+
+const USER_TABLE = 'users';
+
+export const addUserToDB = async (userId: string) => {
+  const { data, error } = await supabase
+    .from(USER_TABLE)
+    .insert({ user_id: userId })
+    .select();
+  if (error) {
+    console.error('Error adding user to Supabase:', error);
+  }
+  if (data) {
+    console.log('Successfully added user to Supabase');
+  }
+};
+
+const SUPABASE_URL = process.env.EXPO_PUBLIC_SUPABASE_URL || '';
+
+const _authDB = async (session: string) => {
+  const response = await fetch(SUPABASE_URL, {
+    headers: {
+      Authorization: `Bearer ${session}`,
+    },
+  });
+  return response.ok;
 };

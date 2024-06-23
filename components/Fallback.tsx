@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 
-const Fallback = ({ duration = 0 }: { duration?: number }) => {
+const Fallback = ({
+  duration = 0,
+  isFavouriteScreen = false,
+}: {
+  duration?: number;
+  isFavouriteScreen?: boolean;
+}) => {
   const [timedOut, setTimedOut] = useState(false);
 
   useEffect(() => {
@@ -14,7 +20,11 @@ const Fallback = ({ duration = 0 }: { duration?: number }) => {
 
   return duration && timedOut ? (
     <View style={styles.container}>
-      <Text>Nothing to display...</Text>
+      {isFavouriteScreen ? (
+        <Text>Your words will show up hear once favourited!</Text>
+      ) : (
+        <Text>Nothing to display...</Text>
+      )}
     </View>
   ) : (
     <View style={styles.container}>

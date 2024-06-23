@@ -10,6 +10,7 @@ import Header from '../components/Header';
 import { ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
 import { useSession } from '../components/SessionProvider';
+import { addUserToDB } from '../database/db.config';
 
 const AuthScreen = () => {
   const [email, setEmail] = useState('');
@@ -20,8 +21,6 @@ const AuthScreen = () => {
   const { session, signIn } = useSession();
 
   useFocusEffect(() => {
-    console.log(session);
-    
     if (session) {
       router.replace('/');
     }
@@ -66,6 +65,7 @@ const AuthScreen = () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
+          addUserToDB(user.uid);
           console.log('Created user:', user.uid);
         })
         .catch((error) => {

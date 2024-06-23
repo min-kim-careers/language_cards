@@ -6,6 +6,7 @@ import {
   fetchCollectionCount
 } from '../../../database/db.config';
 import { ELEMENT_WIDTH } from '../../../global';
+import { auth } from '../../../services/firebase';
 
 const DEFAULT_LIMIT = 10;
 
