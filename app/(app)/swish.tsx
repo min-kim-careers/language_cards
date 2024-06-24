@@ -1,30 +1,47 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { BackHandler, StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Swiper from 'react-native-deck-swiper';
-import { Text } from 'react-native-paper';
-import TipBanner from '../../components/Banner';
+import { Portal, Snackbar, Text } from 'react-native-paper';
 import Fallback from '../../components/Fallback';
+import { useSession } from '../../components/SessionProvider';
 import { useSettings } from '../../components/SettingsProvider';
 import SwishCard from '../../components/SwishCard';
+import TipBanner from '../../components/TipBanner';
 import {
-  fetchWordsForCollection,
-  fetchWordsForFavourites,
-  updateFavourites,
-} from '../../database/db.config';
-import { DisplayOrder, Word } from '../../global';
-import { useSession } from '../../components/SessionProvider';
+  addFavourite,
+  favouriteExists,
+  fetchWordsBetweenRangeForCollections,
+  fetchWordsBetweenRangeForFavourites,
+  removeFavourite,
+} from '../../database/supabase.config';
+import { ANONYMOUS, DisplayOrder, ELEMENT_WIDTH, Word } from '../../global';
 
-const generateRandomBooleans = (wordCount: number) =>
-  Array.from({ length: wordCount }, () => Math.random() >= 0.5);
+const generateRandomBooleans = (wordCount: number) => {
+  return Array.from({ length: wordCount }, () => Math.random() >= 0.5);
+};
+
+const matchDisplayOrder = (displayOrder: string, wordCount: number) => {
+  let newDisplayOrder: boolean[] = [];
+  if (displayOrder === DisplayOrder.Alternate) {
+    newDisplayOrder = generateRandomBooleans(wordCount);
+  } else if (displayOrder === DisplayOrder.KoreanFirst) {
+    newDisplayOrder = Array.from({ length: wordCount }, () => true);
+  } else if (displayOrder === DisplayOrder.EnglishFirst) {
+    newDisplayOrder = Array.from({ length: wordCount }, () => false);
+  } else {
+    console.error('Invalid argument passed as DisplayOrder');
+  }
+  return newDisplayOrder;
+};
 
 const SwishScreen = () => {
   const [words, setWords] = useState<Word[]>([]);
   const [displayOrderList, setDisplayOrderList] = useState<boolean[]>([]);
-  const [favouriteIds, setFavouriteIds] = useState<number[]>([]);
+  const [toast, setToast] = useState('');
 
-  const { session } = useSession();
   const { settings } = useSettings();
+  const { session } = useSession();
 
   const { from, to, favourites } = useLocalSearchParams<{
     from?: string;
@@ -33,36 +50,34 @@ const SwishScreen = () => {
   }>();
 
   const fetchWords = async () => {
-    let newWords: Word[] | null = [];
-    if (from && to) {
-      newWords = await fetchWordsForCollection(
-        parseInt(from!),
-        parseInt(to!),
-        settings.shuffled
-      );
-    } else if (favourites) {
-      newWords = await fetchWordsForFavourites(
-        favourites.split(',').map((e) => parseInt(e)),
-        settings.shuffled
-      );
-    } else {
-      console.error('Unable to fetch words in swish.tsx');
-    }
-
-    if (newWords) {
-      setWords(newWords);
-
-      let _displayOrder: boolean[] = [];
-      if (settings.displayOrder === DisplayOrder.Alternate) {
-        _displayOrder = generateRandomBooleans(newWords.length);
-      } else if (settings.displayOrder === DisplayOrder.FrontFirst) {
-        _displayOrder = Array.from({ length: newWords.length }, () => true);
-      } else if (settings.displayOrder === DisplayOrder.BackFirst) {
-        _displayOrder = Array.from({ length: newWords.length }, () => false);
+    try {
+      let newWords: Word[] | null;
+      // 1. fetch words from db
+      if (favourites) {
+        newWords = await fetchWordsBetweenRangeForFavourites(
+          parseInt(from!),
+          parseInt(to!),
+          session!,
+          settings.shuffled
+        );
       } else {
-        console.error('Invalid argument passed as DisplayOrder');
+        newWords = await fetchWordsBetweenRangeForCollections(
+          parseInt(from!),
+          parseInt(to!),
+          settings.shuffled
+        );
       }
-      setDisplayOrderList(_displayOrder);
+      // 2. set words
+      setWords(newWords!);
+      // 3. match and get display order list
+      const newDisplayOrderList = matchDisplayOrder(
+        settings.displayOrder,
+        newWords!.length
+      );
+      // 4. set display order list
+      setDisplayOrderList(newDisplayOrderList);
+    } catch (error) {
+      console.error('Error fetching and loading words for cards');
     }
   };
 
@@ -70,18 +85,57 @@ const SwishScreen = () => {
     fetchWords();
   }, []);
 
-  const handleOnSwipeTop = (cardIndex: number) => {
-    setFavouriteIds([...favouriteIds, cardIndex]);
+  const handleOnSwipeTop = async (cardIndex: number) => {
+    if (session === ANONYMOUS) {
+      setToast(
+        'This function is only available when signed in with an account'
+      );
+      return;
+    }
+
+    if (await favouriteExists(session!, words[cardIndex].word_id)) {
+      setToast(`${words[cardIndex].korean} is already in favourites.`);
+      return;
+    }
+
+    if (await addFavourite(session!, words[cardIndex].word_id)) {
+      setToast(`Added ${words[cardIndex].korean} to favourites`);
+    } else {
+      setToast(
+        `There was an error adding ${words[cardIndex].korean} to favourites`
+      );
+    }
+  };
+
+  const handleOnSwipeBottom = async (cardIndex: number) => {
+    if (session === ANONYMOUS) {
+      setToast(
+        'This function is only available when signed in with an account'
+      );
+      return;
+    }
+
+    if (!(await favouriteExists(session!, words[cardIndex].word_id))) {
+      setToast(
+        `${words[cardIndex].korean} is not in favourites. It can't be removed.`
+      );
+      return;
+    }
+
+    if (await removeFavourite(session!, words[cardIndex].word_id)) {
+      setToast(`Removed ${words[cardIndex].korean} from favourites`);
+    } else {
+      setToast(
+        `There was an error removing ${words[cardIndex].korean} from favourites`
+      );
+    }
   };
 
   const handleOnSwipeAll = async () => {
-    if (favouriteIds.length && session) {
-      updateFavourites(session, favouriteIds);
-    }
-    router.back();
+    if (router.canGoBack()) router.back();
   };
 
-  if (!words.length) return <Fallback duration={5000} />;
+  if (!words.length) return <Fallback duration={20000} />;
 
   return (
     <View>
@@ -95,22 +149,36 @@ const SwishScreen = () => {
             englishFirst={displayOrderList[index]}
           />
         )}
-        cardIndex={0}
+        // cardIndex={0}
         backgroundColor="lightgrey"
         onSwipedAll={handleOnSwipeAll}
         showSecondCard={true}
         stackSize={2}
-        onSwipedTop={(cardIndex: number) =>
-          handleOnSwipeTop(words[cardIndex].id)
-        }
+        onSwipedTop={(cardIndex: number) => handleOnSwipeTop(cardIndex)}
+        onSwipedBottom={(cardIndex: number) => handleOnSwipeBottom(cardIndex)}
       />
       <TipBanner buttonStyle={styles.buttonStyle}>
         <View style={styles.bannerContainer}>
-          <Text>Double tap or click to flip the card</Text>
-          <Text>Swipe LEFT or RIGHT to view the next card</Text>
-          <Text>Swipe UP to save word to favourites</Text>
+          <Text variant="bodyMedium">Double tap or click to flip the card</Text>
+          <Text variant="bodyMedium">
+            Swipe LEFT or RIGHT to view the next card
+          </Text>
+          {session !== ANONYMOUS && (
+            <Text variant="bodyMedium">Swipe UP to add to favourites</Text>
+          )}
+          {session !== ANONYMOUS && (
+            <Text variant="bodyMedium">
+              Swipe DOWN to remove from favourites
+            </Text>
+          )}
         </View>
       </TipBanner>
+
+      <Portal>
+        <Snackbar visible={toast.length !== 0} onDismiss={() => setToast('')}>
+          {toast}
+        </Snackbar>
+      </Portal>
     </View>
   );
 };
@@ -125,7 +193,17 @@ const styles = StyleSheet.create({
   },
   bannerContainer: {
     gap: 10,
-    height: 30,
+  },
+  lastCardContainer: {
+    alignItems: 'center',
+  },
+  lastCard: {
+    marginVertical: 60,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    width: ELEMENT_WIDTH,
+    height: 500,
+    backgroundColor: 'white',
   },
 });
 

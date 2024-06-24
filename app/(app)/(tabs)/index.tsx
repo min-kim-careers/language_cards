@@ -1,7 +1,7 @@
-import { Redirect } from "expo-router";
+import { Redirect } from 'expo-router';
 
 const AppIndex = () => {
-  return <Redirect href='/(app)/(tabs)/home'/>;
-}
+  return <Redirect href="/(app)/(tabs)/collections" />;
+};
 
 export default AppIndex;

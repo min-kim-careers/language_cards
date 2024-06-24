@@ -1,27 +1,26 @@
 import { Link } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Button } from 'react-native-paper';
-import {
-  fetchCollectionCount
-} from '../../../database/db.config';
+import { Button, Text } from 'react-native-paper';
+import { fetchCollectionCount } from '../../../database/supabase.config';
 import { ELEMENT_WIDTH } from '../../../global';
-import { auth } from '../../../services/firebase';
+import Fallback from '../../../components/Fallback';
 
 const DEFAULT_LIMIT = 10;
 
-const HomeScreen = () => {
+const CollectionsScreen = () => {
   const [collectionCount, setCollectionCount] = useState(0);
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
 
   useEffect(() => {
     const fetchCollections = async () => {
       const res = await fetchCollectionCount(limit);
-      if (res) setCollectionCount(res)
+      if (res) setCollectionCount(res);
     };
-
     fetchCollections();
   });
+
+  if (!collectionCount) return <Fallback duration={5000} />;
 
   return (
     <View style={styles.container}>
@@ -36,7 +35,7 @@ const HomeScreen = () => {
               push
               href={{
                 pathname: '/swish',
-                params: { from: index*limit, to: index*limit+limit-1 },
+                params: { from: index * limit, to: index * limit + limit },
               }}
               asChild
             >
@@ -74,4 +73,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default CollectionsScreen;

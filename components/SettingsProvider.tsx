@@ -5,17 +5,14 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { DisplayOrder, Settings } from '../global';
-import { getSettings, storeSettings } from '../database/db.config';
+import { DEFAULT_SETTINGS, DisplayOrder, Settings } from '../global';
+import { getSettings, storeSettings } from '../database/storage.config';
 
 const SettingContext = createContext<{
-  settings: Settings
+  settings: Settings;
   saveSettings: (settings: Settings) => void;
 }>({
-  settings: {
-    displayOrder: DisplayOrder.FrontFirst,
-    shuffled: false,
-  },
+  settings: DEFAULT_SETTINGS,
   saveSettings: () => {},
 });
 
@@ -30,10 +27,7 @@ export function useSettings() {
 }
 
 export function SettingsProvider(props: PropsWithChildren) {
-  const [settings, setSettings] = useState<Settings>({
-    displayOrder: DisplayOrder.FrontFirst,
-    shuffled: false,
-  });
+  const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
 
   useEffect(() => {
     loadSettings();
@@ -47,7 +41,7 @@ export function SettingsProvider(props: PropsWithChildren) {
   };
 
   const saveSettings = async (newSettings: Settings) => {
-    setSettings(newSettings)
+    setSettings(newSettings);
     await storeSettings(newSettings);
   };
 

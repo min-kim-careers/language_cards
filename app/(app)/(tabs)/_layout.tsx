@@ -9,12 +9,12 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="home"
+        name="collections"
         options={{
           headerShown: false,
-          title: 'H O M E',
+          title: 'C O L L E C T I O N S',
           tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="home" color={color} />
+            <FontAwesome size={28} name="list" color={color} />
           ),
         }}
       />
@@ -22,7 +22,7 @@ export default function TabLayout() {
         name="favourites"
         options={{
           headerShown: false,
-          title: 'F A V O U R I T E',
+          title: 'F A V O U R I T E S',
           tabBarIcon: ({ color }) => (
             <FontAwesome size={28} name="star" color={color} />
           ),

@@ -1,16 +1,17 @@
 import { router, useFocusEffect } from 'expo-router';
 import {
   createUserWithEmailAndPassword,
+  signInAnonymously,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Portal, Snackbar, Text, TextInput } from 'react-native-paper';
 import Header from '../components/Header';
-import { ELEMENT_WIDTH } from '../global';
+import { ANONYMOUS_KEY, ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
 import { useSession } from '../components/SessionProvider';
-import { addUserToDB } from '../database/db.config';
+import { addNewUser } from '../database/supabase.config';
 
 const AuthScreen = () => {
   const [email, setEmail] = useState('');
@@ -65,14 +66,26 @@ const AuthScreen = () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-          addUserToDB(user.uid);
-          console.log('Created user:', user.uid);
+          if (!addNewUser(user.uid)) throw new Error('Failed to add new user');
         })
         .catch((error) => {
           setToast(error.message);
         });
       setLoading(false);
     }
+  };
+
+  // @ts-ignore
+  const handleAnonymousButton = (e) => {
+    e.preventDefault();
+    signInAnonymously(auth)
+      .then(() => {
+        console.log('Logged in anonymously');
+        signIn(ANONYMOUS_KEY);
+      })
+      .catch((error) => {
+        setToast(error.message);
+      });
   };
 
   return (
@@ -110,23 +123,33 @@ const AuthScreen = () => {
           mode="elevated"
           onPress={handleLoginButton}
           disabled={loading}
+          loading={loading}
         >
           Login
         </Button>
       </View>
 
-      {/* <View style={styles.hint}>
-        <Text>Don't have an account?</Text>
-      </View> */}
-
       <View style={styles.signupButtonContainer}>
         <Button
+          labelStyle={styles.signupButton}
           mode="outlined"
           onPress={handleSignUpButton}
           disabled={loading}
-          labelStyle={styles.signupButton}
+          loading={loading}
         >
           Sign Up
+        </Button>
+      </View>
+
+      <View style={styles.anonymousButtonContainer}>
+        <Button
+          labelStyle={styles.anonymousButton}
+          mode="outlined"
+          onPress={handleAnonymousButton}
+          disabled={loading}
+          loading={loading}
+        >
+          Sign in without an account
         </Button>
       </View>
 
@@ -150,29 +173,25 @@ const styles = StyleSheet.create({
   title: {
     margin: 10,
   },
-  header: {
-    // margin: 30,
-  },
+  header: {},
   textInput: {
     width: ELEMENT_WIDTH,
-    // gap: 10,
   },
-  forgot: {
-    // marginTop: 15,
-  },
+  forgot: {},
   loginButtonContainer: {
     width: ELEMENT_WIDTH,
-    // margin: 15,
-  },
-  hint: {
-    // margin: 10,
   },
   signupButtonContainer: {
     width: ELEMENT_WIDTH,
-    // margin: 10,
   },
   signupButton: {
     color: 'black',
+  },
+  anonymousButtonContainer: {
+    width: ELEMENT_WIDTH,
+  },
+  anonymousButton: {
+    // color: 'black',
   },
 });
 

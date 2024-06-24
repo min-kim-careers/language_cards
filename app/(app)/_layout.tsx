@@ -22,6 +22,13 @@ export default function AppLayout() {
           headerTitleAlign: 'center',
         }}
       />
+      <Stack.Screen
+        name="selector"
+        options={{
+          headerTitle: () => <Header />,
+          headerTitleAlign: 'center',
+        }}
+      />
     </Stack>
   ) : (
     <Redirect href="/auth" />

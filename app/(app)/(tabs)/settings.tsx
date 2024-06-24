@@ -1,15 +1,31 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Button, Card, SegmentedButtons, Text } from 'react-native-paper';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import {
+  Button,
+  Card,
+  IconButton,
+  SegmentedButtons,
+  Text,
+} from 'react-native-paper';
 import { useSettings } from '../../../components/SettingsProvider';
-import { DisplayOrder, ELEMENT_WIDTH, Settings } from '../../../global';
+import {
+  DEFAULT_SETTINGS,
+  DisplayOrder,
+  ELEMENT_WIDTH,
+  Settings,
+} from '../../../global';
 import { useSession } from '../../../components/SessionProvider';
+import DropDownPicker, { ItemType } from 'react-native-dropdown-picker';
 
 const SettingsScreen = () => {
-  const [tempSettings, setTempSettings] = useState<Settings>({
-    displayOrder: DisplayOrder.FrontFirst,
-    shuffled: false,
-  });
+  const [tempSettings, setTempSettings] = useState<Settings>(DEFAULT_SETTINGS);
+
+  // Favourite folder settings
+  // const [openDropDown, setOpenDropDown] = useState(false);
+  // const [favouriteItemTypes, setFavouriteItemTypes] = useState<
+  //   ItemType<string>[]
+  // >([]);
+  // const [dropDownValue, setDropDownValue] = useState('My Favourites');
 
   const { signOut } = useSession();
   const { settings, saveSettings } = useSettings();
@@ -19,30 +35,30 @@ const SettingsScreen = () => {
   }, []);
 
   const handleDisplayOrderButton = (value: string) => {
-    let temp: DisplayOrder = DisplayOrder.FrontFirst;
-    if (value === 'FrontFirst') {
-      temp = DisplayOrder.FrontFirst;
-    } else if (value === 'BackFirst') {
-      temp = DisplayOrder.BackFirst;
+    let newDisplayOrder: DisplayOrder = DisplayOrder.KoreanFirst;
+    if (value === 'KoreanFirst') {
+      newDisplayOrder = DisplayOrder.KoreanFirst;
+    } else if (value === 'EnglishFirst') {
+      newDisplayOrder = DisplayOrder.EnglishFirst;
     } else if (value === 'Alternate') {
-      temp = DisplayOrder.Alternate;
+      newDisplayOrder = DisplayOrder.Alternate;
     } else {
       console.error('Invalid value passed as DisplayOrder');
     }
-    setTempSettings({
-      displayOrder: temp,
-      shuffled: tempSettings.shuffled,
-    });
+    setTempSettings((prevSettings) => ({
+      ...prevSettings,
+      displayOrder: newDisplayOrder,
+    }));
   };
 
   const handleShuffleButton = (value: string) => {
-    setTempSettings({
-      displayOrder: tempSettings.displayOrder,
+    setTempSettings((prevSettings) => ({
+      ...prevSettings,
       shuffled: value === 'true' ? true : false,
-    });
+    }));
   };
 
-  const handleSaveSettingsButton = () => {
+  const handleApplySettingsButton = () => {
     saveSettings(tempSettings);
   };
 
@@ -52,7 +68,7 @@ const SettingsScreen = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.settingContainer}>
+      <ScrollView contentContainerStyle={styles.settingContainer}>
         <Text style={styles.settingText}>
           Select how items should be displayed
         </Text>
@@ -61,22 +77,22 @@ const SettingsScreen = () => {
           onValueChange={handleDisplayOrderButton}
           buttons={[
             {
-              value: 'FrontFirst',
-              label: 'Korean first',
-              style: { flexWrap: 'wrap' },
+              value: 'KoreanFirst',
+              label: 'Korean First',
+              style: styles.segmentedButtons,
             },
             {
-              value: 'BackFirst',
-              label: 'English first',
-              style: { flexWrap: 'wrap' },
+              value: 'EnglishFirst',
+              label: 'English First',
+              style: styles.segmentedButtons,
             },
             {
               value: 'Alternate',
               label: 'Alternate',
-              style: { flexWrap: 'wrap' },
+              style: styles.segmentedButtons,
             },
           ]}
-          style={styles.segmentedButtons}
+          style={styles.segmentedButtonsContainer}
         />
 
         <Text style={styles.settingText}>Shuffle cards?</Text>
@@ -93,9 +109,27 @@ const SettingsScreen = () => {
               label: 'No',
             },
           ]}
-          style={styles.segmentedButtons}
+          style={styles.segmentedButtonsContainer}
         />
-      </View>
+
+        {/* <Text>Your favourites will be saved here</Text>
+        <DropDownPicker
+          open={openDropDown}
+          value={dropDownValue}
+          items={favouriteItemTypes}
+          setOpen={setOpenDropDown}
+          setValue={setDropDownValue}
+          setItems={setFavouriteItemTypes}
+        />
+
+        <Button
+          mode="outlined"
+          labelStyle={{ color: 'black' }}
+          style={{ width: ELEMENT_WIDTH }}
+        >
+          Create new favourites collection
+        </Button> */}
+      </ScrollView>
 
       <View style={styles.footerContainer}>
         <Card style={styles.tipCard} mode="contained">
@@ -108,7 +142,7 @@ const SettingsScreen = () => {
         <Button
           labelStyle={styles.button}
           mode="contained"
-          onPress={handleSaveSettingsButton}
+          onPress={handleApplySettingsButton}
         >
           Apply Settings
         </Button>
@@ -145,9 +179,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   settingText: {},
-  segmentedButtons: {
+  segmentedButtonsContainer: {
     width: ELEMENT_WIDTH,
+  },
+  segmentedButtons: {
     flexWrap: 'wrap',
+    alignContent: 'center'
   },
   button: {
     // width: ELEMENT_WIDTH,

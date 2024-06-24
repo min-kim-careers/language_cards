@@ -5,7 +5,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { getSession, removeSession, storeSession } from '../database/db.config';
+import { getSession, removeSession, storeSession } from '../database/storage.config';
 
 export function useSession() {
   const value = useContext(SessionContext);

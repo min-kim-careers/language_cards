@@ -1,89 +1,88 @@
-import { useEffect, useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
-import { getFavourites } from '../../../database/db.config';
 import { Link } from 'expo-router';
-import { ELEMENT_WIDTH } from '../../../global';
+import { useState } from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import {
+  Button,
+  Text
+} from 'react-native-paper';
+import { useSession } from '../../../components/SessionProvider';
+import { fetchFavouritesCount } from '../../../database/supabase.config';
+import { ANONYMOUS, ELEMENT_WIDTH } from '../../../global';
 
 const DEFAULT_LIMIT = 10;
 
-const _splitArray = (array: number[], size: number) => {
-  const result: number[][] = [];
-  for (let i = 0; i < array.length; i += size) {
-    const chunk = array.slice(i, i + size);
-    result.push(chunk);
-  }
-  return result;
-};
-
 const FavouritesScreen = () => {
-  const [favourites, setFavourites] = useState<number[][]>([]);
+  const [favouritesCount, setFavouritesCount] = useState(0);
+  const [limit, setLimit] = useState(DEFAULT_LIMIT);
 
-  useEffect(() => {
-    const initFavourites = async () => {
-      const newFavourites = await getFavourites();
-      if (newFavourites) {
-        const splitNewFavourites = _splitArray(newFavourites, DEFAULT_LIMIT);
-        if (splitNewFavourites) {
-          setFavourites(splitNewFavourites);
-        }
-      }
-    };
+  const { session } = useSession();
 
-    initFavourites();
-  }, []);
+  const fetchFavourites = async () => {
+    const res = await fetchFavouritesCount(session!, limit);
+    if (res) setFavouritesCount(res);
+  };
 
-  if (!favourites.length)
+  // const handlePlusButtonPress = () => {
+  //   router.push('/selector');
+  // };
+
+  if (session === ANONYMOUS) {
     return (
-      <View style={styles.placeHolder}>
-        <Text variant="bodyLarge" style={styles.placeHolderText}>
-          Nothing here...
+      <View style={styles.container}>
+        <Text variant="bodyLarge" style={{ textAlign: 'center' }}>
+          Please sign in if you would like to favourite your words for a better
+          experience!
         </Text>
       </View>
     );
+  }
 
   return (
-    <View>
+    <View style={styles.container}>
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.scrollViewContent}
       >
-        {favourites.map((favourite, index) => (
-          <Link
-            key={index}
-            push
-            href={{
-              pathname: '/swish',
-              params: {
-                favourites: favourite,
-              },
-            }}
-            asChild
-          >
-            <Button mode="contained" style={styles.button}>
-              {`Favourites ${index + 1}`}
-            </Button>
-          </Link>
-        ))}
+        {Array.from({ length: favouritesCount }, (_, index) => index).map(
+          (index) => (
+            <Link
+              key={index}
+              push
+              href={{
+                pathname: '/swish',
+                params: {
+                  from: index * limit,
+                  to: index * limit + limit,
+                  favourites: 'true',
+                },
+              }}
+              asChild
+            >
+              <Button mode="contained" style={styles.swishButton}>
+                {`Favourite ${index + 1}`}
+              </Button>
+            </Link>
+          )
+        )}
       </ScrollView>
+      <Button
+        mode="elevated"
+        style={styles.refreshButton}
+        onPress={fetchFavourites}
+      >
+        Refresh Favourites
+      </Button>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  placeHolder: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  placeHolderText: {
-    color: 'grey',
-  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
+    position: 'relative',
   },
   scrollView: {
     width: '100%',
@@ -94,10 +93,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 20,
   },
-  button: {
+  swishButton: {
     width: ELEMENT_WIDTH,
     height: 50,
     justifyContent: 'center',
+  },
+  refreshButton: {
+    position: 'absolute',
+    bottom: 0,
+    margin: 10,
+    width: 200,
   },
 });
 
