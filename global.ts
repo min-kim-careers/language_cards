@@ -1,13 +1,13 @@
 export const ELEMENT_WIDTH = 300;
 
 export interface Word {
-  id: number;
+  word_id: number;
   korean: string;
   english: string;
-  origin: string;
-  word_grade: string;
-  pos: string;
-  url: string | null;
+  origin?: string;
+  word_grade?: string;
+  pos?: string;
+  url?: string | null;
 }
 
 export enum DisplayOrder {

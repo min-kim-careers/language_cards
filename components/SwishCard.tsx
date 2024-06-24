@@ -97,6 +97,7 @@ const CardSide = ({
         {/* Header */}
         <View style={styles.header}>
           <Text>{word.word_grade || ''}</Text>
+          <Text>Word No. {word.word_id}</Text>
           <Text style={styles.headerText}>
             {cardIndex} / {wordCount}
           </Text>

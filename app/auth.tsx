@@ -10,7 +10,7 @@ import Header from '../components/Header';
 import { ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
 import { useSession } from '../components/SessionProvider';
-import { addUserToDB } from '../database/db.config';
+import { addNewUser } from '../database/supabase.config';
 
 const AuthScreen = () => {
   const [email, setEmail] = useState('');
@@ -65,8 +65,7 @@ const AuthScreen = () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
-          addUserToDB(user.uid);
-          console.log('Created user:', user.uid);
+          addNewUser(user.uid);
         })
         .catch((error) => {
           setToast(error.message);
@@ -110,21 +109,19 @@ const AuthScreen = () => {
           mode="elevated"
           onPress={handleLoginButton}
           disabled={loading}
+          loading={loading}
         >
           Login
         </Button>
       </View>
 
-      {/* <View style={styles.hint}>
-        <Text>Don't have an account?</Text>
-      </View> */}
-
       <View style={styles.signupButtonContainer}>
         <Button
+          labelStyle={styles.signupButton}
           mode="outlined"
           onPress={handleSignUpButton}
           disabled={loading}
-          labelStyle={styles.signupButton}
+          loading={loading}
         >
           Sign Up
         </Button>

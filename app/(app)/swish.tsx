@@ -7,13 +7,8 @@ import TipBanner from '../../components/Banner';
 import Fallback from '../../components/Fallback';
 import { useSettings } from '../../components/SettingsProvider';
 import SwishCard from '../../components/SwishCard';
-import {
-  fetchWordsForCollection,
-  fetchWordsForFavourites,
-  updateFavourites,
-} from '../../database/db.config';
+import { fetchWordsBetweenRangeForCollections } from '../../database/supabase.config';
 import { DisplayOrder, Word } from '../../global';
-import { useSession } from '../../components/SessionProvider';
 
 const generateRandomBooleans = (wordCount: number) =>
   Array.from({ length: wordCount }, () => Math.random() >= 0.5);
@@ -21,32 +16,24 @@ const generateRandomBooleans = (wordCount: number) =>
 const SwishScreen = () => {
   const [words, setWords] = useState<Word[]>([]);
   const [displayOrderList, setDisplayOrderList] = useState<boolean[]>([]);
-  const [favouriteIds, setFavouriteIds] = useState<number[]>([]);
 
-  const { session } = useSession();
   const { settings } = useSettings();
 
-  const { from, to, favourites } = useLocalSearchParams<{
+  const { from, to } = useLocalSearchParams<{
     from?: string;
     to?: string;
-    favourites?: string;
   }>();
 
   const fetchWords = async () => {
     let newWords: Word[] | null = [];
     if (from && to) {
-      newWords = await fetchWordsForCollection(
+      newWords = await fetchWordsBetweenRangeForCollections(
         parseInt(from!),
         parseInt(to!),
         settings.shuffled
       );
-    } else if (favourites) {
-      newWords = await fetchWordsForFavourites(
-        favourites.split(',').map((e) => parseInt(e)),
-        settings.shuffled
-      );
     } else {
-      console.error('Unable to fetch words in swish.tsx');
+      console.error('Invalid range given while fetching words');
     }
 
     if (newWords) {
@@ -70,15 +57,10 @@ const SwishScreen = () => {
     fetchWords();
   }, []);
 
-  const handleOnSwipeTop = (cardIndex: number) => {
-    setFavouriteIds([...favouriteIds, cardIndex]);
-  };
+  const handleOnSwipeTop = (cardIndex: number) => {};
 
   const handleOnSwipeAll = async () => {
-    if (favouriteIds.length && session) {
-      updateFavourites(session, favouriteIds);
-    }
-    router.back();
+    if (router.canGoBack()) router.back();
   };
 
   if (!words.length) return <Fallback duration={5000} />;
@@ -101,14 +83,13 @@ const SwishScreen = () => {
         showSecondCard={true}
         stackSize={2}
         onSwipedTop={(cardIndex: number) =>
-          handleOnSwipeTop(words[cardIndex].id)
+          handleOnSwipeTop(words[cardIndex].word_id)
         }
       />
       <TipBanner buttonStyle={styles.buttonStyle}>
         <View style={styles.bannerContainer}>
           <Text>Double tap or click to flip the card</Text>
           <Text>Swipe LEFT or RIGHT to view the next card</Text>
-          <Text>Swipe UP to save word to favourites</Text>
         </View>
       </TipBanner>
     </View>

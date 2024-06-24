@@ -6,7 +6,7 @@ import React, {
   useState,
 } from 'react';
 import { DisplayOrder, Settings } from '../global';
-import { getSettings, storeSettings } from '../database/db.config';
+import { getSettings, storeSettings } from '../database/storage.config';
 
 const SettingContext = createContext<{
   settings: Settings
