@@ -1,10 +1,10 @@
 import { Link } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { Button } from 'react-native-paper';
+import Fallback from '../../../components/Fallback';
 import { fetchCollectionCount } from '../../../database/supabase.config';
 import { ELEMENT_WIDTH } from '../../../global';
-import Fallback from '../../../components/Fallback';
 
 const DEFAULT_LIMIT = 10;
 
@@ -20,7 +20,7 @@ const CollectionsScreen = () => {
     fetchCollections();
   });
 
-  if (!collectionCount) return <Fallback duration={5000} />;
+  if (!collectionCount) return <Fallback duration={10000} />;
 
   return (
     <View style={styles.container}>

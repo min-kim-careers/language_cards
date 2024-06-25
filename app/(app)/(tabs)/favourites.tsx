@@ -1,10 +1,7 @@
-import { Link } from 'expo-router';
-import { useState } from 'react';
+import { Link, useFocusEffect } from 'expo-router';
+import { useCallback, useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import {
-  Button,
-  Text
-} from 'react-native-paper';
+import { Button, Text } from 'react-native-paper';
 import { useSession } from '../../../components/SessionProvider';
 import { fetchFavouritesCount } from '../../../database/supabase.config';
 import { ANONYMOUS, ELEMENT_WIDTH } from '../../../global';
@@ -17,14 +14,14 @@ const FavouritesScreen = () => {
 
   const { session } = useSession();
 
-  const fetchFavourites = async () => {
+  const getFavouritesCount = async () => {
     const res = await fetchFavouritesCount(session!, limit);
-    if (res) setFavouritesCount(res);
+    setFavouritesCount(res!);
   };
 
-  // const handlePlusButtonPress = () => {
-  //   router.push('/selector');
-  // };
+  useEffect(() => {
+    getFavouritesCount();
+  }, [favouritesCount]);
 
   if (session === ANONYMOUS) {
     return (
@@ -33,6 +30,23 @@ const FavouritesScreen = () => {
           Please sign in if you would like to favourite your words for a better
           experience!
         </Text>
+      </View>
+    );
+  }
+
+  if (!favouritesCount) {
+    return (
+      <View style={styles.container}>
+        <Text variant="bodyLarge" style={{ textAlign: 'center' }}>
+          Nothing in favourites. Add some words!
+        </Text>
+        <Button
+          mode="elevated"
+          style={styles.refreshButton}
+          onPress={getFavouritesCount}
+        >
+          Refresh Favourites
+        </Button>
       </View>
     );
   }
@@ -68,7 +82,7 @@ const FavouritesScreen = () => {
       <Button
         mode="elevated"
         style={styles.refreshButton}
-        onPress={fetchFavourites}
+        onPress={getFavouritesCount}
       >
         Refresh Favourites
       </Button>

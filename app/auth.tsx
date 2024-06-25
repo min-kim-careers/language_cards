@@ -6,9 +6,16 @@ import {
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Button, Portal, Snackbar, Text, TextInput } from 'react-native-paper';
+import {
+  ActivityIndicator,
+  Button,
+  Portal,
+  Snackbar,
+  Text,
+  TextInput,
+} from 'react-native-paper';
 import Header from '../components/Header';
-import { ANONYMOUS_KEY, ELEMENT_WIDTH } from '../global';
+import { ANONYMOUS, ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
 import { useSession } from '../components/SessionProvider';
 import { addNewUser } from '../database/supabase.config';
@@ -78,14 +85,16 @@ const AuthScreen = () => {
   // @ts-ignore
   const handleAnonymousButton = (e) => {
     e.preventDefault();
+    setLoading(true);
     signInAnonymously(auth)
       .then(() => {
         console.log('Logged in anonymously');
-        signIn(ANONYMOUS_KEY);
+        signIn(ANONYMOUS);
       })
       .catch((error) => {
         setToast(error.message);
       });
+    setLoading(false);
   };
 
   return (
@@ -125,7 +134,7 @@ const AuthScreen = () => {
           disabled={loading}
           loading={loading}
         >
-          Login
+          {loading ? <ActivityIndicator /> : `Login`}
         </Button>
       </View>
 
@@ -137,7 +146,7 @@ const AuthScreen = () => {
           disabled={loading}
           loading={loading}
         >
-          Sign Up
+          {loading ? <ActivityIndicator /> : `Sign Up`}
         </Button>
       </View>
 
@@ -149,7 +158,7 @@ const AuthScreen = () => {
           disabled={loading}
           loading={loading}
         >
-          Sign in without an account
+          {loading ? <ActivityIndicator /> : `Sign in without an account`}
         </Button>
       </View>
 
