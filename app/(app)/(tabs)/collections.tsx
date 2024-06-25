@@ -12,15 +12,16 @@ const CollectionsScreen = () => {
   const [collectionCount, setCollectionCount] = useState(0);
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
 
+  const fetchCollections = async () => {
+    const res = await fetchCollectionCount(limit);
+    setCollectionCount(res!);
+  };
+
   useEffect(() => {
-    const fetchCollections = async () => {
-      const res = await fetchCollectionCount(limit);
-      if (res) setCollectionCount(res);
-    };
     fetchCollections();
   });
 
-  if (!collectionCount) return <Fallback duration={10000} />;
+  if (!collectionCount) return <Fallback />;
 
   return (
     <View style={styles.container}>
