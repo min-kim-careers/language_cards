@@ -1,5 +1,6 @@
 import { router, useFocusEffect } from 'expo-router';
 import {
+  AuthErrorCodes,
   createUserWithEmailAndPassword,
   signInAnonymously,
   signInWithEmailAndPassword,
@@ -28,11 +29,11 @@ const AuthScreen = () => {
 
   const { session, signIn } = useSession();
 
-  useFocusEffect(() => {
+  useEffect(() => {
     if (session) {
       router.replace('/');
     }
-  });
+  }, []);
 
   // @ts-ignore
   const handleLoginButton = (e) => {
@@ -50,11 +51,11 @@ const AuthScreen = () => {
           const user = userCredential.user;
           signIn(user.uid);
           console.log('Logged in successfully as', user.email);
+          router.replace('/');
         })
         .catch((error) => {
           setToast(error.message);
         });
-      router.replace('/');
       setLoading(false);
     }
   };
@@ -90,6 +91,7 @@ const AuthScreen = () => {
       .then(() => {
         console.log('Logged in anonymously');
         signIn(ANONYMOUS);
+        router.replace('/');
       })
       .catch((error) => {
         setToast(error.message);

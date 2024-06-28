@@ -1,27 +1,32 @@
 import { Link } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import { Button, Text } from 'react-native-paper';
 import Fallback from '../../../components/Fallback';
-import { fetchCollectionCount } from '../../../database/supabase.config';
+import { fetchCollectionsWordCount } from '../../../database/supabase.config';
 import { ELEMENT_WIDTH } from '../../../global';
 
 const DEFAULT_LIMIT = 10;
 
 const CollectionsScreen = () => {
-  const [collectionCount, setCollectionCount] = useState(0);
+  const [collectionsCount, setCollectionsCount] = useState(0);
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
+  const [wordCount, setWordCount] = useState(0);
 
-  const fetchCollections = async () => {
-    const res = await fetchCollectionCount(limit);
-    setCollectionCount(res!);
+  const initCollectionCount = async () => {
+    const wordCount = await fetchCollectionsWordCount();
+    if (wordCount) {
+      setWordCount(wordCount);
+      const collectionsCount = Math.ceil(wordCount / DEFAULT_LIMIT);
+      setCollectionsCount(collectionsCount);
+    }
   };
 
   useEffect(() => {
-    fetchCollections();
+    initCollectionCount();
   });
 
-  if (!collectionCount) return <Fallback />;
+  if (!collectionsCount) return <Fallback />;
 
   return (
     <View style={styles.container}>
@@ -29,7 +34,7 @@ const CollectionsScreen = () => {
         style={styles.scrollView}
         contentContainerStyle={styles.scrollViewContent}
       >
-        {Array.from({ length: collectionCount }, (_, index) => index).map(
+        {Array.from({ length: collectionsCount }, (_, index) => index).map(
           (index) => (
             <Link
               key={index}
@@ -41,7 +46,7 @@ const CollectionsScreen = () => {
               asChild
             >
               <Button mode="contained" style={styles.button}>
-                {`Collection ${index + 1}`}
+                {`Collection ${index + 1} (${index * limit + limit < wordCount ? 10 : wordCount - index * limit})`}
               </Button>
             </Link>
           )

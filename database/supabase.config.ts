@@ -11,9 +11,7 @@ const WORDS_TABLE = 'words';
 const FAVOURITES_TABLE = 'favourites';
 const USERS_TABLE = 'users';
 
-export const fetchCollectionCount = async (
-  limit: number
-): Promise<number | null> => {
+export const fetchCollectionsWordCount = async (): Promise<number | null> => {
   // Check cache first before fetching
   const result = await getData(COLLECTION_COUNT_KEY);
   if (result) {
@@ -32,13 +30,13 @@ export const fetchCollectionCount = async (
     console.log('Zero count retrieved while fetching collection count');
     return null;
   }
-  const collectionCount = Math.floor(count / limit) || 1;
+  // const collectionCount = Math.floor(count / limit) || 1;
 
   // Caching collection count
-  storeData(COLLECTION_COUNT_KEY, collectionCount);
+  storeData(COLLECTION_COUNT_KEY, count);
 
   console.log('Succesfully fetched and cached collection count');
-  return collectionCount;
+  return count;
 };
 
 export const fetchWordsBetweenRangeForCollections = async (
@@ -67,33 +65,6 @@ export const fetchWordsBetweenRangeForCollections = async (
   console.log('Successfully fetched words between range for collections');
   return data;
 };
-
-// export const fetchWordsBetweenRangeForWordSelector = async (
-//  : number,
-//   to: number
-// ): Promise<Word[] | null> => {
-//   const { data, error } = await supabase
-//     .from(WORDS_TABLE)
-//     .select(`word_id, korean, english`)
-//     .gte('word_id', from)
-//     .lte('word_id', to);
-//   if (error) {
-//     console.error(
-//       'Error fetching words between range for word selector:',
-//       error
-//     );
-//     return null;
-//   }
-//   if (!data) {
-//     console.log(
-//       'Empty array returned while fetching words between range for word selector'
-//     );
-//     return null;
-//   } else {
-//     console.log('Successfully retrieved words for word selector');
-//     return data;
-//   }
-// };
 
 export const addNewUser = async (userId: string): Promise<boolean> => {
   const { data, error } = await supabase
@@ -173,14 +144,7 @@ export const favouriteExists = async (
   return count !== 0;
 };
 
-export const fetchFavouritesCount = async (session: string, limit: number) => {
-  // Check cache first before fetching
-  // const result = await getData(FAVOURITES_COUNT_KEY);
-  // if (result) {
-  //   console.log('Retrieved favourites count from cache');
-  //   return result;
-  // }
-
+export const fetchFavouritesWordCount = async (session: string) => {
   const { count, error } = await supabase
     .from(FAVOURITES_TABLE)
     .select('*', { count: 'exact', head: true })
@@ -194,12 +158,8 @@ export const fetchFavouritesCount = async (session: string, limit: number) => {
     return 0;
   }
 
-  const collectionCount = Math.floor(count / limit) || 1;
-  // Caching collection count
-  // storeData(FAVOURITES_COUNT_KEY, favouritesCount);
-
-  console.log('Succesfully fetched favourites count');
-  return collectionCount;
+  console.log('Succesfully fetched favourites word count');
+  return count;
 };
 
 export const fetchWordsBetweenRangeForFavourites = async (
@@ -208,12 +168,17 @@ export const fetchWordsBetweenRangeForFavourites = async (
   session: string,
   shuffled: boolean = false
 ): Promise<Word[] | null> => {
+  if (to <= from) {
+    console.error(`'to' must be greater than 'from'`);
+    return null;
+  }
   const { data, error } = await supabase
     .from(FAVOURITES_TABLE)
     .select('words(*)')
     .order('word_id', { ascending: true })
     .eq('session_id', session)
-    .range(from, to > 1 ? to - 1 : to);
+    .range(from, to)
+    .order('created_at');
   if (error) {
     console.error('Error fetching words between range for collections:', error);
     return null;

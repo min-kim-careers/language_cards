@@ -53,7 +53,7 @@ const SwishScreen = () => {
     try {
       let newWords: Word[] | null;
       // 1. fetch words from db
-      if (favourites) {
+      if (favourites && session) {
         newWords = await fetchWordsBetweenRangeForFavourites(
           parseInt(from!),
           parseInt(to!),

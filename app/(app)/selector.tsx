@@ -1,12 +1,9 @@
 import { useEffect, useState } from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  TouchableOpacity,
-  View
-} from 'react-native';
-import { Snackbar, Text } from 'react-native-paper';
+import { FlatList, StyleSheet, TouchableOpacity, View } from 'react-native';
+import { IconButton, Snackbar, Text } from 'react-native-paper';
 import { Word } from '../../global';
+import { fetchWordsBetweenRangeForFavourites } from '../../database/supabase.config';
+import { useSession } from '../../components/SessionProvider';
 
 const DEFAULT_LIMIT = 10;
 
@@ -47,13 +44,20 @@ const WordSelector = () => {
   const [[from, to], setRange] = useState([0, DEFAULT_LIMIT]);
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
 
-  // useEffect(() => {
-  //   const fetchWords = async () => {
-  //     const res = await fetchWordsBetweenRangeForWordSelector(from, to);
-  //     if (res) setWords(res);
-  //   };
-  //   fetchWords();
-  // }, []);
+  const { session } = useSession();
+
+  const fetchWords = async () => {
+    const newWords = await fetchWordsBetweenRangeForFavourites(
+      from,
+      to,
+      session!
+    );
+    if (newWords) setWords(newWords);
+  };
+
+  useEffect(() => {
+    fetchWords();
+  }, []);
 
   const handleNextPage = async () => {};
 
@@ -89,6 +93,10 @@ const WordSelector = () => {
         keyExtractor={(word) => word.word_id.toString()}
         extraData={selectedIds}
       />
+      <View style={styles.buttonsContainer}>
+        <IconButton icon='arrow-left'/>
+        <IconButton icon='delete-outline'/>
+      </View>
       <Snackbar visible={toast.length !== 0} onDismiss={() => setToast('')}>
         {toast}
       </Snackbar>
@@ -119,6 +127,11 @@ const styles = StyleSheet.create({
     width: 130,
     height: 50,
   },
+  buttonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    height: 70
+  }
 });
 
 export default WordSelector;

@@ -170,6 +170,7 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   bodyText: {
+    textAlign: 'center',
     fontSize: 40,
   },
   inputContainer: {
