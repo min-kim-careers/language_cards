@@ -3,17 +3,27 @@ import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 import Fallback from '../../../components/Fallback';
+import { useSession } from '../../../components/SessionProvider';
 import { fetchCollectionsWordCount } from '../../../database/supabase.config';
 import { ELEMENT_WIDTH } from '../../../global';
 
 const DEFAULT_LIMIT = 10;
+const ANONYMOUS_COUNT = 2;
 
 const CollectionsScreen = () => {
   const [collectionsCount, setCollectionsCount] = useState(0);
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
   const [wordCount, setWordCount] = useState(0);
 
+  const { isAnonymous } = useSession();
+
   const initCollectionCount = async () => {
+    if (isAnonymous!()) {
+      setCollectionsCount(ANONYMOUS_COUNT);
+      setWordCount(ANONYMOUS_COUNT * DEFAULT_LIMIT);
+      return;
+    }
+
     const wordCount = await fetchCollectionsWordCount();
     if (wordCount) {
       setWordCount(wordCount);
@@ -46,12 +56,21 @@ const CollectionsScreen = () => {
               asChild
             >
               <Button mode="contained" style={styles.button}>
-                {`Collection ${index + 1} (${index * limit + limit < wordCount ? 10 : wordCount - index * limit})`}
+                {`Collection ${index + 1} (${
+                  index * limit + limit < wordCount
+                    ? 10
+                    : wordCount - index * limit
+                })`}
               </Button>
             </Link>
           )
         )}
       </ScrollView>
+      {isAnonymous && (
+        <View style={{ flex: 1 }}>
+          <Text variant='bodyLarge'>Sign in for more words!</Text>
+        </View>
+      )}
     </View>
   );
 };

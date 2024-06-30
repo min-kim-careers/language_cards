@@ -13,11 +13,11 @@ const USERS_TABLE = 'users';
 
 export const fetchCollectionsWordCount = async (): Promise<number | null> => {
   // Check cache first before fetching
-  const result = await getData(COLLECTION_COUNT_KEY);
-  if (result) {
-    console.log('Retrieved collection count from cache');
-    return result;
-  }
+  // const result = await getData(COLLECTION_COUNT_KEY);
+  // if (result) {
+  //   console.log('Retrieved collection count from cache');
+  //   return result;
+  // }
 
   const { count, error } = await supabase
     .from(WORDS_TABLE)
@@ -33,7 +33,7 @@ export const fetchCollectionsWordCount = async (): Promise<number | null> => {
   // const collectionCount = Math.floor(count / limit) || 1;
 
   // Caching collection count
-  storeData(COLLECTION_COUNT_KEY, count);
+  // storeData(COLLECTION_COUNT_KEY, count);
 
   console.log('Succesfully fetched and cached collection count');
   return count;

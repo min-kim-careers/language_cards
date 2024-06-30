@@ -6,6 +6,7 @@ import {
   useState,
 } from 'react';
 import { getSession, removeSession, storeSession } from '../database/storage.config';
+import { ANONYMOUS } from '../global';
 
 export function useSession() {
   const value = useContext(SessionContext);
@@ -22,10 +23,12 @@ const SessionContext = createContext<{
   signIn: (uid: string) => void;
   signOut: () => void;
   session?: string | null;
+  isAnonymous?: () => boolean;
 }>({
   signIn: () => null,
   signOut: () => null,
   session: null,
+  isAnonymous: () => false,
 });
 
 export const SessionProvider = (props: PropsWithChildren) => {
@@ -39,9 +42,9 @@ export const SessionProvider = (props: PropsWithChildren) => {
     loadSession();
   }, []);
 
-  const signIn = async (uid: string) => {
-    setSession(uid);
-    await storeSession(uid);
+  const signIn = async (session: string) => {
+    setSession(session);
+    await storeSession(session);
   };
 
   const signOut = async () => {
@@ -49,12 +52,17 @@ export const SessionProvider = (props: PropsWithChildren) => {
     setSession(null);
   };
 
+  const isAnonymous = () => {
+    return session === ANONYMOUS;
+  }
+
   return (
     <SessionContext.Provider
       value={{
         signIn,
         signOut,
         session,
+        isAnonymous
       }}
     >
       {props.children}

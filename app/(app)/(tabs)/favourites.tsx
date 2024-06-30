@@ -1,5 +1,5 @@
 import { Link, router, useFocusEffect } from 'expo-router';
-import { useCallback, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import {
   ActivityIndicator,
@@ -9,7 +9,7 @@ import {
 } from 'react-native-paper';
 import { useSession } from '../../../components/SessionProvider';
 import { fetchFavouritesWordCount } from '../../../database/supabase.config';
-import { ANONYMOUS, ELEMENT_WIDTH } from '../../../global';
+import { ELEMENT_WIDTH } from '../../../global';
 
 const DEFAULT_LIMIT = 10;
 
@@ -19,7 +19,7 @@ const FavouritesScreen = () => {
   const [loading, setLoading] = useState(false);
   const [wordCount, setWordCount] = useState(0);
 
-  const { session } = useSession();
+  const { session, isAnonymous } = useSession();
 
   const getFavouritesCount = async () => {
     if (session) {
@@ -50,10 +50,12 @@ const FavouritesScreen = () => {
   };
 
   useFocusEffect(() => {
-    getFavouritesCount();
+    if (!isAnonymous!()) {
+      getFavouritesCount();
+    }
   });
 
-  if (session === ANONYMOUS) {
+  if (isAnonymous!()) {
     return (
       <View style={styles.container}>
         <Text variant="bodyLarge" style={{ textAlign: 'center' }}>

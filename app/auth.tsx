@@ -20,6 +20,7 @@ import { ANONYMOUS, ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
 import { useSession } from '../components/SessionProvider';
 import { addNewUser } from '../database/supabase.config';
+import Title from '../components/Title';
 
 const AuthScreen = () => {
   const [email, setEmail] = useState('');
@@ -102,11 +103,7 @@ const AuthScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.title}>
-        <Header isTitle={true} />
-      </View>
-
-      <View style={styles.header}>
-        <Text variant="titleLarge">Sign In</Text>
+        <Title isTitle={true} />
       </View>
 
       <View style={styles.textInput}>
@@ -184,7 +181,6 @@ const styles = StyleSheet.create({
   title: {
     margin: 10,
   },
-  header: {},
   textInput: {
     width: ELEMENT_WIDTH,
   },

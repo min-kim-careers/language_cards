@@ -11,22 +11,19 @@ export default function AppLayout() {
       <Stack.Screen
         name="(tabs)"
         options={{
-          headerTitle: () => <Header />,
-          headerTitleAlign: 'center',
+          header: () => <Header />,
         }}
       />
       <Stack.Screen
         name="swish"
         options={{
-          headerTitle: () => <Header />,
-          headerTitleAlign: 'center',
+          header: () => <Header />,
         }}
       />
       <Stack.Screen
         name="selector"
         options={{
-          headerTitle: () => <Header />,
-          headerTitleAlign: 'center',
+          header: () => <Header />,
         }}
       />
     </Stack>
