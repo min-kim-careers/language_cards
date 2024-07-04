@@ -29,6 +29,9 @@ const CollectionsScreen = () => {
       setWordCount(wordCount);
       const collectionsCount = Math.ceil(wordCount / DEFAULT_LIMIT);
       setCollectionsCount(collectionsCount);
+    } else {
+      setWordCount(0);
+      setCollectionsCount(0);
     }
   };
 

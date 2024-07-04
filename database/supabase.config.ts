@@ -178,7 +178,6 @@ export const fetchWordsBetweenRangeForFavourites = async (
     .order('word_id', { ascending: true })
     .eq('session_id', session)
     .range(from, to)
-    .order('created_at');
   if (error) {
     console.error('Error fetching words between range for collections:', error);
     return null;

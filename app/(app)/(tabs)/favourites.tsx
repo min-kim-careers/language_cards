@@ -28,26 +28,30 @@ const FavouritesScreen = () => {
         setWordCount(wordCount);
         const newFavouritesCount = Math.ceil(wordCount / DEFAULT_LIMIT);
         setFavouritesCount(newFavouritesCount);
+      } else {
+        setWordCount(0);
+        setFavouritesCount(0);
       }
     }
   };
 
   const handleRefreshButton = () => {
+    const minLoadingDuration = 2000;
     setLoading(true);
     getFavouritesCount();
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, minLoadingDuration);
   };
 
-  const handleSelectorButton = () => {
-    router.push({
-      pathname: '/selector',
-      params: {
-        wordCountParam: wordCount,
-      },
-    });
-  };
+  // const handleSelectorButton = () => {
+  //   router.push({
+  //     pathname: '/selector',
+  //     params: {
+  //       wordCountParam: wordCount,
+  //     },
+  //   });
+  // };
 
   useFocusEffect(() => {
     if (!isAnonymous!()) {
@@ -58,7 +62,10 @@ const FavouritesScreen = () => {
   if (isAnonymous!()) {
     return (
       <View style={styles.container}>
-        <Text variant="bodyLarge" style={{ textAlign: 'center' }}>
+        <Text
+          variant='bodyLarge'
+          style={{ textAlign: 'center' }}
+        >
           Please sign in if you would like to favourite your words for a better
           experience!
         </Text>
@@ -66,48 +73,64 @@ const FavouritesScreen = () => {
     );
   }
 
-  return (
-    <View style={styles.container}>
-      {loading ? (
+  if (loading) {
+    return (
+      <View style={styles.container}>
         <ActivityIndicator />
-      ) : !favouritesCount ? (
-        <Text variant="bodyLarge" style={{ textAlign: 'center' }}>
+      </View>
+    );
+  }
+
+  if (!favouritesCount) {
+    return (
+      <View style={styles.container}>
+        <Text
+          variant='bodyLarge'
+          style={{ textAlign: 'center' }}
+        >
           Nothing in favourites. Add some words!
         </Text>
-      ) : (
-        <ScrollView
-          style={styles.scrollView}
-          contentContainerStyle={styles.scrollViewContent}
-        >
-          {Array.from({ length: favouritesCount }, (_, index) => index).map(
-            (index) => (
-              <Link
-                key={index}
-                push
-                href={{
-                  pathname: '/swish',
-                  params: {
-                    from: index * limit,
-                    to: index * limit + limit,
-                    favourites: 'true',
-                  },
-                }}
-                asChild
+      </View>
+    );
+  }
+
+  return (
+    <View style={styles.container}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollViewContent}
+      >
+        {Array.from({ length: favouritesCount }, (_, index) => index).map(
+          (index) => (
+            <Link
+              key={index}
+              push
+              href={{
+                pathname: '/swish',
+                params: {
+                  from: index * limit,
+                  to: index * limit + limit,
+                  favourites: 'true',
+                },
+              }}
+              asChild
+            >
+              <Button
+                mode='contained'
+                style={styles.swishButton}
               >
-                <Button mode="contained" style={styles.swishButton}>
-                  {`Favourites ${index + 1} (${
-                    index * limit + limit < wordCount
-                      ? 10
-                      : wordCount - index * limit
-                  })`}
-                </Button>
-              </Link>
-            )
-          )}
-        </ScrollView>
-      )}
+                {`Favourites ${index + 1} (${
+                  index * limit + limit < wordCount
+                    ? 10
+                    : wordCount - index * limit
+                })`}
+              </Button>
+            </Link>
+          )
+        )}
+      </ScrollView>
       <IconButton
-        icon="refresh"
+        icon='refresh'
         size={36}
         style={styles.refreshButton}
         onPress={handleRefreshButton}
