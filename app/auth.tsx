@@ -1,26 +1,22 @@
-import { router, useFocusEffect } from 'expo-router';
+import { router } from 'expo-router';
 import {
-  AuthErrorCodes,
   createUserWithEmailAndPassword,
   signInAnonymously,
-  signInWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import {
-  ActivityIndicator,
   Button,
   Portal,
   Snackbar,
-  Text,
-  TextInput,
+  TextInput
 } from 'react-native-paper';
-import Header from '../components/Header';
+import { useSession } from '../components/SessionProvider';
+import Title from '../components/Title';
+import { addNewUser } from '../database/supabase.config';
 import { ANONYMOUS, ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
-import { useSession } from '../components/SessionProvider';
-import { addNewUser } from '../database/supabase.config';
-import Title from '../components/Title';
 
 const AuthScreen = () => {
   const [email, setEmail] = useState('');
@@ -45,20 +41,26 @@ const AuthScreen = () => {
 
     if (!_email || !_password) {
       setToast('Please fill in all required fields.');
-    } else {
-      setLoading(true);
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          signIn(user.uid);
-          console.log('Logged in successfully as', user.email);
-          router.replace('/');
-        })
-        .catch((error) => {
-          setToast(error.message);
-        });
-      setLoading(false);
+      return;
     }
+
+    setLoading(true);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setToast(`Welcome ${email}!`);
+        const user = userCredential.user;
+        signIn(user.uid);
+        console.log('Logged in successfully as', user.email);
+
+        setTimeout(() => {
+          setLoading(false);
+          router.replace('/');
+        }, 1500);
+      })
+      .catch((error) => {
+        setToast(error.message);
+        setLoading(false);
+      });
   };
 
   // @ts-ignore
@@ -70,18 +72,19 @@ const AuthScreen = () => {
 
     if (!_email || !_password) {
       setToast('Please fill in all required fields.');
-    } else {
-      setLoading(true);
-      createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          if (!addNewUser(user.uid)) throw new Error('Failed to add new user');
-        })
-        .catch((error) => {
-          setToast(error.message);
-        });
-      setLoading(false);
+      return;
     }
+
+    setLoading(true);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        if (!addNewUser(user.uid)) throw new Error('Failed to add new user');
+      })
+      .catch((error) => {
+        setToast(error.message);
+        setLoading(false);
+      });
   };
 
   // @ts-ignore
@@ -92,12 +95,16 @@ const AuthScreen = () => {
       .then(() => {
         console.log('Logged in anonymously');
         signIn(ANONYMOUS);
-        router.replace('/');
+
+        setTimeout(() => {
+          setLoading(false);
+          router.replace('/');
+        }, 1500);
       })
       .catch((error) => {
         setToast(error.message);
+        setLoading(false);
       });
-    setLoading(false);
   };
 
   return (
@@ -108,61 +115,64 @@ const AuthScreen = () => {
 
       <View style={styles.textInput}>
         <TextInput
-          mode="outlined"
+          mode='outlined'
           onChangeText={(text) => setEmail(text)}
           value={email}
-          placeholder="Email"
+          placeholder='Email'
         />
       </View>
 
       <View style={styles.textInput}>
         <TextInput
-          mode="outlined"
+          mode='outlined'
           onChangeText={(text) => setPassword(text)}
           value={password}
           secureTextEntry={true}
-          placeholder="Password"
+          placeholder='Password'
         />
       </View>
 
       <View style={styles.loginButtonContainer}>
         <Button
-          labelStyle={{ color: 'black' }}
-          mode="elevated"
+          labelStyle={styles.loginButton}
+          mode='elevated'
           onPress={handleLoginButton}
           disabled={loading}
           loading={loading}
         >
-          {loading ? <ActivityIndicator /> : `Login`}
+          {!loading && `Log in`}
         </Button>
       </View>
 
       <View style={styles.signupButtonContainer}>
         <Button
           labelStyle={styles.signupButton}
-          mode="outlined"
+          mode='outlined'
           onPress={handleSignUpButton}
           disabled={loading}
           loading={loading}
         >
-          {loading ? <ActivityIndicator /> : `Sign Up`}
+          {!loading && `Sign Up`}
         </Button>
       </View>
 
       <View style={styles.anonymousButtonContainer}>
         <Button
           labelStyle={styles.anonymousButton}
-          mode="outlined"
+          mode='outlined'
           onPress={handleAnonymousButton}
           disabled={loading}
           loading={loading}
         >
-          {loading ? <ActivityIndicator /> : `Sign in without an account`}
+          {!loading && `Sign in without an account`}
         </Button>
       </View>
 
       <Portal>
-        <Snackbar visible={toast.length !== 0} onDismiss={() => setToast('')}>
+        <Snackbar
+          visible={toast.length !== 0}
+          onDismiss={() => setToast('')}
+        >
           {toast}
         </Snackbar>
       </Portal>
@@ -188,17 +198,25 @@ const styles = StyleSheet.create({
   loginButtonContainer: {
     width: ELEMENT_WIDTH,
   },
+  loginButton: {
+    alignContent: 'center',
+    height: 20,
+    color: 'black',
+  },
   signupButtonContainer: {
     width: ELEMENT_WIDTH,
   },
   signupButton: {
+    alignContent: 'center',
+    height: 20,
     color: 'black',
   },
   anonymousButtonContainer: {
     width: ELEMENT_WIDTH,
   },
   anonymousButton: {
-    // color: 'black',
+    alignContent: 'center',
+    height: 20,
   },
 });
 
