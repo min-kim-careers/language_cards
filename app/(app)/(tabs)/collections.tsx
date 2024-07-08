@@ -2,28 +2,40 @@ import { Link } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { Button, Text } from 'react-native-paper';
-import Fallback from '../../../components/Fallback';
-import { useSession } from '../../../components/SessionProvider';
-import { fetchCollectionsWordCount } from '../../../database/supabase.config';
-import { ELEMENT_WIDTH } from '../../../global';
+import Fallback from '../../../components/fallback';
+import { useSession } from '../../../components/session-provider';
+import {
+  fetchCollectionsWordCount,
+  fetchWordsForCollectionPreview,
+} from '../../../database/supabase.config';
+import { ELEMENT_WIDTH, WordPreview } from '../../../global';
+import { LongPressGestureHandler, State } from 'react-native-gesture-handler';
+import WordPreviewer from '../../../components/word-previewer';
+import HintIcon from '../../../components/hint-icon';
 
 const DEFAULT_LIMIT = 10;
 const ANONYMOUS_COUNT = 2;
 
 const CollectionsScreen = () => {
+  const [wordPreviews, setWordPreviews] = useState<WordPreview[] | null>(null);
+
   const [collectionsCount, setCollectionsCount] = useState(0);
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
   const [wordCount, setWordCount] = useState(0);
 
   const { isAnonymous } = useSession();
 
-  const initCollectionCount = async () => {
+  const handleLongPress = async (from: number, to: number) => {
+    const previews = await fetchWordsForCollectionPreview(from, to);
+    if (previews) setWordPreviews(previews);
+  };
+
+  const getCollectionsCount = async () => {
     if (isAnonymous!()) {
       setCollectionsCount(ANONYMOUS_COUNT);
       setWordCount(ANONYMOUS_COUNT * DEFAULT_LIMIT);
       return;
     }
-
     const wordCount = await fetchCollectionsWordCount();
     if (wordCount) {
       setWordCount(wordCount);
@@ -36,10 +48,27 @@ const CollectionsScreen = () => {
   };
 
   useEffect(() => {
-    initCollectionCount();
+    getCollectionsCount();
   });
 
+  const from = (index: number) => {
+    return index * limit;
+  };
+
+  const to = (index: number) => {
+    return index * limit + limit;
+  };
+
   if (!collectionsCount) return <Fallback />;
+
+
+  if (isAnonymous!()) {
+    return (
+      <View style={styles.container}>
+        <Text variant='bodyLarge'>Sign in for more words!</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
@@ -49,31 +78,35 @@ const CollectionsScreen = () => {
       >
         {Array.from({ length: collectionsCount }, (_, index) => index).map(
           (index) => (
-            <Link
+            <LongPressGestureHandler
+              onActivated={() => handleLongPress(from(index), to(index))}
+              onEnded={() => setWordPreviews(null)}
+              minDurationMs={800}
               key={index}
-              push
-              href={{
-                pathname: '/swish',
-                params: { from: index * limit, to: index * limit + limit },
-              }}
-              asChild
             >
-              <Button mode="contained" style={styles.button}>
-                {`Collection ${index + 1} (${
-                  index * limit + limit < wordCount
-                    ? 10
-                    : wordCount - index * limit
-                })`}
-              </Button>
-            </Link>
+              <Link
+                push
+                href={{
+                  pathname: '/swish',
+                  params: { from: from(index), to: to(index) },
+                }}
+                asChild
+              >
+                <Button
+                  mode='contained'
+                  style={styles.button}
+                >
+                  {`Collection ${index + 1} (${
+                    to(index) < wordCount ? 10 : wordCount - index * limit
+                  })`}
+                </Button>
+              </Link>
+            </LongPressGestureHandler>
           )
         )}
       </ScrollView>
-      {isAnonymous && (
-        <View style={{ flex: 1 }}>
-          <Text variant='bodyLarge'>Sign in for more words!</Text>
-        </View>
-      )}
+      <WordPreviewer wordPreviews={wordPreviews} />
+      <HintIcon/>
     </View>
   );
 };

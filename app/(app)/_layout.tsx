@@ -1,7 +1,7 @@
 import { Redirect, Stack } from 'expo-router';
 
-import Header from '../../components/Header';
-import { useSession } from '../../components/SessionProvider';
+import Header from '../../components/header';
+import { useSession } from '../../components/session-provider';
 
 export default function AppLayout() {
   const { session } = useSession();
@@ -16,12 +16,6 @@ export default function AppLayout() {
       />
       <Stack.Screen
         name="swish"
-        options={{
-          header: () => <Header />,
-        }}
-      />
-      <Stack.Screen
-        name="selector"
         options={{
           header: () => <Header />,
         }}

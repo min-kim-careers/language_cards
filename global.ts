@@ -6,10 +6,15 @@ export interface Word {
   word_id: number;
   korean: string;
   english: string;
-  origin?: string;
-  word_grade?: string;
-  pos?: string;
+  origin: string;
+  word_grade: string;
+  pos: string;
   url?: string | null;
+}
+
+export interface WordPreview {
+  korean: string;
+  english: string;
 }
 
 export enum DisplayOrder {

@@ -1,9 +1,6 @@
+import { FontAwesome6, Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { FontAwesome6 } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
 import { ELEMENT_WIDTH } from '../../../global';
-import { View } from 'react-native';
 
 export default function TabLayout() {
   return (

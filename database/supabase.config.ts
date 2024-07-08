@@ -1,4 +1,4 @@
-import { Word } from '../global';
+import { Word, WordPreview } from '../global';
 import { supabase } from '../services/supabase';
 import {
   COLLECTION_COUNT_KEY,
@@ -168,16 +168,12 @@ export const fetchWordsBetweenRangeForFavourites = async (
   session: string,
   shuffled: boolean = false
 ): Promise<Word[] | null> => {
-  if (to <= from) {
-    console.error(`'to' must be greater than 'from'`);
-    return null;
-  }
   const { data, error } = await supabase
     .from(FAVOURITES_TABLE)
     .select('words(*)')
     .order('word_id', { ascending: true })
     .eq('session_id', session)
-    .range(from, to)
+    .range(from, to);
   if (error) {
     console.error('Error fetching words between range for collections:', error);
     return null;
@@ -194,4 +190,53 @@ export const fetchWordsBetweenRangeForFavourites = async (
   }
   console.log('Successfully fetched words between range for collections');
   return words;
+};
+
+export const fetchWordsForCollectionPreview = async (
+  from: number,
+  to: number
+): Promise<WordPreview[] | null> => {
+  const { data, error } = await supabase
+    .from(WORDS_TABLE)
+    .select('korean, english')
+    .order('word_id', { ascending: true })
+    .range(from, to > 1 ? to - 1 : to);
+  if (error) {
+    console.error('Error fetching words for collections preview:', error);
+    return null;
+  }
+  if (!data) {
+    console.log(
+      'Empty array returned while fetching words for collections preview'
+    );
+    return null;
+  }
+  console.log('Successfully fetched words for collections preview');
+  return data;
+};
+
+export const fetchWordsForFavouritesPreview = async (
+  from: number,
+  to: number,
+  session: string
+): Promise<WordPreview[] | null> => {
+  const { data, error } = await supabase
+    .from(FAVOURITES_TABLE)
+    .select('words(korean, english)')
+    .order('word_id', { ascending: true })
+    .eq('session_id', session)
+    .range(from, to);
+  if (error) {
+    console.error('Error fetching words for favourites preview:', error);
+    return null;
+  }
+  if (!data) {
+    console.log(
+      'Empty array returned while fetching words for favourites preview'
+    );
+    return null;
+  }
+  const previews = data.map((o) => o.words as unknown as WordPreview);
+  console.log('Successfully fetched words for favourites preview');
+  return previews;
 };

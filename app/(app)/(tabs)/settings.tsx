@@ -7,14 +7,14 @@ import {
   SegmentedButtons,
   Text,
 } from 'react-native-paper';
-import { useSettings } from '../../../components/SettingsProvider';
+import { useSettings } from '../../../components/settings-provider';
 import {
   DEFAULT_SETTINGS,
   DisplayOrder,
   ELEMENT_WIDTH,
   Settings,
 } from '../../../global';
-import { useSession } from '../../../components/SessionProvider';
+import { useSession } from '../../../components/session-provider';
 import DropDownPicker, { ItemType } from 'react-native-dropdown-picker';
 
 const SettingsScreen = () => {

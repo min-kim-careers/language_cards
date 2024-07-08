@@ -1,7 +1,7 @@
 import { Slot } from 'expo-router';
 import { DefaultTheme, PaperProvider } from 'react-native-paper';
-import { SettingsProvider } from '../components/SettingsProvider';
-import { SessionProvider } from '../components/SessionProvider';
+import { SettingsProvider } from '../components/settings-provider';
+import { SessionProvider } from '../components/session-provider';
 
 const theme = {
   ...DefaultTheme,

@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FlipCard from 'react-native-flip-card';
 import { Card, Text, TextInput } from 'react-native-paper';
 import { ELEMENT_WIDTH, Word } from '../global';
-import AudioPlayer from './AudioPlayer';
+import AudioPlayer from './audio-player';
 
 interface CardProps {
   cardIndex: number;

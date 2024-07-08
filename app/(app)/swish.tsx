@@ -3,17 +3,17 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Swiper from 'react-native-deck-swiper';
 import { Portal, Snackbar, Text } from 'react-native-paper';
-import Fallback from '../../components/Fallback';
-import { useSession } from '../../components/SessionProvider';
-import { useSettings } from '../../components/SettingsProvider';
-import SwishCard from '../../components/SwishCard';
-import TipBanner from '../../components/TipBanner';
+import Fallback from '../../components/fallback';
+import { useSession } from '../../components/session-provider';
+import { useSettings } from '../../components/settings-provider';
+import SwishCard from '../../components/swish-card';
+import TipBanner from '../../components/tip-banner';
 import {
   addFavourite,
   favouriteExists,
   fetchWordsBetweenRangeForCollections,
   fetchWordsBetweenRangeForFavourites,
-  removeFavourite,
+  removeFavourite
 } from '../../database/supabase.config';
 import { ANONYMOUS, DisplayOrder, ELEMENT_WIDTH, Word } from '../../global';
 
@@ -36,6 +36,8 @@ const matchDisplayOrder = (displayOrder: string, wordCount: number) => {
 };
 
 const SwishScreen = () => {
+  const [currentCardIndex, setCurrentCardIndex] = useState(1);
+
   const [words, setWords] = useState<Word[]>([]);
   const [displayOrderList, setDisplayOrderList] = useState<boolean[]>([]);
   const [toast, setToast] = useState('');
@@ -132,7 +134,7 @@ const SwishScreen = () => {
   };
 
   const handleOnSwipeAll = async () => {
-    if (router.canGoBack()) router.back();
+    router.canGoBack() ? router.back() : router.replace('/');
   };
 
   if (!words.length) return <Fallback duration={20000} />;
@@ -149,25 +151,24 @@ const SwishScreen = () => {
             englishFirst={displayOrderList[index]}
           />
         )}
-        // cardIndex={0}
-        backgroundColor="lightgrey"
+        onSwiped={(cardIndex: number) => setCurrentCardIndex(cardIndex)}
+        goBackToPreviousCardOnSwipeLeft
+        disableLeftSwipe={currentCardIndex === 1}
+        backgroundColor='lightgrey'
         onSwipedAll={handleOnSwipeAll}
-        showSecondCard={true}
-        stackSize={2}
         onSwipedTop={(cardIndex: number) => handleOnSwipeTop(cardIndex)}
         onSwipedBottom={(cardIndex: number) => handleOnSwipeBottom(cardIndex)}
       />
       <TipBanner buttonStyle={styles.buttonStyle}>
         <View style={styles.bannerContainer}>
-          <Text variant="bodyMedium">Double tap or click to flip the card</Text>
-          <Text variant="bodyMedium">
-            Swipe LEFT or RIGHT to view the next card
-          </Text>
+          <Text variant='bodyMedium'>Double TAP/CLICK to flip the card</Text>
+          <Text variant='bodyMedium'>Swipe RIGHT to view the next card</Text>
+          <Text variant='bodyMedium'>Swipe LEFT to view the previous card</Text>
           {session !== ANONYMOUS && (
-            <Text variant="bodyMedium">Swipe UP to add to favourites</Text>
+            <Text variant='bodyMedium'>Swipe UP to add to favourites</Text>
           )}
           {session !== ANONYMOUS && (
-            <Text variant="bodyMedium">
+            <Text variant='bodyMedium'>
               Swipe DOWN to remove from favourites
             </Text>
           )}
@@ -175,7 +176,10 @@ const SwishScreen = () => {
       </TipBanner>
 
       <Portal>
-        <Snackbar visible={toast.length !== 0} onDismiss={() => setToast('')}>
+        <Snackbar
+          visible={toast.length !== 0}
+          onDismiss={() => setToast('')}
+        >
           {toast}
         </Snackbar>
       </Portal>

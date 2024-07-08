@@ -12,8 +12,8 @@ import {
   Snackbar,
   TextInput
 } from 'react-native-paper';
-import { useSession } from '../components/SessionProvider';
-import Title from '../components/Title';
+import { useSession } from '../components/session-provider';
+import Title from '../components/title';
 import { addNewUser } from '../database/supabase.config';
 import { ANONYMOUS, ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';

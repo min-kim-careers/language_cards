@@ -7,13 +7,20 @@ import {
   IconButton,
   Text,
 } from 'react-native-paper';
-import { useSession } from '../../../components/SessionProvider';
-import { fetchFavouritesWordCount } from '../../../database/supabase.config';
-import { ELEMENT_WIDTH } from '../../../global';
+import { useSession } from '../../../components/session-provider';
+import {
+  fetchFavouritesWordCount,
+  fetchWordsForFavouritesPreview,
+} from '../../../database/supabase.config';
+import { ELEMENT_WIDTH, WordPreview } from '../../../global';
+import { LongPressGestureHandler } from 'react-native-gesture-handler';
+import WordPreviewer from '../../../components/word-previewer';
 
 const DEFAULT_LIMIT = 10;
 
 const FavouritesScreen = () => {
+  const [wordPreviews, setWordPreviews] = useState<WordPreview[] | null>(null);
+
   const [favouritesCount, setFavouritesCount] = useState(0);
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
   const [loading, setLoading] = useState(false);
@@ -32,6 +39,13 @@ const FavouritesScreen = () => {
         setWordCount(0);
         setFavouritesCount(0);
       }
+    }
+  };
+
+  const handleLongPress = async (from: number, to: number) => {
+    if (session) {
+      const previews = await fetchWordsForFavouritesPreview(from, to, session);
+      if (previews) setWordPreviews(previews);
     }
   };
 
@@ -58,6 +72,14 @@ const FavouritesScreen = () => {
       getFavouritesCount();
     }
   });
+
+  const from = (index: number) => {
+    return index * limit;
+  };
+
+  const to = (index: number) => {
+    return index * limit + limit;
+  };
 
   if (isAnonymous!()) {
     return (
@@ -102,30 +124,35 @@ const FavouritesScreen = () => {
       >
         {Array.from({ length: favouritesCount }, (_, index) => index).map(
           (index) => (
-            <Link
+            <LongPressGestureHandler
+              onActivated={() => handleLongPress(from(index), to(index))}
+              onEnded={() => setWordPreviews(null)}
+              minDurationMs={800}
               key={index}
-              push
-              href={{
-                pathname: '/swish',
-                params: {
-                  from: index * limit,
-                  to: index * limit + limit,
-                  favourites: 'true',
-                },
-              }}
-              asChild
             >
-              <Button
-                mode='contained'
-                style={styles.swishButton}
+              <Link
+                key={index}
+                push
+                href={{
+                  pathname: '/swish',
+                  params: {
+                    from: from(index),
+                    to: to(index),
+                    favourites: 'true',
+                  },
+                }}
+                asChild
               >
-                {`Favourites ${index + 1} (${
-                  index * limit + limit < wordCount
-                    ? 10
-                    : wordCount - index * limit
-                })`}
-              </Button>
-            </Link>
+                <Button
+                  mode='contained'
+                  style={styles.swishButton}
+                >
+                  {`Favourites ${index + 1} (${
+                    to(index) < wordCount ? 10 : wordCount - from(index)
+                  })`}
+                </Button>
+              </Link>
+            </LongPressGestureHandler>
           )
         )}
       </ScrollView>
@@ -143,6 +170,8 @@ const FavouritesScreen = () => {
         style={styles.selectorButton}
         onPress={handleSelectorButton}
       /> */}
+
+      <WordPreviewer wordPreviews={wordPreviews} />
     </View>
   );
 };
