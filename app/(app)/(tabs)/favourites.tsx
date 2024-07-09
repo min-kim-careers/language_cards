@@ -15,6 +15,7 @@ import {
 import { ELEMENT_WIDTH, WordPreview } from '../../../global';
 import { LongPressGestureHandler } from 'react-native-gesture-handler';
 import WordPreviewer from '../../../components/word-previewer';
+import HintIcon from '../../../components/hint-icon';
 
 const DEFAULT_LIMIT = 10;
 
@@ -57,15 +58,6 @@ const FavouritesScreen = () => {
       setLoading(false);
     }, minLoadingDuration);
   };
-
-  // const handleSelectorButton = () => {
-  //   router.push({
-  //     pathname: '/selector',
-  //     params: {
-  //       wordCountParam: wordCount,
-  //     },
-  //   });
-  // };
 
   useFocusEffect(() => {
     if (!isAnonymous!()) {
@@ -163,15 +155,9 @@ const FavouritesScreen = () => {
         onPress={handleRefreshButton}
         disabled={loading}
       />
-
-      {/* <IconButton
-        icon="table-large"
-        size={36}
-        style={styles.selectorButton}
-        onPress={handleSelectorButton}
-      /> */}
-
       <WordPreviewer wordPreviews={wordPreviews} />
+
+      <HintIcon />
     </View>
   );
 };
