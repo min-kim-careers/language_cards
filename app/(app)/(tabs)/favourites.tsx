@@ -29,7 +29,7 @@ const FavouritesScreen = () => {
 
   const { session, isAnonymous } = useSession();
 
-  const getFavouritesCount = async () => {
+  const initFavourites = async () => {
     if (session) {
       const wordCount = await fetchFavouritesWordCount(session);
       if (wordCount) {
@@ -53,15 +53,15 @@ const FavouritesScreen = () => {
   const handleRefreshButton = () => {
     const minLoadingDuration = 2000;
     setLoading(true);
-    getFavouritesCount();
+    initFavourites();
     setTimeout(() => {
       setLoading(false);
     }, minLoadingDuration);
   };
 
   useFocusEffect(() => {
-    if (!isAnonymous!()) {
-      getFavouritesCount();
+    if (!isAnonymous) {
+      initFavourites();
     }
   });
 
@@ -73,7 +73,7 @@ const FavouritesScreen = () => {
     return index * limit + limit;
   };
 
-  if (isAnonymous!()) {
+  if (isAnonymous) {
     return (
       <View style={styles.container}>
         <Text
@@ -131,6 +131,7 @@ const FavouritesScreen = () => {
                     from: from(index),
                     to: to(index),
                     favourites: 'true',
+                    pushed: 'true',
                   },
                 }}
                 asChild

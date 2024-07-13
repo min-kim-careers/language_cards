@@ -41,7 +41,6 @@ export const shuffleWords = (words: Word[]) => {
   return words;
 };
 
-
 export const getSession = async (): Promise<string> => {
   return await getData(SESSION_KEY);
 };
@@ -54,20 +53,22 @@ export const removeSession = async () => {
   await removeData(SESSION_KEY);
 };
 
-export const loadDBFile = async () => {
-  let temp: Word[] = [];
-  let sectionIndex = 1;
-  vocabs.forEach((word, index) => {
-    try {
-      temp.push(word);
-      if ((index + 1) % 10 == 0 && index > 0) {
-        storeData(`Collection ${sectionIndex++}`, temp);
-        temp = [];
-      }
-    } catch (error) {
-      storeData(`Collection ${sectionIndex}`, temp);
-    }
-  });
+export const initLocalStorage = () => {
+  try {
+    storeData(COLLECTION_COUNT_KEY, vocabs.length);
+  } catch (error) {
+    console.error('Failed to store word count in local storage');
+  }
+};
+
+export const getCollectionsWordCount = async () => {
+  try {
+    const collectionsWordCount = await getData(COLLECTION_COUNT_KEY);
+    return collectionsWordCount;
+  } catch (error) {
+    console.error('Failed to get collections word count');
+    return null;
+  }
 };
 
 export const getAllCollectionNamesSorted = async (): Promise<string[]> => {
@@ -94,7 +95,6 @@ export const getOrderedWords = async (collection: string): Promise<Word[]> => {
   const words: Word[] = await getData(collection);
   return words;
 };
-
 
 export const getSettings = async (): Promise<Settings> => {
   return getData(SETTINGS_KEY);

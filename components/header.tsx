@@ -1,36 +1,43 @@
-import { StyleSheet } from 'react-native';
-import { Card } from 'react-native-paper';
-import { ELEMENT_WIDTH } from '../global';
 import { AntDesign } from '@expo/vector-icons';
+import { router, useLocalSearchParams } from 'expo-router';
+import { StyleSheet, View } from 'react-native';
+import { ELEMENT_WIDTH, SHADOW_STYLE } from '../global';
+import SearchModal from './search-modal';
 import Title from './title';
 import { useEffect, useState } from 'react';
-import { router } from 'expo-router';
 
 const Header = ({ isTitle = false }: { isTitle?: boolean }) => {
-  const [isPushed, setIsPushed] = useState(false);
+  const [wasPushed, setWasPushed] = useState(false);
+
+  const { pushed } = useLocalSearchParams<{
+    pushed?: string;
+  }>();
+
   useEffect(() => {
-    if (router.canGoBack()) {
-      setIsPushed(true);
-    }
+    if (pushed) setWasPushed(pushed === 'true');
   }, []);
 
   return (
-    <Card style={styles.container}>
-      {isPushed && (
-        <AntDesign
-          name="left"
-          size={24}
-          color="black"
-          style={{
-            position: 'absolute',
-            right: ELEMENT_WIDTH * 0.55,
-            top: 4,
-          }}
-          onPress={() => router.back()}
-        />
-      )}
+    <View style={styles.container}>
+      <BackButton canGoBack={wasPushed} />
       <Title isTitle={isTitle} />
-    </Card>
+      <SearchModal style={styles.right} />
+    </View>
+  );
+};
+
+const BackButton = ({ canGoBack }: { canGoBack: boolean }) => {
+  return (
+    <AntDesign
+      name='left'
+      size={24}
+      color='black'
+      style={{
+        ...styles.left,
+        display: canGoBack ? 'flex' : 'none',
+      }}
+      onPress={() => router.back()}
+    />
   );
 };
 
@@ -41,11 +48,21 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: 'white',
     borderRadius: 30,
-    elevation: 7,
-    justifyContent: 'center',
+    elevation: 5,
     paddingHorizontal: 20,
     alignItems: 'center',
     alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    ...SHADOW_STYLE,
+  },
+  left: {
+    position: 'absolute',
+    left: 10,
+  },
+  right: {
+    position: 'absolute',
+    right: 10,
   },
 });
 

@@ -3,10 +3,10 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import {
   Button,
   Card,
-  IconButton,
   SegmentedButtons,
-  Text,
+  Text
 } from 'react-native-paper';
+import { useSession } from '../../../components/session-provider';
 import { useSettings } from '../../../components/settings-provider';
 import {
   DEFAULT_SETTINGS,
@@ -14,18 +14,9 @@ import {
   ELEMENT_WIDTH,
   Settings,
 } from '../../../global';
-import { useSession } from '../../../components/session-provider';
-import DropDownPicker, { ItemType } from 'react-native-dropdown-picker';
 
 const SettingsScreen = () => {
   const [tempSettings, setTempSettings] = useState<Settings>(DEFAULT_SETTINGS);
-
-  // Favourite folder settings
-  // const [openDropDown, setOpenDropDown] = useState(false);
-  // const [favouriteItemTypes, setFavouriteItemTypes] = useState<
-  //   ItemType<string>[]
-  // >([]);
-  // const [dropDownValue, setDropDownValue] = useState('My Favourites');
 
   const { signOut } = useSession();
   const { settings, saveSettings } = useSettings();
@@ -111,24 +102,6 @@ const SettingsScreen = () => {
           ]}
           style={styles.segmentedButtonsContainer}
         />
-
-        {/* <Text>Your favourites will be saved here</Text>
-        <DropDownPicker
-          open={openDropDown}
-          value={dropDownValue}
-          items={favouriteItemTypes}
-          setOpen={setOpenDropDown}
-          setValue={setDropDownValue}
-          setItems={setFavouriteItemTypes}
-        />
-
-        <Button
-          mode="outlined"
-          labelStyle={{ color: 'black' }}
-          style={{ width: ELEMENT_WIDTH }}
-        >
-          Create new favourites collection
-        </Button> */}
       </ScrollView>
 
       <View style={styles.footerContainer}>

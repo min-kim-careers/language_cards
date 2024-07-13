@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Button, Card, Divider, Modal, Portal, Text } from 'react-native-paper';
-import { WordPreview } from '../global';
-import { StyleSheet, View } from 'react-native';
+import { Modal, StyleSheet, View } from 'react-native';
+import { Portal, Text } from 'react-native-paper';
+import { ELEMENT_WIDTH, SHADOW_STYLE, WordPreview } from '../global';
 
 const WordPreviewer = ({
   wordPreviews,
@@ -14,59 +14,58 @@ const WordPreviewer = ({
     wordPreviews ? setVisible(true) : setVisible(false);
   }, [wordPreviews]);
 
-  const showModal = () => setVisible(true);
-  const hideModal = () => setVisible(false);
-
   if (!wordPreviews) return;
 
   return (
-    <Portal>
+    <View style={styles.centeredView}>
       <Modal
+        animationType='fade'
+        transparent={true}
         visible={visible}
-        onDismiss={hideModal}
-        contentContainerStyle={styles.container}
+        onRequestClose={() => setVisible(!visible)}
       >
-        <Text style={styles.title}>Preview</Text>
-        {wordPreviews.map((word, i) => (
-          <View key={i}>
-            <View style={styles.view}>
-              <Text style={styles.words}>{word.english}</Text>
-              <Text style={styles.words}>{word.korean}</Text>
-            </View>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            {wordPreviews.map((word, i) => (
+              <View
+                key={i}
+                style={{
+                  flexDirection: 'row',
+                  width: '100%',
+                  justifyContent: 'space-evenly'
+                }}
+              >
+                <Text style={styles.text}>{word.english}</Text>
+                <Text style={styles.text}>{word.korean}</Text>
+              </View>
+            ))}
           </View>
-        ))}
+        </View>
       </Modal>
-    </Portal>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    height: '50%',
-    width: '75%',
+  centeredView: {
+    flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: '15%',
-    alignSelf: 'center',
-    borderRadius: 10,
+    alignItems: 'center',
   },
-  view: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    width: '100%',
-    paddingVertical: '1%',
+  modalView: {
+    position: 'absolute',
+    width: '65%',
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...SHADOW_STYLE,
   },
-  title: {
+  text: {
+    marginBottom: 15,
     textAlign: 'center',
-    marginBottom: 20,
-    fontSize: 20,
-    width: '100%',
-  },
-  words: {
-    width: '50%',
-    textAlign: 'center',
-    fontSize: 15,
+    width: '50%'
   },
 });
-
 export default WordPreviewer;

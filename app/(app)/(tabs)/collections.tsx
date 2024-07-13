@@ -1,20 +1,20 @@
 import { Link } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { LongPressGestureHandler } from 'react-native-gesture-handler';
+import { Button } from 'react-native-paper';
 import Fallback from '../../../components/fallback';
-import { useSession } from '../../../components/session-provider';
+import HintIcon from '../../../components/hint-icon';
+import WordPreviewer from '../../../components/word-previewer';
 import {
   fetchCollectionsWordCount,
   fetchWordsForCollectionPreview,
 } from '../../../database/supabase.config';
 import { ELEMENT_WIDTH, WordPreview } from '../../../global';
-import { LongPressGestureHandler, State } from 'react-native-gesture-handler';
-import WordPreviewer from '../../../components/word-previewer';
-import HintIcon from '../../../components/hint-icon';
 
 const DEFAULT_LIMIT = 10;
-const ANONYMOUS_COUNT = 2;
+
+// const ANONYMOUS_COLLECTION_COUNT = 2;
 
 const CollectionsScreen = () => {
   const [wordPreviews, setWordPreviews] = useState<WordPreview[] | null>(null);
@@ -23,19 +23,19 @@ const CollectionsScreen = () => {
   const [limit, setLimit] = useState(DEFAULT_LIMIT);
   const [wordCount, setWordCount] = useState(0);
 
-  const { isAnonymous } = useSession();
+  // const { isAnonymous } = useSession();
 
   const handleLongPress = async (from: number, to: number) => {
     const previews = await fetchWordsForCollectionPreview(from, to);
     if (previews) setWordPreviews(previews);
   };
 
-  const getCollectionsCount = async () => {
-    if (isAnonymous!()) {
-      setCollectionsCount(ANONYMOUS_COUNT);
-      setWordCount(ANONYMOUS_COUNT * DEFAULT_LIMIT);
-      return;
-    }
+  const initCollections = async () => {
+    // if (isAnonymous!()) {
+    //   setCollectionsCount(ANONYMOUS_COLLECTION_COUNT);
+    //   setWordCount(ANONYMOUS_COLLECTION_COUNT * DEFAULT_LIMIT);
+    //   return;
+    // }
     const wordCount = await fetchCollectionsWordCount();
     if (wordCount) {
       setWordCount(wordCount);
@@ -48,7 +48,7 @@ const CollectionsScreen = () => {
   };
 
   useEffect(() => {
-    getCollectionsCount();
+    initCollections();
   });
 
   const from = (index: number) => {
@@ -61,14 +61,13 @@ const CollectionsScreen = () => {
 
   if (!collectionsCount) return <Fallback />;
 
-
-  if (isAnonymous!()) {
-    return (
-      <View style={styles.container}>
-        <Text variant='bodyLarge'>Sign in for more words!</Text>
-      </View>
-    );
-  }
+  // if (isAnonymous!()) {
+  //   return (
+  //     <View style={styles.container}>
+  //       <Text variant='bodyLarge'>Sign in for more words!</Text>
+  //     </View>
+  //   );
+  // }
 
   return (
     <View style={styles.container}>
@@ -88,7 +87,11 @@ const CollectionsScreen = () => {
                 push
                 href={{
                   pathname: '/swish',
-                  params: { from: from(index), to: to(index) },
+                  params: {
+                    from: from(index),
+                    to: to(index),
+                    pushed: 'true',
+                  },
                 }}
                 asChild
               >
@@ -106,7 +109,7 @@ const CollectionsScreen = () => {
         )}
       </ScrollView>
       <WordPreviewer wordPreviews={wordPreviews} />
-      <HintIcon/>
+      <HintIcon />
     </View>
   );
 };

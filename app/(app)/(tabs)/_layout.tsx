@@ -1,6 +1,6 @@
 import { FontAwesome6, Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { ELEMENT_WIDTH } from '../../../global';
+import { ELEMENT_WIDTH, SHADOW_STYLE } from '../../../global';
 
 export default function TabLayout() {
   return (
@@ -19,6 +19,7 @@ export default function TabLayout() {
           paddingHorizontal: 20,
           alignItems: 'center',
           alignSelf: 'center',
+          ...SHADOW_STYLE
         },
       }}
     >

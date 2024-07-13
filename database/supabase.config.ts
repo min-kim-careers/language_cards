@@ -1,11 +1,6 @@
 import { Word, WordPreview } from '../global';
 import { supabase } from '../services/supabase';
-import {
-  COLLECTION_COUNT_KEY,
-  getData,
-  shuffleWords,
-  storeData,
-} from './storage.config';
+import { shuffleWords } from './storage.config';
 
 const WORDS_TABLE = 'words';
 const FAVOURITES_TABLE = 'favourites';
@@ -81,15 +76,15 @@ export const addNewUser = async (userId: string): Promise<boolean> => {
 
 export const addFavourite = async (
   sessionId: string,
-  wordId: number,
-  collectionName: string = 'My Favourites'
+  wordId: number
+  // collectionName: string = 'My Favourites'
 ): Promise<boolean> => {
   const { data, error } = await supabase
     .from(FAVOURITES_TABLE)
     .upsert({
       session_id: sessionId,
       word_id: wordId,
-      collection_name: collectionName,
+      // collection_name: collectionName,
     })
     .select();
   if (error) {
@@ -100,10 +95,38 @@ export const addFavourite = async (
   return true;
 };
 
+const generateUniqueIdForFavourites = (sessionId: string, word_id: number) => {
+  return sessionId + '_' + word_id.toString();
+};
+
+export const addMultipleFavourites = async (
+  sessionId: string,
+  wordIdList: number[]
+  // collectionName: string = 'My Favourites'
+) => {
+  const newEntries = wordIdList.map((wordId) => ({
+    session_id: sessionId,
+    word_id: wordId,
+    // collection_name: collectionName,
+    unique_id: generateUniqueIdForFavourites(sessionId, wordId),
+  }));
+
+  const { data, error } = await supabase
+    .from(FAVOURITES_TABLE)
+    .upsert(newEntries, { onConflict: 'unique_id', ignoreDuplicates: true })
+    .select();
+  if (error) {
+    console.error('Error adding multiple favourites:', error);
+    return null;
+  }
+  console.log('Successfully added multiple favourites:', data);
+  return data;
+};
+
 export const removeFavourite = async (
   sessionId: string,
-  wordId: number,
-  collectionName: string = 'My Favourites'
+  wordId: number
+  // collectionName: string = 'My Favourites'
 ): Promise<boolean> => {
   const { data, error } = await supabase
     .from(FAVOURITES_TABLE)
@@ -111,7 +134,7 @@ export const removeFavourite = async (
     .match({
       session_id: sessionId,
       word_id: wordId,
-      collection_name: collectionName,
+      // collection_name: collectionName,
     })
     .select();
   if (error) {
@@ -124,8 +147,8 @@ export const removeFavourite = async (
 
 export const favouriteExists = async (
   sessionId: string,
-  wordId: number,
-  collectionName: string = 'My Favourites'
+  wordId: number
+  // collectionName: string = 'My Favourites'
 ): Promise<boolean> => {
   const { count, error } = await supabase
     .from(FAVOURITES_TABLE)
@@ -133,7 +156,7 @@ export const favouriteExists = async (
     .match({
       session_id: sessionId,
       word_id: wordId,
-      collection_name: collectionName,
+      // collection_name: collectionName,
     })
     .select();
   if (error) {
