@@ -10,7 +10,7 @@ import {
   removeSession,
   storeSession,
 } from '../database/storage.config';
-import { ANONYMOUS } from '../global';
+import { ANONYMOUS } from '../constants/global';
 
 export function useSession() {
   const value = useContext(SessionContext);

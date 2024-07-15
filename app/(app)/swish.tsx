@@ -7,7 +7,7 @@ import Fallback from '../../components/fallback';
 import { useSession } from '../../components/session-provider';
 import { useSettings } from '../../components/settings-provider';
 import SwishCard from '../../components/swish-card';
-import TipBanner from '../../components/tip-banner';
+import InstructionsBanner from '../../components/instructions-banner';
 import {
   addFavourite,
   favouriteExists,
@@ -15,7 +15,7 @@ import {
   fetchWordsBetweenRangeForFavourites,
   removeFavourite
 } from '../../database/supabase.config';
-import { ANONYMOUS, DisplayOrder, ELEMENT_WIDTH, Word } from '../../global';
+import { ANONYMOUS, DisplayOrder, ELEMENT_WIDTH, Word } from '../../constants/global';
 
 const generateRandomBooleans = (wordCount: number) => {
   return Array.from({ length: wordCount }, () => Math.random() >= 0.5);
@@ -159,7 +159,7 @@ const SwishScreen = () => {
         onSwipedTop={(cardIndex: number) => handleOnSwipeTop(cardIndex)}
         onSwipedBottom={(cardIndex: number) => handleOnSwipeBottom(cardIndex)}
       />
-      <TipBanner buttonStyle={styles.buttonStyle}>
+      <InstructionsBanner buttonStyle={styles.buttonStyle}>
         <View style={styles.bannerContainer}>
           <Text variant='bodyMedium'>Double TAP/CLICK to flip the card</Text>
           <Text variant='bodyMedium'>Swipe RIGHT to view the next card</Text>
@@ -173,7 +173,7 @@ const SwishScreen = () => {
             </Text>
           )}
         </View>
-      </TipBanner>
+      </InstructionsBanner>
 
       <Portal>
         <Snackbar

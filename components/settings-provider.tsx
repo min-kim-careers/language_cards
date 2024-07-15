@@ -5,7 +5,7 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { DEFAULT_SETTINGS, DisplayOrder, Settings } from '../global';
+import { DEFAULT_SETTINGS, DisplayOrder, Settings } from '../constants/global';
 import { getSettings, storeSettings } from '../database/storage.config';
 
 const SettingContext = createContext<{

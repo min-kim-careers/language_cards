@@ -1,7 +1,13 @@
 import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 
-const Title = ({ isTitle }: { isTitle?: boolean }) => {
+const Logo = ({
+  isTitle,
+  className,
+}: {
+  isTitle?: boolean;
+  className?: string;
+}) => {
   const styles = StyleSheet.create({
     mainHeader: {
       fontSize: isTitle ? 40 : 20,
@@ -14,11 +20,11 @@ const Title = ({ isTitle }: { isTitle?: boolean }) => {
   });
 
   return (
-    <View>
+    <View className={className}>
       <Text style={styles.mainHeader}>S W I S H</Text>
       <Text style={styles.subHeader}>K O R E A N</Text>
     </View>
   );
 };
 
-export default Title;
+export default Logo;

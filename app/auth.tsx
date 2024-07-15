@@ -2,20 +2,15 @@ import { router } from 'expo-router';
 import {
   createUserWithEmailAndPassword,
   signInAnonymously,
-  signInWithEmailAndPassword
+  signInWithEmailAndPassword,
 } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import {
-  Button,
-  Portal,
-  Snackbar,
-  TextInput
-} from 'react-native-paper';
+import { Button, Portal, Snackbar, TextInput } from 'react-native-paper';
 import { useSession } from '../components/session-provider';
-import Title from '../components/title';
+import Logo from '../components/logo';
+import { ANONYMOUS, ELEMENT_WIDTH } from '../constants/global';
 import { addNewUser } from '../database/supabase.config';
-import { ANONYMOUS, ELEMENT_WIDTH } from '../global';
 import { auth } from '../services/firebase';
 
 const AuthScreen = () => {
@@ -87,30 +82,30 @@ const AuthScreen = () => {
       });
   };
 
-  // @ts-ignore
-  const handleAnonymousButton = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    signInAnonymously(auth)
-      .then(() => {
-        console.log('Logged in anonymously');
-        signIn(ANONYMOUS);
+  // // @ts-ignore
+  // const handleAnonymousButton = (e) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+  //   signInAnonymously(auth)
+  //     .then(() => {
+  //       console.log('Logged in anonymously');
+  //       signIn(ANONYMOUS);
 
-        setTimeout(() => {
-          setLoading(false);
-          router.replace('/');
-        }, 1500);
-      })
-      .catch((error) => {
-        setToast(error.message);
-        setLoading(false);
-      });
-  };
+  //       setTimeout(() => {
+  //         setLoading(false);
+  //         router.replace('/');
+  //       }, 1500);
+  //     })
+  //     .catch((error) => {
+  //       setToast(error.message);
+  //       setLoading(false);
+  //     });
+  // };
 
   return (
     <View style={styles.container}>
       <View style={styles.title}>
-        <Title isTitle={true} />
+        <Logo isTitle />
       </View>
 
       <View style={styles.textInput}>
@@ -156,7 +151,7 @@ const AuthScreen = () => {
         </Button>
       </View>
 
-      <View style={styles.anonymousButtonContainer}>
+      {/* <View style={styles.anonymousButtonContainer}>
         <Button
           labelStyle={styles.anonymousButton}
           mode='outlined'
@@ -166,7 +161,7 @@ const AuthScreen = () => {
         >
           {!loading && `Sign in without an account`}
         </Button>
-      </View>
+      </View> */}
 
       <Portal>
         <Snackbar

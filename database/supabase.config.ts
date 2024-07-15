@@ -1,4 +1,4 @@
-import { Word, WordPreview } from '../global';
+import { Word, WordPreview } from '../constants/global';
 import { supabase } from '../services/supabase';
 import { shuffleWords } from './storage.config';
 
@@ -121,6 +121,44 @@ export const addMultipleFavourites = async (
   }
   console.log('Successfully added multiple favourites:', data);
   return data;
+};
+
+export const removeMultipleFavourites = async (
+  sessionId: string,
+  wordIdList: number[]
+  // collectionName: string = 'My Favourites'
+) => {
+  const entriesToRemove = wordIdList.map((wordId) => generateUniqueIdForFavourites(sessionId, wordId));
+
+  const { data, error } = await supabase
+    .from(FAVOURITES_TABLE)
+    .delete()
+    .in('unique_id', entriesToRemove);
+  if (error) {
+    console.error('Error removing multiple favourites:', error);
+    return null;
+  }
+  console.log('Successfully removed multiple favourites:', data);
+  return data;
+};
+
+export const fetchAllFavouritesForUser = async (session: string) => {
+  const { data, error } = await supabase
+    .from(FAVOURITES_TABLE)
+    .select('words(word_id, korean, english)')
+    .order('word_id', { ascending: true })
+    .eq('session_id', session);
+  if (error) {
+    console.error('Error fetching all favourites for user:', error);
+    return null;
+  }
+  if (!data) {
+    console.log('No favourites to fetch for user');
+  } else {
+    console.log('Succesfully fetched all favourites for user');
+  }
+
+  return data.flatMap((d) => d.words);
 };
 
 export const removeFavourite = async (

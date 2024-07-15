@@ -2,7 +2,7 @@ import { AntDesign } from '@expo/vector-icons';
 import { Audio } from 'expo-av';
 import { useEffect, useState } from 'react';
 
-const AudioPlayer = ({ soundUrl }: { soundUrl: string }) => {
+const AudioButton = ({ soundUrl }: { soundUrl: string }) => {
   const [sound, setSound] = useState<Audio.Sound>();
 
   const playSound = async () => {
@@ -25,4 +25,4 @@ const AudioPlayer = ({ soundUrl }: { soundUrl: string }) => {
   return <AntDesign name="sound" size={24} color="black" onPress={playSound} />;
 };
 
-export default AudioPlayer;
+export default AudioButton;

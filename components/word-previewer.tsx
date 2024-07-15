@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Modal, StyleSheet, View } from 'react-native';
-import { Portal, Text } from 'react-native-paper';
-import { ELEMENT_WIDTH, SHADOW_STYLE, WordPreview } from '../global';
+import { Text } from 'react-native-paper';
+import { SHADOW_STYLE, WordPreview } from '../constants/global';
 
 const WordPreviewer = ({
   wordPreviews,
@@ -32,7 +32,7 @@ const WordPreviewer = ({
                 style={{
                   flexDirection: 'row',
                   width: '100%',
-                  justifyContent: 'space-evenly'
+                  justifyContent: 'space-evenly',
                 }}
               >
                 <Text style={styles.text}>{word.english}</Text>
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   text: {
     marginBottom: 15,
     textAlign: 'center',
-    width: '50%'
+    width: '50%',
   },
 });
 export default WordPreviewer;

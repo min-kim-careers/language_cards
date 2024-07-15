@@ -1,6 +1,10 @@
-import { FontAwesome6, Ionicons, MaterialIcons } from '@expo/vector-icons';
+import {
+  Feather,
+  Ionicons,
+  MaterialIcons
+} from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { ELEMENT_WIDTH, SHADOW_STYLE } from '../../../global';
+import { ELEMENT_WIDTH, SHADOW_STYLE } from '../../../constants/global';
 
 export default function TabLayout() {
   return (
@@ -9,7 +13,7 @@ export default function TabLayout() {
         tabBarActiveTintColor: 'black',
         tabBarStyle: {
           bottom: 10,
-          width: ELEMENT_WIDTH*1.1,
+          width: ELEMENT_WIDTH * 1.1,
           height: 50,
           backgroundColor: 'white',
           borderRadius: 30,
@@ -19,42 +23,54 @@ export default function TabLayout() {
           paddingHorizontal: 20,
           alignItems: 'center',
           alignSelf: 'center',
-          ...SHADOW_STYLE
+          ...SHADOW_STYLE,
         },
       }}
     >
       <Tabs.Screen
-        name="collections"
+        name='add-words'
         options={{
           headerShown: false,
           title: '',
           tabBarIcon: ({ color }) => (
-            <FontAwesome6 name="list-ul" size={24} color={color} />
+            <Feather
+              name='plus-square'
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
-        name="favourites"
+        name='favourites'
         options={{
           headerShown: false,
           title: '',
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="favorite-border" size={24} color={color} />
+            <MaterialIcons
+              name='favorite-border'
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name='remove-words'
         options={{
           headerShown: false,
           title: '',
           tabBarIcon: ({ color }) => (
-            <Ionicons name="settings-outline" size={24} color={color} />
+            <Feather
+              name='minus-square'
+              size={24}
+              color={color}
+            />
           ),
         }}
       />
       <Tabs.Screen
-        name="index"
+        name='index'
         options={{
           href: null,
         }}

@@ -1,21 +1,20 @@
-import { Link, router, useFocusEffect } from 'expo-router';
+import { Link, useFocusEffect } from 'expo-router';
 import { useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, View } from 'react-native';
 import {
-  ActivityIndicator,
-  Button,
-  IconButton,
-  Text,
-} from 'react-native-paper';
+  LongPressGestureHandler,
+  ScrollView,
+} from 'react-native-gesture-handler';
+import { ActivityIndicator, Text } from 'react-native-paper';
+import HintButton from '../../../components/hint-button';
+import RefreshButton from '../../../components/refresh-button';
 import { useSession } from '../../../components/session-provider';
+import WordPreviewer from '../../../components/word-previewer';
+import { ELEMENT_WIDTH, WordPreview } from '../../../constants/global';
 import {
   fetchFavouritesWordCount,
   fetchWordsForFavouritesPreview,
 } from '../../../database/supabase.config';
-import { ELEMENT_WIDTH, WordPreview } from '../../../global';
-import { LongPressGestureHandler } from 'react-native-gesture-handler';
-import WordPreviewer from '../../../components/word-previewer';
-import HintIcon from '../../../components/hint-icon';
 
 const DEFAULT_LIMIT = 10;
 
@@ -65,17 +64,9 @@ const FavouritesScreen = () => {
     }
   });
 
-  const from = (index: number) => {
-    return index * limit;
-  };
-
-  const to = (index: number) => {
-    return index * limit + limit;
-  };
-
   if (isAnonymous) {
     return (
-      <View style={styles.container}>
+      <View className='justify-center items-center flex-1'>
         <Text
           variant='bodyLarge'
           style={{ textAlign: 'center' }}
@@ -89,7 +80,7 @@ const FavouritesScreen = () => {
 
   if (loading) {
     return (
-      <View style={styles.container}>
+      <View className='justify-center items-center flex-1'>
         <ActivityIndicator />
       </View>
     );
@@ -97,7 +88,7 @@ const FavouritesScreen = () => {
 
   if (!favouritesCount) {
     return (
-      <View style={styles.container}>
+      <View className='justify-center items-center flex-1'>
         <Text
           variant='bodyLarge'
           style={{ textAlign: 'center' }}
@@ -109,94 +100,115 @@ const FavouritesScreen = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={styles.scrollViewContent}
+    <View className='flex-1 justify-center items-center'>
+      <View className='flex-[0.5]' />
+      <View
+        className={`flex-[10]`}
+        style={{
+          width: ELEMENT_WIDTH,
+        }}
       >
-        {Array.from({ length: favouritesCount }, (_, index) => index).map(
-          (index) => (
-            <LongPressGestureHandler
-              onActivated={() => handleLongPress(from(index), to(index))}
-              onEnded={() => setWordPreviews(null)}
-              minDurationMs={800}
-              key={index}
-            >
-              <Link
+        <ScrollView>
+          {Array.from({ length: favouritesCount }, (_, index) => index).map(
+            (index) => (
+              <FavouritesButton
+                handleLongPress={handleLongPress}
+                index={index}
+                limit={limit}
+                setWordPreviews={setWordPreviews}
+                wordCount={wordCount}
                 key={index}
-                push
-                href={{
-                  pathname: '/swish',
-                  params: {
-                    from: from(index),
-                    to: to(index),
-                    favourites: 'true',
-                    pushed: 'true',
-                  },
-                }}
-                asChild
-              >
-                <Button
-                  mode='contained'
-                  style={styles.swishButton}
-                >
-                  {`Favourites ${index + 1} (${
-                    to(index) < wordCount ? 10 : wordCount - from(index)
-                  })`}
-                </Button>
-              </Link>
-            </LongPressGestureHandler>
-          )
-        )}
-      </ScrollView>
-      <IconButton
-        icon='refresh'
-        size={36}
-        style={styles.refreshButton}
-        onPress={handleRefreshButton}
-        disabled={loading}
-      />
-      <WordPreviewer wordPreviews={wordPreviews} />
+              />
+            )
+          )}
+        </ScrollView>
+      </View>
+      <View className='flex-[0.5]' />
 
-      <HintIcon />
+      <Toolbar
+        className='absolute bg-white justify-center items-center bottom-[30%] left-2 h-[150px] rounded-xl shadow-sm'
+        refreshing={loading}
+        handleRefreshButton={handleRefreshButton}
+      />
+
+      <WordPreviewer wordPreviews={wordPreviews} />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    position: 'relative',
-  },
-  scrollView: {
-    width: '100%',
-    paddingVertical: 20,
-  },
-  scrollViewContent: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: 20,
-  },
-  swishButton: {
-    width: ELEMENT_WIDTH,
-    height: 50,
-    justifyContent: 'center',
-  },
-  refreshButton: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    margin: 10,
-  },
-  selectorButton: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    margin: 10,
-  },
-});
+const Toolbar = ({
+  refreshing,
+  handleRefreshButton,
+  className,
+}: {
+  refreshing: boolean;
+  handleRefreshButton: () => void;
+  className?: string;
+}) => {
+  return (
+    <View className={className}>
+      <HintButton className='justify-center items-center flex-1' />
+      <RefreshButton
+        className='justify-center items-center flex-1'
+        loading={refreshing}
+        onPress={handleRefreshButton}
+      />
+    </View>
+  );
+};
+
+const FavouritesButton = ({
+  handleLongPress,
+  setWordPreviews,
+  index,
+  wordCount,
+  limit,
+}: {
+  handleLongPress: (from: number, to: number) => void;
+  setWordPreviews: React.Dispatch<React.SetStateAction<WordPreview[] | null>>;
+  index: number;
+  wordCount: number;
+  limit: number;
+}) => {
+  const from = (index: number) => {
+    return index * limit;
+  };
+
+  const to = (index: number) => {
+    return index * limit + limit;
+  };
+
+  return (
+    <LongPressGestureHandler
+      onActivated={() => handleLongPress(from(index), to(index))}
+      onEnded={() => setWordPreviews(null)}
+      minDurationMs={800}
+      key={index}
+    >
+      <Link
+        key={index}
+        push
+        href={{
+          pathname: '/swish',
+          params: {
+            from: from(index),
+            to: to(index),
+            favourites: 'true',
+          },
+        }}
+        className='h-[80px] justify-center items-center bg-[grey] rounded-3xl shadow-sm'
+        asChild
+      >
+        <Pressable>
+          <Text style={{ color: 'white' }}>
+            {`Favourites ${index + 1} (${
+              to(index) < wordCount ? 10 : wordCount - from(index)
+            })`}
+          </Text>
+        </Pressable>
+      </Link>
+    </LongPressGestureHandler>
+  );
+};
 
 export default FavouritesScreen;

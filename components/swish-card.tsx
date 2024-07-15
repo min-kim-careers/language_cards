@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import FlipCard from 'react-native-flip-card';
 import { Card, Text, TextInput } from 'react-native-paper';
-import { ELEMENT_WIDTH, Word } from '../global';
-import AudioPlayer from './audio-player';
+import { ELEMENT_WIDTH, Word } from '../constants/global';
+import AudioButton from './audio-button';
 
 interface CardProps {
   cardIndex: number;
@@ -120,10 +120,17 @@ const CardSide = ({
               <TextInput
                 value={input}
                 onChangeText={(e) => handleTextInput(e)}
-                mode="flat"
-                placeholder="Guess"
+                mode='flat'
+                placeholder='Guess'
                 style={styles.input}
-                right={correct && <TextInput.Icon icon="check" color="green" />}
+                right={
+                  correct && (
+                    <TextInput.Icon
+                      icon='check'
+                      color='green'
+                    />
+                  )
+                }
               />
             )}
           </View>
@@ -133,7 +140,7 @@ const CardSide = ({
         <View style={styles.footer}>
           <Text>{word.pos}</Text>
           {((!isFront && englishFirst) || (isFront && !englishFirst)) &&
-            word.url !== '' && <AudioPlayer soundUrl={word.url!} />}
+            word.url !== '' && <AudioButton soundUrl={word.url!} />}
         </View>
       </Card>
     </View>

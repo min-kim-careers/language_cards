@@ -1,14 +1,12 @@
 import * as React from 'react';
 import {
-  Image,
   StyleProp,
-  StyleSheetProperties,
   View,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 import { Banner, Button, Portal } from 'react-native-paper';
 
-const TipBanner = ({
+const InstructionsBanner = ({
   buttonStyle,
   children,
 }: {
@@ -46,4 +44,4 @@ const TipBanner = ({
   );
 };
 
-export default TipBanner;
+export default InstructionsBanner;

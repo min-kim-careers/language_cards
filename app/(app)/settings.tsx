@@ -6,14 +6,14 @@ import {
   SegmentedButtons,
   Text
 } from 'react-native-paper';
-import { useSession } from '../../../components/session-provider';
-import { useSettings } from '../../../components/settings-provider';
+import { useSession } from '../../components/session-provider';
+import { useSettings } from '../../components/settings-provider';
 import {
   DEFAULT_SETTINGS,
   DisplayOrder,
   ELEMENT_WIDTH,
   Settings,
-} from '../../../global';
+} from '../../constants/global';
 
 const SettingsScreen = () => {
   const [tempSettings, setTempSettings] = useState<Settings>(DEFAULT_SETTINGS);

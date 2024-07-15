@@ -5,9 +5,10 @@
   "extends": "expo/tsconfig.base",
   "include": [
     "app/**/*",
-    "global.ts",
+    "constants/global.ts",
     "components/**/*",
     "database/storage.config.ts",
-    "database/supabase.config.ts"
+    "database/supabase.config.ts",
+    "nativewind-env.d.ts"
   ]
 }

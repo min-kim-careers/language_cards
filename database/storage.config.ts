@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Settings, Word } from '../global';
+import { Settings, Word } from '../constants/global';
 import vocabs from './vocabs.json';
 
 export const SESSION_KEY = 'appSession';

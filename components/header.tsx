@@ -1,43 +1,83 @@
 import { AntDesign } from '@expo/vector-icons';
-import { router, useLocalSearchParams } from 'expo-router';
+import { getHeaderTitle } from '@react-navigation/elements';
+import { NativeStackHeaderProps } from '@react-navigation/native-stack';
+import { Link, router } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { ELEMENT_WIDTH, SHADOW_STYLE } from '../global';
-import SearchModal from './search-modal';
-import Title from './title';
-import { useEffect, useState } from 'react';
+import { ELEMENT_WIDTH, SHADOW_STYLE } from '../constants/global';
+import Logo from './logo';
+import { Ionicons } from '@expo/vector-icons';
 
-const Header = ({ isTitle = false }: { isTitle?: boolean }) => {
-  const [wasPushed, setWasPushed] = useState(false);
+const BACK_ALLOWED_SCREENS = ['title', 'settings'];
 
-  const { pushed } = useLocalSearchParams<{
-    pushed?: string;
-  }>();
-
-  useEffect(() => {
-    if (pushed) setWasPushed(pushed === 'true');
-  }, []);
+const Header = ({
+  navigation,
+  route,
+  options,
+  back,
+}: NativeStackHeaderProps) => {
+  const title = getHeaderTitle(options, route.name);
 
   return (
     <View style={styles.container}>
-      <BackButton canGoBack={wasPushed} />
-      <Title isTitle={isTitle} />
-      <SearchModal style={styles.right} />
+      <BackButton
+        className='flex-1 h-full justify-center items-center'
+        canGoBack={BACK_ALLOWED_SCREENS.includes(title)}
+      />
+      <Logo className='flex-1 h-full justify-center items-center' />
+      <SettingsButton
+        className='flex-1 h-full justify-center items-end'
+        isSettings={title === 'settings'}
+      />
     </View>
   );
 };
 
-const BackButton = ({ canGoBack }: { canGoBack: boolean }) => {
+const SettingsButton = ({
+  isSettings,
+  className,
+}: {
+  isSettings: boolean;
+  className?: string;
+}) => {
   return (
-    <AntDesign
-      name='left'
-      size={24}
-      color='black'
-      style={{
-        ...styles.left,
-        display: canGoBack ? 'flex' : 'none',
-      }}
-      onPress={() => router.back()}
-    />
+    <View className={className}>
+      <Link
+        push
+        href='settings'
+        style={{
+          display: isSettings ? 'none' : 'flex',
+        }}
+      >
+        <Ionicons
+          name='settings-outline'
+          size={24}
+          color='black'
+        />
+      </Link>
+    </View>
+  );
+};
+
+const BackButton = ({
+  canGoBack,
+  className,
+}: {
+  canGoBack: boolean;
+  className?: string;
+}) => {
+  return (
+    <View className={className}>
+      <AntDesign
+        name='left'
+        size={24}
+        color='black'
+        style={{
+          ...styles.left,
+          display: canGoBack ? 'flex' : 'none',
+        }}
+        onPress={() => router.back()}
+      />
+    </View>
   );
 };
 
@@ -53,7 +93,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignSelf: 'center',
     flexDirection: 'row',
-    justifyContent: 'center',
     ...SHADOW_STYLE,
   },
   left: {
