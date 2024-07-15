@@ -9,7 +9,8 @@
     "web": "expo start --web --clear --tunnel",
     "build": "expo export -p web",
     "build:web": "expo export -p web && npx workbox-cli generateSW workbox-config.js",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "tailwindcss -i ./global.css -o ./node_modules/.cache/nativewind/global.css"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
