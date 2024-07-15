@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import FlipCard from 'react-native-flip-card';
-import { Card, Text, TextInput } from 'react-native-paper';
+import { Card, TextInput } from 'react-native-paper';
 import { ELEMENT_WIDTH, Word } from '../constants/global';
 import AudioButton from './audio-button';
 

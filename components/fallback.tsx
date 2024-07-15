@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
-import { Text } from 'react-native-paper';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 
 const Fallback = ({
   duration = 0,

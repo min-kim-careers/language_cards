@@ -138,7 +138,7 @@ export const removeMultipleFavourites = async (
     console.error('Error removing multiple favourites:', error);
     return null;
   }
-  console.log('Successfully removed multiple favourites:', data);
+  console.log('Successfully removed multiple favourites');
   return data;
 };
 

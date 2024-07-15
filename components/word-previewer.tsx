@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Modal, StyleSheet, View } from 'react-native';
-import { Text } from 'react-native-paper';
+import { Text } from 'react-native';
 import { SHADOW_STYLE, WordPreview } from '../constants/global';
 
 const WordPreviewer = ({

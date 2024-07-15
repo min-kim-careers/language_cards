@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import {
   Button,
   Card,
   SegmentedButtons,
-  Text
 } from 'react-native-paper';
 import { useSession } from '../../components/session-provider';
 import { useSettings } from '../../components/settings-provider';

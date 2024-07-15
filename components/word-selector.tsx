@@ -1,8 +1,8 @@
 import { Octicons } from '@expo/vector-icons';
-import { useEffect, useState } from 'react';
-import { Pressable, TextInput, View } from 'react-native';
+import { useCallback, useEffect, useState } from 'react';
+import { Pressable, Text, TextInput, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import { ActivityIndicator, Button, Snackbar, Text } from 'react-native-paper';
+import { ActivityIndicator, Snackbar } from 'react-native-paper';
 import {
   addMultipleFavourites,
   fetchAllFavouritesForUser,
@@ -10,6 +10,7 @@ import {
 } from '../database/supabase.config';
 import vocabs from '../database/vocabs.json';
 import { useSession } from './session-provider';
+import { useFocusEffect } from 'expo-router';
 
 interface Word {
   word_id: number;
@@ -39,12 +40,10 @@ const WordSelector = ({ selectorType }: { selectorType: SelectorType }) => {
   };
 
   const initWordRemover = async () => {
-    if (selectorType === 'remove') {
-      if (session) {
-        const newWords = await fetchAllFavouritesForUser(session);
-        if (newWords) setWords(newWords);
-        if (newWords) setQueriedWords(newWords);
-      }
+    if (selectorType === 'remove' && session) {
+      const newWords = await fetchAllFavouritesForUser(session);
+      if (newWords) setWords(newWords);
+      if (newWords) setQueriedWords(newWords);
     }
   };
 
@@ -52,9 +51,11 @@ const WordSelector = ({ selectorType }: { selectorType: SelectorType }) => {
     initWordAppender();
   }, [words]);
 
-  useEffect(() => {
-    initWordRemover();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      initWordRemover();
+    }, [])
+  );
 
   useEffect(() => {
     if (!searchQuery) {
@@ -85,6 +86,7 @@ const WordSelector = ({ selectorType }: { selectorType: SelectorType }) => {
           setToast('Words were successfully added! (if not duplicates)');
         } else if (selectorType === 'remove') {
           setToast('Words were successfully removed! (if not duplicates)');
+          initWordRemover();
         }
         setSelectedWordIds([]);
       }, 2000);
@@ -190,19 +192,17 @@ const SelectorButton = ({
   onPress: () => void;
 }) => {
   return (
-    <Button
-      mode='contained'
+    <Pressable
       onPress={onPress}
-      style={{
-        position: 'absolute',
-        bottom: '5%',
-        alignSelf: 'center',
-      }}
+      className='absolute bottom-6 bg-gray-500 p-3 rounded-xl shadow-sm'
     >
-      {selectorType === 'append'
-        ? 'Add to Favourites'
-        : 'Remove from Favourites'}
-    </Button>
+      {selectorType === 'append' && (
+        <Text className='text-white'>Add Words</Text>
+      )}
+      {selectorType === 'remove' && (
+        <Text className='text-white'>Remove Words</Text>
+      )}
+    </Pressable>
   );
 };
 
@@ -210,30 +210,20 @@ const LoadingScreen = ({ selectorType }: { selectorType: SelectorType }) => {
   return (
     <View
       style={{
-        flex: 1,
         position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0,0,0,0.4)',
       }}
+      className='h-screen w-screen'
     >
-      <ActivityIndicator
-        color='white'
-        size={'large'}
-      />
+      <ActivityIndicator size={'large'} />
       <Text
         style={{
-          color: 'white',
           padding: 30,
         }}
       >
-        {selectorType === 'append'
-          ? 'Adding the words to your favourites'
-          : 'Removing words from your favourites'}
+        {selectorType === 'append' && 'Adding the words to your favourites'}
+        {selectorType === 'remove' && 'Removing words from your favourites'}
       </Text>
     </View>
   );

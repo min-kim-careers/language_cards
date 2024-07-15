@@ -7,7 +7,7 @@ import { ELEMENT_WIDTH, SHADOW_STYLE } from '../constants/global';
 import Logo from './logo';
 import { Ionicons } from '@expo/vector-icons';
 
-const BACK_ALLOWED_SCREENS = ['title', 'settings'];
+const BACK_ALLOWED_SCREENS = ['swish', 'settings'];
 
 const Header = ({
   navigation,
@@ -20,7 +20,7 @@ const Header = ({
   return (
     <View style={styles.container}>
       <BackButton
-        className='flex-1 h-full justify-center items-center'
+        className='flex-1 h-full justify-center items-start'
         canGoBack={BACK_ALLOWED_SCREENS.includes(title)}
       />
       <Logo className='flex-1 h-full justify-center items-center' />

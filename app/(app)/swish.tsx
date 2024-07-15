@@ -1,8 +1,8 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Swiper from 'react-native-deck-swiper';
-import { Portal, Snackbar, Text } from 'react-native-paper';
+import { Portal, Snackbar } from 'react-native-paper';
 import Fallback from '../../components/fallback';
 import { useSession } from '../../components/session-provider';
 import { useSettings } from '../../components/settings-provider';
@@ -13,9 +13,14 @@ import {
   favouriteExists,
   fetchWordsBetweenRangeForCollections,
   fetchWordsBetweenRangeForFavourites,
-  removeFavourite
+  removeFavourite,
 } from '../../database/supabase.config';
-import { ANONYMOUS, DisplayOrder, ELEMENT_WIDTH, Word } from '../../constants/global';
+import {
+  ANONYMOUS,
+  DisplayOrder,
+  ELEMENT_WIDTH,
+  Word,
+} from '../../constants/global';
 
 const generateRandomBooleans = (wordCount: number) => {
   return Array.from({ length: wordCount }, () => Math.random() >= 0.5);
@@ -161,16 +166,12 @@ const SwishScreen = () => {
       />
       <InstructionsBanner buttonStyle={styles.buttonStyle}>
         <View style={styles.bannerContainer}>
-          <Text variant='bodyMedium'>Double TAP/CLICK to flip the card</Text>
-          <Text variant='bodyMedium'>Swipe RIGHT to view the next card</Text>
-          <Text variant='bodyMedium'>Swipe LEFT to view the previous card</Text>
+          <Text>Double TAP/CLICK to flip the card</Text>
+          <Text>Swipe RIGHT to view the next card</Text>
+          <Text>Swipe LEFT to view the previous card</Text>
+          {session !== ANONYMOUS && <Text>Swipe UP to add to favourites</Text>}
           {session !== ANONYMOUS && (
-            <Text variant='bodyMedium'>Swipe UP to add to favourites</Text>
-          )}
-          {session !== ANONYMOUS && (
-            <Text variant='bodyMedium'>
-              Swipe DOWN to remove from favourites
-            </Text>
+            <Text>Swipe DOWN to remove from favourites</Text>
           )}
         </View>
       </InstructionsBanner>

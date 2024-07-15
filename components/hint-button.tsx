@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Modal, Pressable, View } from 'react-native';
-import { IconButton, Text } from 'react-native-paper';
+import { Modal, Pressable, Text, View } from 'react-native';
+import { IconButton } from 'react-native-paper';
 
 const HintButton = ({ className }: { className?: string }) => {
   const [visible, setVisible] = useState(false);
@@ -22,12 +22,12 @@ const HintButton = ({ className }: { className?: string }) => {
       >
         <View className='flex-1 justify-center items-center'>
           <View className='bg-white p-5 rounded-md shadow-md'>
-            <Text variant='bodyLarge'>Long press a collection to preview!</Text>
+            <Text>Long press a collection to preview!</Text>
             <Pressable
               className='flex-row self-end pt-4'
               onPress={() => setVisible(false)}
             >
-              Close
+              <Text>Close</Text>
             </Pressable>
           </View>
         </View>

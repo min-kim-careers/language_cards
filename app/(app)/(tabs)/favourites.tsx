@@ -1,13 +1,12 @@
 import { Link, useFocusEffect } from 'expo-router';
-import { useState } from 'react';
-import { Pressable, View } from 'react-native';
+import { useCallback, useState } from 'react';
+import { Pressable, Text, View } from 'react-native';
 import {
   LongPressGestureHandler,
   ScrollView,
 } from 'react-native-gesture-handler';
-import { ActivityIndicator, Text } from 'react-native-paper';
+import { ActivityIndicator } from 'react-native-paper';
 import HintButton from '../../../components/hint-button';
-import RefreshButton from '../../../components/refresh-button';
 import { useSession } from '../../../components/session-provider';
 import WordPreviewer from '../../../components/word-previewer';
 import { ELEMENT_WIDTH, WordPreview } from '../../../constants/global';
@@ -58,25 +57,11 @@ const FavouritesScreen = () => {
     }, minLoadingDuration);
   };
 
-  useFocusEffect(() => {
-    if (!isAnonymous) {
+  useFocusEffect(
+    useCallback(() => {
       initFavourites();
-    }
-  });
-
-  if (isAnonymous) {
-    return (
-      <View className='justify-center items-center flex-1'>
-        <Text
-          variant='bodyLarge'
-          style={{ textAlign: 'center' }}
-        >
-          Please sign in if you would like to favourite your words for a better
-          experience!
-        </Text>
-      </View>
-    );
-  }
+    }, [])
+  );
 
   if (loading) {
     return (
@@ -89,10 +74,7 @@ const FavouritesScreen = () => {
   if (!favouritesCount) {
     return (
       <View className='justify-center items-center flex-1'>
-        <Text
-          variant='bodyLarge'
-          style={{ textAlign: 'center' }}
-        >
+        <Text style={{ textAlign: 'center' }}>
           Nothing in favourites. Add some words!
         </Text>
       </View>
@@ -126,7 +108,7 @@ const FavouritesScreen = () => {
       <View className='flex-[0.5]' />
 
       <Toolbar
-        className='absolute bg-white justify-center items-center bottom-[30%] left-2 h-[150px] rounded-xl shadow-sm'
+        className='absolute bg-white justify-center items-center bottom-5 left-4 rounded-xl shadow-sm'
         refreshing={loading}
         handleRefreshButton={handleRefreshButton}
       />
@@ -148,11 +130,11 @@ const Toolbar = ({
   return (
     <View className={className}>
       <HintButton className='justify-center items-center flex-1' />
-      <RefreshButton
+      {/* <RefreshButton
         className='justify-center items-center flex-1'
         loading={refreshing}
         onPress={handleRefreshButton}
-      />
+      /> */}
     </View>
   );
 };
