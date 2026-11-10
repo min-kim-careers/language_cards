@@ -37,3 +37,4 @@ yarn-error.*
 .env.env*
 !.env.example
 *.key
+!.env*.example
