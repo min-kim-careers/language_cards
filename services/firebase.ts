@@ -2,7 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: 'REDACTED',
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
   authDomain: 'project-swish.firebaseapp.com',
   projectId: 'project-swish',
   storageBucket: 'project-swish.appspot.com',
