@@ -18,8 +18,5 @@ Flashcard apps feel like homework. Swiping makes vocab review quick and casual e
 ## Stack
 Expo (React Native) · TypeScript · NativeWind · Supabase · Firebase Auth
 
-## Run locally
-Needs a Firebase project and a Supabase project, set as `EXPO_PUBLIC_*` variables in `.env`.
-```bash
-npm install && npx expo start
-```
+## Running it
+Built with Expo for iOS, Android and web, backed by a Supabase project (vocab and favourites) and Firebase Auth. Configuration is through the `EXPO_PUBLIC_*` variables in `.env.example`.
